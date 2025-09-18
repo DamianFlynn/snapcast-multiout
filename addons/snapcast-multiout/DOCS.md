@@ -37,20 +37,100 @@ Below is a complete **High-Level Design (HLD)** and **Low-Level Design (LLD)** f
 
 # Low-Level Design (LLD)
 
-## Naming & Mapping (example)
+## Audio Device Configuration
 
-Use consistent, human-friendly room IDs. Example for 5 zones (initial with UMC1820):
+### Stereo Pair Mapping
 
-- Streams (and MA players): `kitchen`, `living`, `bedroom1`, `bedroom2`, `office`
-- UMC1820 output pairs:
-    - `umc_out_12` → Xantech Source 1 → **kitchen**
-    - `umc_out_34` → Xantech Source 2 → **living**
-    - `umc_out_56` → Xantech Source 3 → **bedroom1**
-    - `umc_out_78` → Xantech Source 4 → **bedroom2**
-    - `umc_out_910` → Xantech Source 5 → **office**
-- Each Sat1 joins the stream for its room (e.g., kitchen Sat1 → `kitchen`).
+The add-on treats each ALSA device as a complete stereo pair:
 
-> When you expand beyond 5 stereo pairs, add another interface (or a bigger one) and define more devices/streams.
+- **Sound Blaster X-Fi**: 2 stereo outputs (4 channels total)
+  - `hw:1,0` → Outputs 1+2 (L+R for room 1)
+  - `hw:1,1` → Outputs 3+4 (L+R for room 2)
+
+- **Behringer UMC1820**: 4 stereo outputs (8 channels total)
+  - `hw:2,0` → Outputs 1+2 (L+R for room 1)
+  - `hw:2,1` → Outputs 3+4 (L+R for room 2)
+  - `hw:2,2` → Outputs 5+6 (L+R for room 3)
+  - `hw:2,3` → Outputs 7+8 (L+R for room 4)
+
+### Scaling Your Setup
+
+#### Phase 1: Start with Sound Blaster (2 stereo rooms)
+```yaml
+streams:
+  - name: kitchen
+    device: hw:1,0
+  - name: living_room
+    device: hw:1,1
+```
+
+#### Phase 2: Add UMC1820 (6 total stereo rooms)
+```yaml
+streams:
+  # Keep existing Sound Blaster rooms
+  - name: kitchen
+    device: hw:1,0
+  - name: living_room
+    device: hw:1,1
+  
+  # Add UMC1820 rooms
+  - name: bedroom1
+    device: hw:2,0
+  - name: bedroom2
+    device: hw:2,1
+  - name: office
+    device: hw:2,2
+  - name: dining_room
+    device: hw:2,3
+```
+
+#### Phase 3: Second UMC1820 (10 total stereo rooms)
+```yaml
+streams:
+  # Sound Blaster (2 rooms)
+  - name: kitchen
+    device: hw:1,0
+  - name: living_room
+    device: hw:1,1
+  
+  # First UMC1820 (4 rooms)
+  - name: bedroom1
+    device: hw:2,0
+  - name: bedroom2
+    device: hw:2,1
+  - name: office
+    device: hw:2,2
+  - name: dining_room
+    device: hw:2,3
+  
+  # Second UMC1820 (4 more rooms)
+  - name: basement
+    device: hw:3,0
+  - name: garage
+    device: hw:3,1
+  - name: guest_room
+    device: hw:3,2
+  - name: workshop
+    device: hw:3,3
+```
+
+### Hardware Considerations
+
+#### USB Bandwidth
+- Sound Blaster: ~1MB/s (minimal impact)
+- UMC1820: ~4MB/s per device
+- Use separate USB controllers/hubs for multiple UMC1820s
+
+#### Amplifier Connections
+- Use **balanced TRS → unbalanced RCA** cables for UMC1820
+- Sound Blaster outputs are typically unbalanced
+- Keep cable runs short to minimize noise
+- Set conservative output levels initially
+
+#### Synchronization
+- All outputs maintain perfect sync via Snapcast
+- No additional timing configuration needed
+- Latency is automatically managed across all devices
 
 ## Build Process
 
@@ -90,8 +170,28 @@ The add-on runs:
 - Use `list_devices_on_start: true` to see available devices
 - Check device permissions with `/dev/snd` mapping
 - Verify ALSA device names with `aplay -L`
+- Ensure USB interfaces are properly powered
+
+### Stereo Audio Problems
+- **Only one channel playing**: Check cable connections and amplifier settings
+- **Mono audio**: Verify source is sending stereo and device supports stereo output
+- **No audio**: Check device permissions and ALSA device names
+- **Distorted audio**: Reduce output levels, check for USB power issues
+
+### Multi-Device Setup
+- **Devices not detected**: Check USB power and try different USB ports
+- **Audio dropouts**: Use separate USB controllers for multiple interfaces
+- **Sync issues**: Snapcast handles synchronization automatically - check network connectivity
+- **Device numbering changes**: Use device names like `hw:UMC1820,0` instead of numbers
 
 ### Connection Issues
 - Ensure ports 1704, 1705, 1780 are accessible
 - Check network connectivity between clients and server
 - Review logs for specific error messages
+- Verify Home Assistant can access USB audio devices
+
+### Performance Optimization
+- Use powered USB hubs for multiple interfaces
+- Keep USB cable lengths reasonable (<3 meters)
+- Monitor CPU usage with multiple high-resolution streams
+- Consider dedicated USB controllers for professional setups

@@ -28,11 +28,11 @@ Perfect for multi-room audio setups using USB audio interfaces like the Behringe
 list_devices_on_start: true
 streams:
   - name: living_room
-    device: hw:0,0
+    device: hw:1,0
   - name: kitchen  
-    device: hw:0,1
+    device: hw:1,1
   - name: bedroom
-    device: hw:0,2
+    device: hw:2,0
 ```
 
 ### Configuration Options
@@ -42,9 +42,101 @@ streams:
   - **name** (string): Unique identifier for the room/zone
   - **device** (string): ALSA device name (use `hw:CARD,DEVICE` format)
 
+### Understanding ALSA Device Names
+
+Each `hw:X,Y` device represents a **stereo pair** (left + right channels):
+- `hw:1,0` = Card 1, Device 0 (first stereo pair - channels 1+2)
+- `hw:1,1` = Card 1, Device 1 (second stereo pair - channels 3+4)
+- `hw:2,0` = Card 2, Device 0 (different USB interface)
+
+### Multi-Device Stereo Setup Examples
+
+#### Single Sound Blaster (2 stereo rooms)
+```yaml
+list_devices_on_start: true
+streams:
+  - name: kitchen
+    device: hw:1,0      # Sound Blaster stereo pair 1
+  - name: living_room
+    device: hw:1,1      # Sound Blaster stereo pair 2
+```
+
+#### Sound Blaster + UMC1820 (6 stereo rooms)
+```yaml
+list_devices_on_start: true
+streams:
+  # Sound Blaster (2 stereo outputs)
+  - name: kitchen
+    device: hw:1,0
+  - name: living_room
+    device: hw:1,1
+  
+  # UMC1820 (4 stereo outputs)  
+  - name: bedroom1
+    device: hw:2,0      # UMC1820 outputs 1+2
+  - name: bedroom2
+    device: hw:2,1      # UMC1820 outputs 3+4
+  - name: office
+    device: hw:2,2      # UMC1820 outputs 5+6
+  - name: dining_room
+    device: hw:2,3      # UMC1820 outputs 7+8
+```
+
+#### Dual UMC1820 Setup (8 stereo rooms)
+```yaml
+list_devices_on_start: true
+streams:
+  # First UMC1820
+  - name: kitchen
+    device: hw:1,0
+  - name: living_room
+    device: hw:1,1
+  - name: bedroom1
+    device: hw:1,2
+  - name: bedroom2
+    device: hw:1,3
+  
+  # Second UMC1820
+  - name: office
+    device: hw:2,0
+  - name: dining_room
+    device: hw:2,1
+  - name: basement
+    device: hw:2,2
+  - name: garage
+    device: hw:2,3
+```
+
 ### Finding Audio Devices
 
-Enable `list_devices_on_start: true` and check the add-on logs to see available audio devices on your system.
+1. Enable `list_devices_on_start: true`
+2. Connect your USB audio interface(s)
+3. Start the add-on
+4. Check the logs to see available devices:
+
+```
+----- ALSA PCMs (playback) -----
+hw:CARD=Creative,DEV=0
+    Creative Sound Blaster, USB Audio
+hw:CARD=UMC1820,DEV=0  
+    Behringer UMC1820, USB Audio
+hw:CARD=UMC1820,DEV=1
+    Behringer UMC1820, USB Audio #1
+```
+
+5. Use the device names in your configuration (e.g., `hw:UMC1820,0` or `hw:1,0`)
+
+### Stereo Audio Verification
+
+Each configured stream should output **stereo audio**:
+- Left channel audio → Left speaker in room
+- Right channel audio → Right speaker in room
+- Perfect synchronization across all rooms when grouped
+
+If you hear mono audio or only one channel, check:
+- ALSA device configuration
+- Cable connections to amplifiers
+- Source audio format (ensure stereo input)
 
 ## Usage
 
