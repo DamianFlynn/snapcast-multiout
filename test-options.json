@@ -1,0 +1,13 @@
+{
+  "list_devices_on_start": true,
+  "streams": [
+    {
+      "name": "kitchen",
+      "device": "default"
+    },
+    {
+      "name": "sitting_room",
+      "device": "default"
+    }
+  ]
+}
