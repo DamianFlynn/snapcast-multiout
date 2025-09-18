@@ -1,5 +1,5 @@
 # https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
 
-name: Snapcast Multi-Output Add-ons
+name: Damians Home Assistant Add-ons
 url: https://github.com/damianflynn/snapcast-multiout
 maintainer: Damian Flynn <damian@damianflynn.com>

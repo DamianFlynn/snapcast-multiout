@@ -1,4 +1,74 @@
-Below is a complete **High-Level Design (HLD)** and **Low-Level Design (LLD)** for your new multi-room audio system powered by **Music Assistant + Snapcast**, using **Satellite1** devices (with XMOS AEC) in each room and **Xantech MRC88** for the in-ceiling speakers. I’ve also included a **custom HAOS add-on**that dynamically creates one Snapclient per “room/stream,” so you can start with your **Sound Blaster USB** today and seamlessly move to the **UMC1820** when it arrives.
+# DamianFlynn Home Assistant Add-ons# Damian Home Assistant Add-ons
+
+
+
+A collection of Home Assistant add-ons for advanced audio and home automation scenarios.A collection of Home Assistant add-ons for advanced audio and home automation scenarios.
+
+
+
+## Add-ons## Add-ons
+
+
+
+### Snapcast Multi-Output### Snapcast Multi-Output
+
+
+
+Synchronized multi-room audio using Snapcast with support for multiple audio output devices.Synchronized multi-room audio using Snapcast with support for multiple audio output devices.
+
+
+
+[**Installation & Documentation →**](./addons/snapcast-multiout/)[**Installation & Documentation →**](./addons/snapcast-multiout/)
+
+
+
+- Perfect audio synchronization across multiple rooms- Perfect audio synchronization across multiple rooms
+
+- Support for USB audio interfaces (UMC1820, etc.)- Support for USB audio interfaces (UMC1820, etc.)
+
+- Integration with Music Assistant- Integration with Music Assistant
+
+- Web-based control interface- Web-based control interface
+
+- Dynamic stream management- Dynamic stream management
+
+
+
+## Installation## Installation
+
+
+
+1. Add this repository to your Home Assistant:1. Add this repository to your Home Assistant:
+
+   ```   ```
+
+   https://github.com/damianflynn/snapcast-multiout   https://github.com/damianflynn/snapcast-multiout
+
+   ```   ```
+
+
+
+2. Install the desired add-on from your Home Assistant add-on store2. Install the desired add-on from your Home Assistant add-on store
+
+
+
+3. Configure and start the add-on3. Configure and start the add-on
+
+
+
+## Support## Support
+
+
+
+For issues, questions, or feature requests, please use the [GitHub Issues](https://github.com/damianflynn/snapcast-multiout/issues).For issues, questions, or feature requests, please use the [GitHub Issues](https://github.com/damianflynn/snapcast-multiout/issues).
+
+
+
+## License## License
+
+
+
+MIT License - see individual add-ons for specific licensing information.MIT License - see individual add-ons for specific licensing information.elow is a complete **High-Level Design (HLD)** and **Low-Level Design (LLD)** for your new multi-room audio system powered by **Music Assistant + Snapcast**, using **Satellite1** devices (with XMOS AEC) in each room and **Xantech MRC88** for the in-ceiling speakers. I’ve also included a **custom HAOS add-on**that dynamically creates one Snapclient per “room/stream,” so you can start with your **Sound Blaster USB** today and seamlessly move to the **UMC1820** when it arrives.
 
 ---
 
