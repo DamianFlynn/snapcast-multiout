@@ -12,10 +12,16 @@ echo "[INFO] Snapcast Multi-Output addon starting..."
 echo "[INFO] Configuration file: $OPTS"
 
 if [ "$LIST" = "true" ]; then
+  echo "[INFO] ----- USB Audio Devices -----"
+  lsusb | grep -i audio || echo "No USB audio devices found"
   echo "[INFO] ----- ALSA devices (cards) -----"
-  cat /proc/asound/cards || true
+  cat /proc/asound/cards 2>/dev/null || echo "No ALSA cards found - audio subsystem may not be available"
   echo "[INFO] ----- ALSA PCMs (playback) -----"
-  aplay -L || true
+  aplay -L 2>/dev/null || echo "No ALSA playback devices found"
+  echo "[INFO] ----- Hardware detection -----"
+  ls -la /dev/snd/ 2>/dev/null || echo "No /dev/snd devices found"
+  echo "[INFO] ----- System audio modules -----"
+  lsmod | grep -E "(snd|usb|audio)" || echo "No audio modules loaded"
 fi
 
 echo "[INFO] Writing snapserver.conf..."
