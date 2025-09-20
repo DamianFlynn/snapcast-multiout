@@ -1,21 +1,19 @@
 name: Snapcast Multi-Output
 slug: snapcast-multiout
-version: "0.31.0-5"
-description: Snapserver + dynamic Snapclients for multi-output USB (UMC1820) with Music Assistant
+version: "0.31.0-6"
+description: Snapserver + dynamic Snapclients for multi-output USB audio with Music Assistant
 url: https://github.com/damianflynn/snapcast-multiout
 arch: [amd64, aarch64]
 startup: services
 boot: auto
 host_network: true
-init: false
 privileged: true
 audio: true
-map:
-  - share:rw
 devices:
   - /dev/snd
-  - /dev/dri
 udev: true
+map:
+  - share:rw
 options:
   list_devices_on_start: true
   streams:
