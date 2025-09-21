@@ -24,7 +24,7 @@ fi
 echo "[INFO] ================================================="
 echo "[INFO] Snapcast Multi-Output addon starting..."
 echo "[INFO] Addon Version: $ADDON_VERSION"
-echo "[INFO] Addon Git Version: 0.31.0-27 (Debug snapweb files and add Node.js for building)"
+echo "[INFO] Addon Git Version: 0.31.0-30 (Use official snapweb from badaix/snapweb repository)"
 echo "[INFO] Configuration file: $OPTS"
 echo "[INFO] ================================================="
 

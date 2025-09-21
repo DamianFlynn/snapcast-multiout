@@ -20,9 +20,12 @@ RUN apk add --no-cache \
     libvorbis libogg alsa-lib avahi soxr flac opus expat openssl boost1.82-libs \
     pulseaudio-alsa
 
-# Build snapcast with timeout protection and smaller parallel jobs
+# Build snapcast from source
 RUN timeout 900 git clone --recursive --depth=1 https://github.com/badaix/snapcast.git /snapcast || \
     (echo "Git clone timed out, trying again..." && git clone --depth=1 https://github.com/badaix/snapcast.git /snapcast)
+
+# Clone snapweb separately 
+RUN git clone --depth=1 https://github.com/badaix/snapweb.git /snapweb
 
 WORKDIR /snapcast
 RUN sed -i '1i#include <sys/types.h>' /snapcast/common/utils/file_utils.hpp
@@ -41,37 +44,30 @@ RUN echo "=== Checking snapcast directory structure ===" && \
     echo "=== End directory check ==="
 
 # Try to build web interface if package.json exists
-RUN if [ -f "/snapcast/server/snapweb/package.json" ]; then \
-        echo "Building snapweb interface..." && \
-        cd /snapcast/server/snapweb && \
-        npm install && npm run build; \
-    elif [ -f "/snapcast/snapweb/package.json" ]; then \
-        echo "Building snapweb interface..." && \
-        cd /snapcast/snapweb && \
-        npm install && npm run build; \
-    else \
-        echo "No package.json found for web interface"; \
-    fi
+RUN echo "Building snapweb interface..." && \
+    cd /snapweb && \
+    npm install && \
+    npm run build && \
+    echo "Snapweb build completed"
 
-# Install snapweb files with better detection
+# Install snapweb files
 RUN mkdir -p /usr/share/snapserver/snapweb && \
-    if [ -d "/snapcast/server/snapweb" ]; then \
-        echo "Found snapweb in /snapcast/server/snapweb" && \
-        cp -r /snapcast/server/snapweb/* /usr/share/snapserver/snapweb/; \
-    elif [ -d "/snapcast/snapweb" ]; then \
-        echo "Found snapweb in /snapcast/snapweb" && \
-        cp -r /snapcast/snapweb/* /usr/share/snapserver/snapweb/; \
-    elif [ -d "/snapcast/client/snapweb" ]; then \
-        echo "Found snapweb in /snapcast/client/snapweb" && \
-        cp -r /snapcast/client/snapweb/* /usr/share/snapserver/snapweb/; \
+    if [ -d "/snapweb/dist" ]; then \
+        echo "Installing built snapweb from /snapweb/dist" && \
+        cp -r /snapweb/dist/* /usr/share/snapserver/snapweb/; \
+    elif [ -d "/snapweb/build" ]; then \
+        echo "Installing built snapweb from /snapweb/build" && \
+        cp -r /snapweb/build/* /usr/share/snapserver/snapweb/; \
+    elif [ -d "/snapweb" ]; then \
+        echo "Installing snapweb source files" && \
+        cp -r /snapweb/* /usr/share/snapserver/snapweb/; \
     else \
-        echo "Warning: snapweb files not found in snapcast source, creating minimal index.html"; \
-        echo '<html><head><title>Snapcast Server</title></head><body><h1>Snapcast Server</h1><p>Web interface files not available in this build</p><p>Server is running on port 1780</p></body></html>' > /usr/share/snapserver/snapweb/index.html; \
+        echo "No snapweb found, using custom interface"; \
     fi
 
 # Clean up
 WORKDIR /
-RUN rm -rf /snapcast
+RUN rm -rf /snapcast /snapweb
 RUN apk del build-base cmake git boost-dev libvorbis-dev libogg-dev \
     alsa-lib-dev avahi-dev soxr-dev flac-dev opus-dev expat-dev openssl-dev \
     nodejs npm
