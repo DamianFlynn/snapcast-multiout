@@ -115,3 +115,9 @@ ALSA lib dlmisc.c:339:(snd_dlobj_cache_get0) Cannot open shared library libasoun
 2025-09-21 10-38-29.675 [Fatal] (Snapclient) Exception: Can't open default, error: No such device or address
 2025-09-21 10-38-29.675 [Notice] (Snapclient) Snapclient terminated.
 2025-09-21 10-38-29.675 [Error] (StreamSessionTCP) Error in socket shutdown: Socket not connected
+[INFO] Snapcast Multi-Output addon starting...
+[INFO] Configuration file: /data/options.json
+[INFO] ----- Detecting USB Audio Devices -----
+[INFO] Found USB audio device: card 2
+[INFO] Configuring ALSA to use USB audio card 2
+/run.sh: line 38: /etc/asound.conf: Read-only file system

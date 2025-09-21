@@ -7,7 +7,7 @@ FROM $BUILD_FROM
 RUN apk add --no-cache \
     bash jq alsa-utils alsa-plugins alsa-plugins-pulse coreutils usbutils pciutils \
     build-base cmake git boost-dev libvorbis-dev libogg-dev libpng-dev \
-    python3 py3-pip curl pulseaudio-alsa \
+    python3 py3-pip curl pulseaudio pulseaudio-alsa pulseaudio-utils \
     alsa-lib-dev avahi-dev soxr-dev flac-dev opus-dev expat-dev openssl-dev \
     && apk add --no-cache --virtual .runtime-deps \
     libvorbis libogg alsa-lib avahi soxr flac opus expat openssl boost1.82-libs

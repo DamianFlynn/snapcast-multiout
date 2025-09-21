@@ -11,7 +11,7 @@ LIST=$(jq -r '.list_devices_on_start' "$OPTS")
 echo "[INFO] Snapcast Multi-Output addon starting..."
 echo "[INFO] Configuration file: $OPTS"
 
-# Function to detect USB audio devices and update asound.conf
+# Function to detect USB audio devices and report configuration
 detect_and_configure_audio() {
   echo "[INFO] ----- Detecting USB Audio Devices -----"
   
@@ -30,22 +30,14 @@ detect_and_configure_audio() {
     fi
   done
   
-  # Configure asound.conf with the first USB audio device found
+  # Report the USB audio device found
   if [ ${#USB_AUDIO_CARDS[@]} -gt 0 ]; then
     USB_CARD=${USB_AUDIO_CARDS[0]}
-    echo "[INFO] Configuring ALSA to use USB audio card $USB_CARD"
-    
-    cat > /etc/asound.conf <<EOF
-# ---------- Auto-detected USB Audio Device Configuration ----------
-# USB audio device detected as card $USB_CARD
-pcm.!default { type hw; card $USB_CARD }
-ctl.!default { type hw; card $USB_CARD }
-
-# ---------- Backup configurations ----------
-# For manual override, edit this file and restart the addon
-EOF
+    echo "[INFO] Will use USB audio card $USB_CARD (configured in asound.conf)"
+    export DETECTED_USB_CARD="$USB_CARD"
   else
-    echo "[WARN] No USB audio devices found, using default asound.conf"
+    echo "[WARN] No USB audio devices found, will use default configuration"
+    export DETECTED_USB_CARD=""
   fi
 }
 
@@ -84,6 +76,13 @@ CLIENT_PIDS=()
 for i in $(seq 0 $((COUNT-1))); do
   NAME=$(jq -r ".streams[$i].name" "$OPTS")
   DEV=$(jq -r ".streams[$i].device" "$OPTS")
+  
+  # If we detected a USB audio device and the config uses default, override with USB device
+  if [ -n "$DETECTED_USB_CARD" ] && [ "$DEV" = "default" ]; then
+    DEV="hw:$DETECTED_USB_CARD,0"
+    echo "[INFO] Overriding device 'default' with detected USB device: $DEV"
+  fi
+  
   echo "[INFO] Starting snapclient $((i+1)): stream='$NAME' device='$DEV'"
   # Run snapclient with explicit logging to stdout/stderr
   snapclient --host 127.0.0.1 --player alsa --soundcard "$DEV" --instance $((i+1)) 2>&1 &
