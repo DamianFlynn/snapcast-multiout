@@ -24,7 +24,7 @@ fi
 echo "[INFO] ================================================="
 echo "[INFO] Snapcast Multi-Output addon starting..."
 echo "[INFO] Addon Version: $ADDON_VERSION"
-echo "[INFO] Addon Git Version: 0.31.0-20 (Fix BUILD_VERSION error and add version tracking)"
+echo "[INFO] Addon Git Version: 0.31.0-21 (Test ALSA accessibility and use fallback devices)"
 echo "[INFO] Configuration file: $OPTS"
 echo "[INFO] ================================================="
 
@@ -82,10 +82,24 @@ detect_and_configure_audio() {
     fi
   done
   
+  # Test ALSA accessibility for detected devices
+  test_alsa_device() {
+    local device="$1"
+    echo "[DEBUG] Testing ALSA accessibility for $device"
+    # Test if ALSA can access the device by checking card index
+    if aplay -l 2>/dev/null | grep -q "card $(echo $device | sed 's/hw:\([0-9]*\),.*/\1/')"; then
+      echo "[DEBUG] ALSA can access $device"
+      return 0
+    else
+      echo "[DEBUG] ALSA cannot access $device"
+      return 1
+    fi
+  }
+
   # Report the USB audio device found and determine the correct device
   if [ ${#USB_AUDIO_CARDS[@]} -gt 0 ]; then
     USB_CARD=${USB_AUDIO_CARDS[0]}
-    echo "[INFO] Will use USB audio card $USB_CARD"
+    echo "[INFO] Found USB audio card $USB_CARD, testing ALSA accessibility..."
     
     # Find the first available playback device for this card
     PCM_DEVICE=""
@@ -93,49 +107,63 @@ detect_and_configure_audio() {
       if [ -e "$pcm" ]; then
         DEVICE_NUM=$(basename "$pcm" | sed 's/pcmC'${USB_CARD}'D\([0-9]*\)p/\1/')
         PCM_DEVICE="hw:$USB_CARD,$DEVICE_NUM"
-        echo "[INFO] Found playback device: $PCM_DEVICE"
+        echo "[INFO] Found USB playback device: $PCM_DEVICE"
         break
       fi
     done
     
-    if [ -n "$PCM_DEVICE" ]; then
+    # Test if the USB device is accessible via ALSA
+    if [ -n "$PCM_DEVICE" ] && test_alsa_device "$PCM_DEVICE"; then
       export DETECTED_USB_DEVICE="$PCM_DEVICE"
       echo "[INFO] Will use USB audio device: $DETECTED_USB_DEVICE"
     else
-      echo "[WARN] USB card $USB_CARD found but no playback devices available"
+      echo "[WARN] USB card $USB_CARD found but ALSA cannot access it. Trying fallback devices..."
+      PCM_DEVICE=""
       export DETECTED_USB_DEVICE=""
     fi
-  else
-    echo "[WARNING] No USB audio devices detected via uevent check, but trying known working devices..."
+  fi
+
+  # If no working USB device found, try fallback devices (card 2)
+  if [ -z "$DETECTED_USB_DEVICE" ]; then
+    echo "[INFO] Trying card 2 devices as fallback..."
     # We can see from debug that card 2 has multiple PCM devices: pcmC2D3p, pcmC2D7p, pcmC2D8p
-    # Even though card 1 is detected as USB, ALSA can't access it properly
-    # Try card 2 devices since they show up in the container
     if [ -e "/dev/snd/controlC2" ]; then
-      echo "[INFO] Trying card 2 devices as fallback"
       # Try each available device on card 2
       for device_num in 3 7 8; do
         if [ -e "/dev/snd/pcmC2D${device_num}p" ]; then
           PCM_DEVICE="hw:2,$device_num"
-          echo "[INFO] Found available device: $PCM_DEVICE"
-          export DETECTED_USB_DEVICE="$PCM_DEVICE"
-          break
+          echo "[INFO] Testing fallback device: $PCM_DEVICE"
+          if test_alsa_device "$PCM_DEVICE"; then
+            export DETECTED_USB_DEVICE="$PCM_DEVICE"
+            echo "[INFO] Will use fallback device: $DETECTED_USB_DEVICE"
+            break
+          else
+            echo "[DEBUG] Fallback device $PCM_DEVICE not accessible"
+          fi
         fi
       done
     fi
     
-    # If card 2 didn't work, try card 1 with device 0 anyway
-    if [ -z "$DETECTED_USB_DEVICE" ] && [ -e "/dev/snd/controlC1" ]; then
-      echo "[INFO] Trying card 1 device 0 as last resort"
-      if [ -e "/dev/snd/pcmC1D0p" ]; then
-        PCM_DEVICE="hw:1,0"
-        echo "[INFO] Found device: $PCM_DEVICE"
-        export DETECTED_USB_DEVICE="$PCM_DEVICE"
+    # If still no device, try card 0 as last resort
+    if [ -z "$DETECTED_USB_DEVICE" ] && [ -e "/dev/snd/controlC0" ]; then
+      echo "[INFO] Trying card 0 as last resort..."
+      if [ -e "/dev/snd/pcmC0D0p" ]; then
+        PCM_DEVICE="hw:0,0"
+        if test_alsa_device "$PCM_DEVICE"; then
+          export DETECTED_USB_DEVICE="$PCM_DEVICE"
+          echo "[INFO] Will use card 0 device: $DETECTED_USB_DEVICE"
+        fi
       fi
     fi
-    
-    if [ -z "$DETECTED_USB_DEVICE" ]; then
-      echo "[ERROR] No accessible audio devices found, will use default configuration"
-      export DETECTED_USB_DEVICE=""
+  fi
+
+  # Final check
+  if [ -z "$DETECTED_USB_DEVICE" ]; then
+    echo "[ERROR] No accessible audio devices found, will use default configuration"
+    export DETECTED_USB_DEVICE=""
+  else
+    echo "[INFO] Selected audio device: $DETECTED_USB_DEVICE"
+  fi
     fi
   fi
 }
