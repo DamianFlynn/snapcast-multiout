@@ -17,13 +17,14 @@ for config_path in "/config.yaml" "/data/config.yaml" "/app/config.yaml" "$(dirn
   fi
 done
 # If still unknown, try to get it from build environment
-if [ "$ADDON_VERSION" = "unknown" ] && [ -n "$BUILD_VERSION" ]; then
+if [ "$ADDON_VERSION" = "unknown" ] && [ -n "${BUILD_VERSION:-}" ]; then
   ADDON_VERSION="$BUILD_VERSION"
 fi
 
 echo "[INFO] ================================================="
 echo "[INFO] Snapcast Multi-Output addon starting..."
 echo "[INFO] Addon Version: $ADDON_VERSION"
+echo "[INFO] Addon Git Version: 0.31.0-20 (Fix BUILD_VERSION error and add version tracking)"
 echo "[INFO] Configuration file: $OPTS"
 echo "[INFO] ================================================="
 
