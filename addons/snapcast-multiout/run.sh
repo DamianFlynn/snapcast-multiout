@@ -13,10 +13,32 @@ echo "[INFO] Configuration file: $OPTS"
 
 # Function to detect USB audio devices and report configuration
 detect_and_configure_audio() {
-  echo "[INFO] ----- Detecting USB Audio Devices -----"
+  echo "[INFO] Detecting USB audio devices..."
   
-  # Check for USB audio devices in /dev/snd/
+  # First, let's see what devices are available in the container
+  echo "[DEBUG] === CONTAINER DEVICE ANALYSIS ==="
+  echo "[DEBUG] /dev/snd/ contents:"
+  ls -la /dev/snd/ 2>/dev/null || echo "[DEBUG] /dev/snd/ not accessible"
+  
+  echo "[DEBUG] Sound card directories:"
+  ls -la /sys/class/sound/ 2>/dev/null || echo "[DEBUG] /sys/class/sound/ not accessible"
+  
+  echo "[DEBUG] Checking each card for details:"
+  for card_dir in /sys/class/sound/card*; do
+    if [ -d "$card_dir" ]; then
+      CARD_NUM=$(basename "$card_dir" | sed 's/card//')
+      echo "[DEBUG] === CARD $CARD_NUM ==="
+      echo "[DEBUG] Card $CARD_NUM uevent:"
+      cat "$card_dir/device/uevent" 2>/dev/null || echo "[DEBUG] No uevent file"
+      echo "[DEBUG] Card $CARD_NUM PCM devices:"
+      ls -la /dev/snd/pcmC${CARD_NUM}D* 2>/dev/null || echo "[DEBUG] No PCM devices"
+    fi
+  done
+  echo "[DEBUG] === END ANALYSIS ==="
+  
   USB_AUDIO_CARDS=()
+  
+  # Scan all control devices to find USB audio cards
   for control in /dev/snd/controlC*; do
     if [ -e "$control" ]; then
       CARD_NUM=$(basename "$control" | sed 's/controlC//')
@@ -67,8 +89,26 @@ detect_and_configure_audio() {
       export DETECTED_USB_DEVICE=""
     fi
   else
-    echo "[WARN] No USB audio devices found, will use default configuration"
-    export DETECTED_USB_DEVICE=""
+    echo "[WARNING] No USB audio devices detected, trying fallback to card 2..."
+    # Fallback: try card 2 specifically (often where USB audio appears)
+    if [ -e "/dev/snd/controlC2" ]; then
+      echo "[INFO] Trying card 2 as fallback USB device"
+      # Try to find any playback device on card 2
+      for pcm in /dev/snd/pcmC2D*p; do
+        if [ -e "$pcm" ]; then
+          DEVICE_NUM=$(basename "$pcm" | sed 's/pcmC2D\([0-9]*\)p/\1/')
+          PCM_DEVICE="hw:2,$DEVICE_NUM"
+          echo "[INFO] Found fallback playback device: $PCM_DEVICE"
+          export DETECTED_USB_DEVICE="$PCM_DEVICE"
+          break
+        fi
+      done
+    fi
+    
+    if [ -z "$DETECTED_USB_DEVICE" ]; then
+      echo "[WARN] No USB audio devices found and no fallback available, will use default configuration"
+      export DETECTED_USB_DEVICE=""
+    fi
   fi
 }
 
