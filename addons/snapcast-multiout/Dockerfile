@@ -4,9 +4,9 @@ FROM alpine:3.19
 
 # Install build and runtime dependencies
 RUN apk add --no-cache \
-    bash jq alsa-utils alsa-plugins coreutils usbutils pciutils \
+    bash jq alsa-utils alsa-plugins alsa-plugins-pulse coreutils usbutils pciutils \
     build-base cmake git boost-dev libvorbis-dev libogg-dev libpng-dev \
-    python3 py3-pip curl \
+    python3 py3-pip curl pulseaudio-alsa \
     alsa-lib-dev avahi-dev soxr-dev flac-dev opus-dev expat-dev openssl-dev \
     && apk add --no-cache --virtual .runtime-deps \
     libvorbis libogg alsa-lib avahi soxr flac opus expat openssl boost1.82-libs

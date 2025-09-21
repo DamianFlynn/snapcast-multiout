@@ -17,9 +17,9 @@ options:
   list_devices_on_start: true
   streams:
     - name: kitchen
-      device: default
+      device: hw:2,0
     - name: sitting_room
-      device: default
+      device: hw:2,0
 schema:
   list_devices_on_start: bool
   streams:

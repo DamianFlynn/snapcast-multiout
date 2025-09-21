@@ -11,9 +11,53 @@ LIST=$(jq -r '.list_devices_on_start' "$OPTS")
 echo "[INFO] Snapcast Multi-Output addon starting..."
 echo "[INFO] Configuration file: $OPTS"
 
+# Function to detect USB audio devices and update asound.conf
+detect_and_configure_audio() {
+  echo "[INFO] ----- Detecting USB Audio Devices -----"
+  
+  # Check for USB audio devices in /dev/snd/
+  USB_AUDIO_CARDS=()
+  for control in /dev/snd/controlC*; do
+    if [ -e "$control" ]; then
+      CARD_NUM=$(basename "$control" | sed 's/controlC//')
+      # Check if this is a USB audio device
+      if [ -f "/sys/class/sound/card$CARD_NUM/device/uevent" ]; then
+        if grep -q "usb" "/sys/class/sound/card$CARD_NUM/device/uevent" 2>/dev/null; then
+          USB_AUDIO_CARDS+=("$CARD_NUM")
+          echo "[INFO] Found USB audio device: card $CARD_NUM"
+        fi
+      fi
+    fi
+  done
+  
+  # Configure asound.conf with the first USB audio device found
+  if [ ${#USB_AUDIO_CARDS[@]} -gt 0 ]; then
+    USB_CARD=${USB_AUDIO_CARDS[0]}
+    echo "[INFO] Configuring ALSA to use USB audio card $USB_CARD"
+    
+    cat > /etc/asound.conf <<EOF
+# ---------- Auto-detected USB Audio Device Configuration ----------
+# USB audio device detected as card $USB_CARD
+pcm.!default { type hw; card $USB_CARD }
+ctl.!default { type hw; card $USB_CARD }
+
+# ---------- Backup configurations ----------
+# For manual override, edit this file and restart the addon
+EOF
+  else
+    echo "[WARN] No USB audio devices found, using default asound.conf"
+  fi
+}
+
+# Detect and configure audio devices
+detect_and_configure_audio
+
+echo "[INFO] Snapcast Multi-Output addon starting..."
+echo "[INFO] Configuration file: $OPTS"
+
 if [ "$LIST" = "true" ]; then
   echo "[INFO] ----- USB Audio Devices -----"
-  lsusb | grep -i audio || echo "No USB audio devices found"
+  lsusb | grep -E "(Audio|Sound|Creative|Blaster)" || echo "No USB audio devices found"
   echo "[INFO] ----- ALSA devices (cards) -----"
   cat /proc/asound/cards 2>/dev/null || echo "No ALSA cards found - audio subsystem may not be available"
   echo "[INFO] ----- ALSA PCMs (playback) -----"
