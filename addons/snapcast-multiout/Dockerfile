@@ -2,13 +2,9 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-# Use the base image specified in build.yaml
-ARG BUILD_FROM
-FROM $BUILD_FROM
-
 # Install essential packages first
 RUN apk update && apk add --no-cache \
-    bash jq alsa-utils alsa-plugins coreutils usbutils
+    bash jq alsa-utils alsa-plugins alsa-plugins-pulse coreutils usbutils
 
 # Install build dependencies in smaller batches to prevent timeouts
 RUN apk add --no-cache build-base cmake git
@@ -18,7 +14,8 @@ RUN apk add --no-cache flac-dev opus-dev expat-dev openssl-dev
 
 # Install runtime dependencies  
 RUN apk add --no-cache \
-    libvorbis libogg alsa-lib avahi soxr flac opus expat openssl boost1.82-libs
+    libvorbis libogg alsa-lib avahi soxr flac opus expat openssl boost1.82-libs \
+    pulseaudio-alsa
 
 # Build snapcast with timeout protection and smaller parallel jobs
 RUN timeout 900 git clone --recursive --depth=1 https://github.com/badaix/snapcast.git /snapcast || \
