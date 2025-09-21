@@ -24,7 +24,7 @@ fi
 echo "[INFO] ================================================="
 echo "[INFO] Snapcast Multi-Output addon starting..."
 echo "[INFO] Addon Version: $ADDON_VERSION"
-echo "[INFO] Addon Git Version: 0.31.0-21 (Test ALSA accessibility and use fallback devices)"
+echo "[INFO] Addon Git Version: 0.31.0-22 (Fix syntax error in device selection)"
 echo "[INFO] Configuration file: $OPTS"
 echo "[INFO] ================================================="
 
@@ -163,8 +163,6 @@ detect_and_configure_audio() {
     export DETECTED_USB_DEVICE=""
   else
     echo "[INFO] Selected audio device: $DETECTED_USB_DEVICE"
-  fi
-    fi
   fi
 }
 
