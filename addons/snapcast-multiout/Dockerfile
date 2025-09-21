@@ -1,6 +1,7 @@
 
-# Use Alpine as the base image
-FROM alpine:3.19
+# Use Home Assistant base image
+ARG BUILD_FROM
+FROM $BUILD_FROM
 
 # Install build and runtime dependencies
 RUN apk add --no-cache \

@@ -1,0 +1,500 @@
+[32m2025-09-21 10:59:05.210 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 10:59:05.355 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 11:04:05.373 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:04:05.374 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:04:05.377 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:04:05.517 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 11:09:05.536 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:09:05.538 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:09:05.543 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:09:05.719 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 11:14:05.748 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:14:05.749 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:14:05.755 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:14:05.909 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 11:19:05.999 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:19:06.000 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:19:06.002 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:19:06.052 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 11:24:06.068 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:24:06.070 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:24:06.074 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:24:06.206 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 11:29:06.237 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 11:29:06.242 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:29:06.244 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:29:06.250 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:29:06.399 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 11:34:06.409 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:34:06.411 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:34:06.417 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:34:06.574 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[33m2025-09-21 11:36:03.180 WARNING (MainThread) [supervisor.addons.manager] Add-on 00c5fb9c_snapcast-multiout is already installed[0m
+[33m2025-09-21 11:36:10.335 WARNING (MainThread) [supervisor.addons.manager] Add-on 00c5fb9c_snapcast-multiout is already installed[0m
+[32m2025-09-21 11:38:27.574 INFO (MainThread) [supervisor.docker.addon] Starting Docker add-on 00c5fb9c/amd64-addon-snapcast-multiout with version 0.31.0-8[0m
+[31m2025-09-21 11:38:37.476 ERROR (SyncWorker_0) [supervisor.docker.manager] Container addon_00c5fb9c_snapcast-multiout is not running[0m
+[32m2025-09-21 11:39:06.585 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:39:06.586 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:39:06.589 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:39:06.696 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 11:44:06.712 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:44:06.714 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:44:06.717 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:44:06.865 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 11:49:06.877 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:49:06.879 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:49:06.885 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:49:07.026 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 11:50:55.261 INFO (MainThread) [supervisor.resolution.check] Starting system checks with state running[0m
+[32m2025-09-21 11:50:55.262 INFO (MainThread) [supervisor.resolution.checks.base] Run check for docker_config/system[0m
+[32m2025-09-21 11:50:55.262 INFO (MainThread) [supervisor.resolution.checks.base] Run check for ipv4_connection_problem/system[0m
+[32m2025-09-21 11:50:55.263 INFO (MainThread) [supervisor.resolution.checks.base] Run check for pwned/addon[0m
+[32m2025-09-21 11:50:55.315 INFO (MainThread) [supervisor.resolution.checks.base] Run check for free_space/system[0m
+[32m2025-09-21 11:50:55.317 INFO (MainThread) [supervisor.resolution.checks.base] Run check for multiple_data_disks/system[0m
+[32m2025-09-21 11:50:55.318 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_ipv6_error/dns_server[0m
+[32m2025-09-21 11:50:55.319 INFO (MainThread) [supervisor.resolution.checks.base] Run check for trust/supervisor[0m
+[32m2025-09-21 11:50:55.330 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disabled_data_disk/system[0m
+[32m2025-09-21 11:50:55.330 INFO (MainThread) [supervisor.resolution.checks.base] Run check for security/core[0m
+[32m2025-09-21 11:50:55.331 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_failed/dns_server[0m
+[32m2025-09-21 11:50:55.332 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disk_lifetime/system[0m
+[32m2025-09-21 11:50:55.336 INFO (MainThread) [supervisor.resolution.check] System checks complete[0m
+[32m2025-09-21 11:50:55.336 INFO (MainThread) [supervisor.resolution.evaluate] Starting system evaluation with state running[0m
+[32m2025-09-21 11:50:55.536 INFO (MainThread) [supervisor.resolution.evaluate] System evaluation complete[0m
+[32m2025-09-21 11:50:55.536 INFO (MainThread) [supervisor.resolution.fixup] Starting system autofix at state running[0m
+[32m2025-09-21 11:50:55.537 INFO (MainThread) [supervisor.resolution.fixup] System autofix complete[0m
+[32m2025-09-21 11:52:11.397 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/5c53de3b repository from https://github.com/esphome/home-assistant-addon[0m
+[32m2025-09-21 11:52:11.397 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/core repository from https://github.com/home-assistant/addons[0m
+[32m2025-09-21 11:52:11.398 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/a0d7b954 repository from https://github.com/hassio-addons/repository[0m
+[32m2025-09-21 11:52:11.401 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/d5369777 repository from https://github.com/music-assistant/home-assistant-addon[0m
+[32m2025-09-21 11:52:11.406 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/cb646a50 repository from https://github.com/hacs/addons[0m
+[32m2025-09-21 11:52:11.411 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/00c5fb9c repository from https://github.com/damianflynn/snapcast-multiout[0m
+[32m2025-09-21 11:54:07.044 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:54:07.045 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:54:07.047 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:54:07.160 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 11:59:07.189 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 11:59:07.193 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 11:59:07.195 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 11:59:07.201 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 11:59:07.352 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:04:07.363 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:04:07.365 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:04:07.370 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:04:07.517 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:09:07.539 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:09:07.541 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:09:07.545 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:09:07.690 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:14:07.715 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:14:07.716 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:14:07.719 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:14:07.814 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:19:07.826 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:19:07.828 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:19:07.832 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:19:07.981 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:24:08.003 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:24:08.005 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:24:08.009 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:24:08.154 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:29:08.190 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 12:29:08.195 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:29:08.197 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:29:08.202 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:29:08.383 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:34:08.395 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:34:08.397 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:34:08.401 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:34:08.542 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:39:08.551 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:39:08.553 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:39:08.555 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:39:08.606 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:44:08.620 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:44:08.622 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:44:08.624 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:44:08.741 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:49:08.756 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:49:08.758 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:49:08.762 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:49:08.843 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:50:55.573 INFO (MainThread) [supervisor.resolution.check] Starting system checks with state running[0m
+[32m2025-09-21 12:50:55.574 INFO (MainThread) [supervisor.resolution.checks.base] Run check for docker_config/system[0m
+[32m2025-09-21 12:50:55.575 INFO (MainThread) [supervisor.resolution.checks.base] Run check for ipv4_connection_problem/system[0m
+[32m2025-09-21 12:50:55.575 INFO (MainThread) [supervisor.resolution.checks.base] Run check for pwned/addon[0m
+[32m2025-09-21 12:50:55.627 INFO (MainThread) [supervisor.resolution.checks.base] Run check for free_space/system[0m
+[32m2025-09-21 12:50:55.629 INFO (MainThread) [supervisor.resolution.checks.base] Run check for multiple_data_disks/system[0m
+[32m2025-09-21 12:50:55.629 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_ipv6_error/dns_server[0m
+[32m2025-09-21 12:50:55.631 INFO (MainThread) [supervisor.resolution.checks.base] Run check for trust/supervisor[0m
+[32m2025-09-21 12:50:55.641 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disabled_data_disk/system[0m
+[32m2025-09-21 12:50:55.642 INFO (MainThread) [supervisor.resolution.checks.base] Run check for security/core[0m
+[32m2025-09-21 12:50:55.642 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_failed/dns_server[0m
+[32m2025-09-21 12:50:55.643 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disk_lifetime/system[0m
+[32m2025-09-21 12:50:55.647 INFO (MainThread) [supervisor.resolution.check] System checks complete[0m
+[32m2025-09-21 12:50:55.647 INFO (MainThread) [supervisor.resolution.evaluate] Starting system evaluation with state running[0m
+[32m2025-09-21 12:50:55.841 INFO (MainThread) [supervisor.resolution.evaluate] System evaluation complete[0m
+[32m2025-09-21 12:50:55.841 INFO (MainThread) [supervisor.resolution.fixup] Starting system autofix at state running[0m
+[32m2025-09-21 12:50:55.841 INFO (MainThread) [supervisor.resolution.fixup] System autofix complete[0m
+[32m2025-09-21 12:54:08.865 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:54:08.866 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:54:08.869 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:54:08.953 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 12:58:43.614 INFO (MainThread) [supervisor.host.info] Updating local host information[0m
+[32m2025-09-21 12:58:44.052 INFO (MainThread) [supervisor.host.services] Updating service information[0m
+[32m2025-09-21 12:58:44.059 INFO (MainThread) [supervisor.host.network] Updating local network information[0m
+[32m2025-09-21 12:58:44.447 INFO (MainThread) [supervisor.host.sound] Updating PulseAudio information[0m
+[32m2025-09-21 12:58:44.453 INFO (MainThread) [supervisor.host.manager] Host information reload completed[0m
+[32m2025-09-21 12:59:08.996 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 12:59:09.001 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 12:59:09.003 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 12:59:09.006 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 12:59:09.135 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:04:09.153 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:04:09.154 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:04:09.156 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:04:09.207 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:09:09.230 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:09:09.231 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:09:09.233 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:09:09.282 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:14:09.314 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:14:09.316 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:14:09.320 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:14:09.435 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:19:09.450 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:19:09.451 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:19:09.453 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:19:09.606 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:24:09.635 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:24:09.637 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:24:09.641 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:24:09.775 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:29:09.780 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 13:29:09.784 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:29:09.785 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:29:09.788 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:29:09.944 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:34:09.953 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:34:09.955 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:34:09.959 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:34:10.100 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:39:10.129 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:39:10.132 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:39:10.137 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:39:10.278 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:44:10.290 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:44:10.291 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:44:10.296 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:44:10.438 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:49:10.454 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:49:10.456 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:49:10.460 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:49:10.599 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:50:55.863 INFO (MainThread) [supervisor.resolution.check] Starting system checks with state running[0m
+[32m2025-09-21 13:50:55.864 INFO (MainThread) [supervisor.resolution.checks.base] Run check for docker_config/system[0m
+[32m2025-09-21 13:50:55.865 INFO (MainThread) [supervisor.resolution.checks.base] Run check for ipv4_connection_problem/system[0m
+[32m2025-09-21 13:50:55.866 INFO (MainThread) [supervisor.resolution.checks.base] Run check for pwned/addon[0m
+[32m2025-09-21 13:50:55.925 INFO (MainThread) [supervisor.resolution.checks.base] Run check for free_space/system[0m
+[32m2025-09-21 13:50:55.928 INFO (MainThread) [supervisor.resolution.checks.base] Run check for multiple_data_disks/system[0m
+[32m2025-09-21 13:50:55.929 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_ipv6_error/dns_server[0m
+[32m2025-09-21 13:50:55.930 INFO (MainThread) [supervisor.resolution.checks.base] Run check for trust/supervisor[0m
+[32m2025-09-21 13:50:55.940 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disabled_data_disk/system[0m
+[32m2025-09-21 13:50:55.941 INFO (MainThread) [supervisor.resolution.checks.base] Run check for security/core[0m
+[32m2025-09-21 13:50:55.941 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_failed/dns_server[0m
+[32m2025-09-21 13:50:55.942 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disk_lifetime/system[0m
+[32m2025-09-21 13:50:55.946 INFO (MainThread) [supervisor.resolution.check] System checks complete[0m
+[32m2025-09-21 13:50:55.947 INFO (MainThread) [supervisor.resolution.evaluate] Starting system evaluation with state running[0m
+[32m2025-09-21 13:50:56.106 INFO (MainThread) [supervisor.resolution.evaluate] System evaluation complete[0m
+[32m2025-09-21 13:50:56.106 INFO (MainThread) [supervisor.resolution.fixup] Starting system autofix at state running[0m
+[32m2025-09-21 13:50:56.106 INFO (MainThread) [supervisor.resolution.fixup] System autofix complete[0m
+[32m2025-09-21 13:54:10.628 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:54:10.631 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:54:10.636 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:54:10.781 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 13:59:10.789 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 13:59:10.794 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 13:59:10.795 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 13:59:10.800 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 13:59:10.951 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:04:10.969 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:04:10.970 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:04:10.973 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:04:11.118 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:09:11.139 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:09:11.142 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:09:11.147 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:09:11.294 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:14:11.300 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:14:11.302 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:14:11.308 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:14:11.468 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:19:11.488 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:19:11.490 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:19:11.496 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:19:11.613 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:24:11.619 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:24:11.621 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:24:11.628 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:24:11.777 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:28:45.134 INFO (MainThread) [supervisor.plugins.dns] Restarting CoreDNS plugin[0m
+[32m2025-09-21 14:28:45.139 INFO (SyncWorker_5) [supervisor.docker.manager] Restarting hassio_dns[0m
+[32m2025-09-21 14:28:51.122 INFO (MainThread) [supervisor.plugins.dns] Restarting CoreDNS plugin[0m
+[32m2025-09-21 14:28:51.127 INFO (SyncWorker_2) [supervisor.docker.manager] Restarting hassio_dns[0m
+[32m2025-09-21 14:29:11.788 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 14:29:11.791 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:29:11.793 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:29:11.797 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:29:11.926 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:34:11.950 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:34:11.951 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:34:11.954 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:34:12.048 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:39:12.081 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:39:12.083 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:39:12.088 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:39:12.235 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:44:12.249 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:44:12.251 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:44:12.255 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:44:12.398 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:49:12.422 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:49:12.423 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:49:12.426 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:49:12.539 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:50:56.121 INFO (MainThread) [supervisor.resolution.check] Starting system checks with state running[0m
+[32m2025-09-21 14:50:56.121 INFO (MainThread) [supervisor.resolution.checks.base] Run check for docker_config/system[0m
+[32m2025-09-21 14:50:56.122 INFO (MainThread) [supervisor.resolution.checks.base] Run check for ipv4_connection_problem/system[0m
+[32m2025-09-21 14:50:56.122 INFO (MainThread) [supervisor.resolution.checks.base] Run check for pwned/addon[0m
+[32m2025-09-21 14:50:56.180 INFO (MainThread) [supervisor.resolution.checks.base] Run check for free_space/system[0m
+[32m2025-09-21 14:50:56.182 INFO (MainThread) [supervisor.resolution.checks.base] Run check for multiple_data_disks/system[0m
+[32m2025-09-21 14:50:56.183 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_ipv6_error/dns_server[0m
+[32m2025-09-21 14:50:56.185 INFO (MainThread) [supervisor.resolution.checks.base] Run check for trust/supervisor[0m
+[32m2025-09-21 14:50:56.196 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disabled_data_disk/system[0m
+[32m2025-09-21 14:50:56.197 INFO (MainThread) [supervisor.resolution.checks.base] Run check for security/core[0m
+[32m2025-09-21 14:50:56.197 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_failed/dns_server[0m
+[32m2025-09-21 14:50:56.198 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disk_lifetime/system[0m
+[32m2025-09-21 14:50:56.203 INFO (MainThread) [supervisor.resolution.check] System checks complete[0m
+[32m2025-09-21 14:50:56.203 INFO (MainThread) [supervisor.resolution.evaluate] Starting system evaluation with state running[0m
+[32m2025-09-21 14:50:56.338 INFO (MainThread) [supervisor.resolution.evaluate] System evaluation complete[0m
+[32m2025-09-21 14:50:56.338 INFO (MainThread) [supervisor.resolution.fixup] Starting system autofix at state running[0m
+[32m2025-09-21 14:50:56.338 INFO (MainThread) [supervisor.resolution.fixup] System autofix complete[0m
+[32m2025-09-21 14:52:12.302 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/core repository from https://github.com/home-assistant/addons[0m
+[32m2025-09-21 14:52:12.302 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/d5369777 repository from https://github.com/music-assistant/home-assistant-addon[0m
+[32m2025-09-21 14:52:12.303 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/a0d7b954 repository from https://github.com/hassio-addons/repository[0m
+[32m2025-09-21 14:52:12.308 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/5c53de3b repository from https://github.com/esphome/home-assistant-addon[0m
+[32m2025-09-21 14:52:12.319 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/cb646a50 repository from https://github.com/hacs/addons[0m
+[32m2025-09-21 14:52:12.326 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/00c5fb9c repository from https://github.com/damianflynn/snapcast-multiout[0m
+[32m2025-09-21 14:54:12.576 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:54:12.578 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:54:12.583 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:54:12.722 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 14:59:12.735 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 14:59:12.739 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 14:59:12.740 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 14:59:12.745 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 14:59:12.910 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:04:12.921 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:04:12.922 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:04:12.926 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:04:13.078 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:05:24.454 INFO (MainThread) [supervisor.host.info] Updating local host information[0m
+[32m2025-09-21 15:05:24.916 INFO (MainThread) [supervisor.host.services] Updating service information[0m
+[32m2025-09-21 15:05:24.923 INFO (MainThread) [supervisor.host.network] Updating local network information[0m
+[32m2025-09-21 15:05:25.276 INFO (MainThread) [supervisor.host.sound] Updating PulseAudio information[0m
+[32m2025-09-21 15:05:25.282 INFO (MainThread) [supervisor.host.manager] Host information reload completed[0m
+[32m2025-09-21 15:09:13.116 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:09:13.118 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:09:13.126 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:09:13.242 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:14:13.255 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:14:13.257 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:14:13.262 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:14:13.412 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:19:13.438 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:19:13.440 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:19:13.444 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:19:13.569 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:24:13.602 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:24:13.604 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:24:13.608 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:24:13.707 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:29:13.722 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 15:29:13.724 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:29:13.725 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:29:13.728 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:29:13.804 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:34:13.816 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:34:13.818 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:34:13.823 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:34:13.958 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:39:13.967 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:39:13.969 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:39:13.972 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:39:14.087 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:44:14.105 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:44:14.106 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:44:14.109 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:44:14.227 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:49:14.251 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:49:14.253 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:49:14.255 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:49:14.332 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:50:43.725 INFO (MainThread) [supervisor.updater] Fetching update data from https://version.home-assistant.io/stable.json[0m
+[32m2025-09-21 15:50:56.344 INFO (MainThread) [supervisor.resolution.check] Starting system checks with state running[0m
+[32m2025-09-21 15:50:56.344 INFO (MainThread) [supervisor.resolution.checks.base] Run check for docker_config/system[0m
+[32m2025-09-21 15:50:56.345 INFO (MainThread) [supervisor.resolution.checks.base] Run check for ipv4_connection_problem/system[0m
+[32m2025-09-21 15:50:56.346 INFO (MainThread) [supervisor.resolution.checks.base] Run check for pwned/addon[0m
+[32m2025-09-21 15:50:56.346 INFO (MainThread) [supervisor.resolution.checks.base] Run check for free_space/system[0m
+[32m2025-09-21 15:50:56.350 INFO (MainThread) [supervisor.resolution.checks.base] Run check for multiple_data_disks/system[0m
+[32m2025-09-21 15:50:56.350 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_ipv6_error/dns_server[0m
+[32m2025-09-21 15:50:56.351 INFO (MainThread) [supervisor.resolution.checks.base] Run check for trust/supervisor[0m
+[32m2025-09-21 15:50:56.362 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disabled_data_disk/system[0m
+[32m2025-09-21 15:50:56.362 INFO (MainThread) [supervisor.resolution.checks.base] Run check for security/core[0m
+[32m2025-09-21 15:50:56.363 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_failed/dns_server[0m
+[32m2025-09-21 15:50:56.363 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disk_lifetime/system[0m
+[32m2025-09-21 15:50:56.369 INFO (MainThread) [supervisor.resolution.check] System checks complete[0m
+[32m2025-09-21 15:50:56.370 INFO (MainThread) [supervisor.resolution.evaluate] Starting system evaluation with state running[0m
+[32m2025-09-21 15:50:56.501 INFO (MainThread) [supervisor.resolution.evaluate] System evaluation complete[0m
+[32m2025-09-21 15:50:56.501 INFO (MainThread) [supervisor.resolution.fixup] Starting system autofix at state running[0m
+[32m2025-09-21 15:50:56.502 INFO (MainThread) [supervisor.resolution.fixup] System autofix complete[0m
+[32m2025-09-21 15:54:14.343 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:54:14.345 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:54:14.348 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:54:14.423 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 15:59:14.436 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 15:59:14.441 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 15:59:14.443 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 15:59:14.446 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 15:59:14.585 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:04:14.613 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:04:14.614 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:04:14.619 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:04:14.753 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:09:14.762 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:09:14.764 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:09:14.768 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:09:14.909 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:14:14.929 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:14:14.930 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:14:14.933 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:14:14.996 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:19:15.009 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:19:15.011 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:19:15.015 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:19:15.122 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:20:27.136 INFO (MainThread) [supervisor.plugins.dns] Restarting CoreDNS plugin[0m
+[32m2025-09-21 16:20:27.141 INFO (SyncWorker_5) [supervisor.docker.manager] Restarting hassio_dns[0m
+[32m2025-09-21 16:20:28.375 INFO (MainThread) [supervisor.plugins.dns] Restarting CoreDNS plugin[0m
+[32m2025-09-21 16:20:28.380 INFO (SyncWorker_7) [supervisor.docker.manager] Restarting hassio_dns[0m
+[32m2025-09-21 16:24:15.133 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:24:15.135 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:24:15.143 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:24:15.218 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:29:15.240 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 16:29:15.243 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:29:15.245 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:29:15.250 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:29:15.381 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:34:15.415 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:34:15.417 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:34:15.420 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:34:15.532 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:39:15.540 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:39:15.541 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:39:15.544 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:39:15.663 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:44:15.684 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:44:15.686 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:44:15.693 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:44:15.832 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:49:15.852 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:49:15.854 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:49:15.857 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:49:15.987 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:50:56.507 INFO (MainThread) [supervisor.resolution.check] Starting system checks with state running[0m
+[32m2025-09-21 16:50:56.507 INFO (MainThread) [supervisor.resolution.checks.base] Run check for docker_config/system[0m
+[32m2025-09-21 16:50:56.508 INFO (MainThread) [supervisor.resolution.checks.base] Run check for ipv4_connection_problem/system[0m
+[32m2025-09-21 16:50:56.508 INFO (MainThread) [supervisor.resolution.checks.base] Run check for pwned/addon[0m
+[32m2025-09-21 16:50:56.561 INFO (MainThread) [supervisor.resolution.checks.base] Run check for free_space/system[0m
+[32m2025-09-21 16:50:56.563 INFO (MainThread) [supervisor.resolution.checks.base] Run check for multiple_data_disks/system[0m
+[32m2025-09-21 16:50:56.564 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_ipv6_error/dns_server[0m
+[32m2025-09-21 16:50:56.565 INFO (MainThread) [supervisor.resolution.checks.base] Run check for trust/supervisor[0m
+[32m2025-09-21 16:50:56.576 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disabled_data_disk/system[0m
+[32m2025-09-21 16:50:56.577 INFO (MainThread) [supervisor.resolution.checks.base] Run check for security/core[0m
+[32m2025-09-21 16:50:56.577 INFO (MainThread) [supervisor.resolution.checks.base] Run check for dns_server_failed/dns_server[0m
+[32m2025-09-21 16:50:56.578 INFO (MainThread) [supervisor.resolution.checks.base] Run check for disk_lifetime/system[0m
+[32m2025-09-21 16:50:56.585 INFO (MainThread) [supervisor.resolution.check] System checks complete[0m
+[32m2025-09-21 16:50:56.585 INFO (MainThread) [supervisor.resolution.evaluate] Starting system evaluation with state running[0m
+[32m2025-09-21 16:50:56.683 INFO (MainThread) [supervisor.resolution.evaluate] System evaluation complete[0m
+[32m2025-09-21 16:50:56.683 INFO (MainThread) [supervisor.resolution.fixup] Starting system autofix at state running[0m
+[32m2025-09-21 16:50:56.683 INFO (MainThread) [supervisor.resolution.fixup] System autofix complete[0m
+[32m2025-09-21 16:54:16.999 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:54:16.001 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:54:16.006 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:54:16.093 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 16:59:16.115 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 16:59:16.119 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 16:59:16.120 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 16:59:16.126 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 16:59:16.201 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 17:04:16.225 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 17:04:16.227 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 17:04:16.231 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 17:04:16.338 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 17:09:16.353 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 17:09:16.354 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 17:09:16.357 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 17:09:16.454 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 17:12:05.283 INFO (MainThread) [supervisor.host.info] Updating local host information[0m
+[32m2025-09-21 17:12:05.721 INFO (MainThread) [supervisor.host.services] Updating service information[0m
+[32m2025-09-21 17:12:05.727 INFO (MainThread) [supervisor.host.network] Updating local network information[0m
+[32m2025-09-21 17:12:06.099 INFO (MainThread) [supervisor.host.sound] Updating PulseAudio information[0m
+[32m2025-09-21 17:12:06.105 INFO (MainThread) [supervisor.host.manager] Host information reload completed[0m
+[32m2025-09-21 17:13:41.802 INFO (MainThread) [supervisor.plugins.dns] Restarting CoreDNS plugin[0m
+[32m2025-09-21 17:13:41.809 INFO (SyncWorker_6) [supervisor.docker.manager] Restarting hassio_dns[0m
+[32m2025-09-21 17:13:43.654 INFO (MainThread) [supervisor.plugins.dns] Restarting CoreDNS plugin[0m
+[32m2025-09-21 17:13:43.658 INFO (SyncWorker_2) [supervisor.docker.manager] Restarting hassio_dns[0m
+[32m2025-09-21 17:14:16.477 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 17:14:16.478 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 17:14:16.482 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 17:14:16.599 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 17:19:16.620 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 17:19:16.621 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 17:19:16.624 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 17:19:16.732 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 17:24:16.876 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 17:24:16.877 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 17:24:16.905 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 17:24:17.131 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 17:29:17.146 INFO (MainThread) [supervisor.homeassistant.api] Updated Home Assistant API token[0m
+[32m2025-09-21 17:29:17.148 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 17:29:17.149 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 17:29:17.152 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 17:29:17.222 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 17:34:17.249 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 17:34:17.251 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 17:34:17.255 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 17:34:17.377 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 17:39:17.392 INFO (MainThread) [supervisor.api.proxy] Home Assistant WebSocket API request initialize[0m
+[32m2025-09-21 17:39:17.393 INFO (MainThread) [supervisor.api.proxy] WebSocket access from core_speech-to-phrase[0m
+[32m2025-09-21 17:39:17.396 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API proxy running[0m
+[32m2025-09-21 17:39:17.491 INFO (MainThread) [supervisor.api.proxy] [core_speech-to-phrase] Home Assistant WebSocket API closed[0m
+[32m2025-09-21 17:40:35.186 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/5c53de3b repository from https://github.com/esphome/home-assistant-addon[0m
+[32m2025-09-21 17:40:35.187 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/a0d7b954 repository from https://github.com/hassio-addons/repository[0m
+[32m2025-09-21 17:40:35.188 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/core repository from https://github.com/home-assistant/addons[0m
+[32m2025-09-21 17:40:35.198 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/00c5fb9c repository from https://github.com/damianflynn/snapcast-multiout[0m
+[32m2025-09-21 17:40:35.198 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/cb646a50 repository from https://github.com/hacs/addons[0m
+[32m2025-09-21 17:40:35.259 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/d5369777 repository from https://github.com/music-assistant/home-assistant-addon[0m
+[32m2025-09-21 17:40:36.284 INFO (MainThread) [supervisor.store] Loading add-ons from store: 85 all - 0 new - 0 remove[0m
+[32m2025-09-21 17:40:43.552 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/core repository from https://github.com/home-assistant/addons[0m
+[32m2025-09-21 17:40:43.553 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/5c53de3b repository from https://github.com/esphome/home-assistant-addon[0m
+[32m2025-09-21 17:40:43.561 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/d5369777 repository from https://github.com/music-assistant/home-assistant-addon[0m
+[32m2025-09-21 17:40:43.561 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/a0d7b954 repository from https://github.com/hassio-addons/repository[0m
+[32m2025-09-21 17:40:43.567 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/cb646a50 repository from https://github.com/hacs/addons[0m
+[32m2025-09-21 17:40:43.568 INFO (MainThread) [supervisor.store.git] Update add-on /data/addons/git/00c5fb9c repository from https://github.com/damianflynn/snapcast-multiout[0m
+[32m2025-09-21 17:41:03.725 INFO (MainThread) [supervisor.docker.addon] Updating image 00c5fb9c/amd64-addon-snapcast-multiout:0.31.0-8 to 00c5fb9c/amd64-addon-snapcast-multiout:0.31.0-9[0m
+[31m2025-09-21 17:41:03.732 CRITICAL (MainThread) [supervisor.utils.common] Can't parse /data/addons/git/00c5fb9c/addons/snapcast-multiout/build.yaml: does not match regular expression ^([a-zA-Z\-\.:\d{}]+/)*?([\-\w{}]+)/([\-\w{}]+)(:[\.\-\w{}]+)?$ for dictionary value @ data['build_from']['aarch64']. Got 'alpine:3.19'
+does not match regular expression ^([a-zA-Z\-\.:\d{}]+/)*?([\-\w{}]+)/([\-\w{}]+)(:[\.\-\w{}]+)?$ for dictionary value @ data['build_from']['amd64']. Got 'alpine:3.19'[0m
+[33m2025-09-21 17:41:03.743 WARNING (MainThread) [supervisor.utils.common] Resetting /data/addons/git/00c5fb9c/addons/snapcast-multiout/build.yaml to default[0m
+[32m2025-09-21 17:41:03.747 INFO (MainThread) [supervisor.docker.addon] Starting build for 00c5fb9c/amd64-addon-snapcast-multiout:0.31.0-9[0m
+[32m2025-09-21 17:41:03.755 INFO (SyncWorker_4) [supervisor.docker.manager] Runing command '['docker', 'buildx', 'build', '.', '--tag', '00c5fb9c/amd64-addon-snapcast-multiout:0.31.0-9', '--file', 'Dockerfile', '--platform', 'linux/amd64', '--pull', '--label', 'io.hass.version=0.31.0-9', '--label', 'io.hass.arch=amd64', '--label', 'io.hass.type=addon', '--label', 'io.hass.name=Snapcast Multi-Output', '--label', 'io.hass.description=Snapserver + dynamic Snapclients for multi-output USB audio with Music Assistant', '--label', 'io.hass.url=https://github.com/damianflynn/snapcast-multiout', '--build-arg', 'BUILD_FROM=ghcr.io/home-assistant/amd64-base:latest', '--build-arg', 'BUILD_VERSION=0.31.0-9', '--build-arg', 'BUILD_ARCH=amd64']' on docker.io/library/docker:28.3.3-cli[0m
