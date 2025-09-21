@@ -1,258 +1,3 @@
-2025-09-21 19-38-04.591 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 100, muted: 0
-2025-09-21 19-38-04.591 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
-2025-09-21 19-38-04.591 [Info] (Player) Player name: alsa, device: hw:1,0, description: <none>, idx: -1, sharing mode: unspecified, parameters: <none>
-2025-09-21 19-38-04.591 [Info] (Player) Mixer mode: software, parameters: <none>
-2025-09-21 19-38-04.591 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
-2025-09-21 19-38-04.591 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
-2025-09-21 19-38-04.592 [Error] (Snapclient) PCM device "hw:1,0" not found
-2025-09-21 19-38-04.592 [Info] (Snapclient) Version 0.32.4
-ALSA lib confmisc.c:165:(snd_config_get_card) Cannot get card index for 1
-2025-09-21 19-38-04.592 [Error] (Alsa) Exception: Can't open hw:1,0, error: No such file or directory, code: -2
-2025-09-21 19-38-04.592 [Error] (StreamSessionTCP) Error reading message header of length 0: End of file
-2025-09-21 19-38-04.592 [Info] (StreamServer) onDisconnect: f4:4d:30:63:b5:ae
-2025-09-21 19-38-04.592 [Fatal] (Snapclient) Exception: Can't open hw:1,0, error: No such file or directory
-2025-09-21 19-38-04.592 [Notice] (Snapclient) Snapclient terminated.
-2025-09-21 19-38-04.592 [Error] (StreamSessionTCP) Error in socket shutdown: Socket not connected
-/run.sh: line 20: BUILD_VERSION: unbound variable
-[INFO] =================================================
-[INFO] Snapcast Multi-Output addon starting...
-[INFO] Addon Version: unknown
-[INFO] Addon Git Version: 0.31.0-20 (Fix BUILD_VERSION error and add version tracking)
-[INFO] Configuration file: /data/options.json
-[INFO] =================================================
-[INFO] Detecting USB audio devices...
-[DEBUG] === CONTAINER DEVICE ANALYSIS ===
-[DEBUG] /dev/snd/ contents:
-total 0
-drwxr-xr-x  4 root root     360 Sep 21 17:07 .
-drwxr-xr-x 19 root root    3400 Sep 21 17:07 ..
-drwxr-xr-x  2 root root      60 Sep 21 17:07 by-id
-drwxr-xr-x  2 root root     120 Sep 21 17:07 by-path
-crw-rw----  1 root   29 116,  8 Sep 21 17:07 controlC0
-crw-rw----  1 root   29 116,  7 Sep 21 17:07 controlC1
-crw-rw----  1 root   29 116, 13 Sep 21 17:07 controlC2
-crw-rw----  1 root   29 116,  4 Sep 21 17:07 hwC0D0
-crw-rw----  1 root   29 116, 12 Sep 21 17:07 hwC2D0
-crw-rw----  1 root   29 116,  3 Sep 21 17:07 pcmC0D0c
-crw-rw----  1 root   29 116,  2 Sep 21 17:07 pcmC0D0p
-crw-rw----  1 root   29 116,  6 Sep 21 17:07 pcmC1D0c
-crw-rw----  1 root   29 116,  5 Sep 21 17:07 pcmC1D0p
-crw-rw----  1 root   29 116,  9 Sep 21 17:07 pcmC2D3p
-crw-rw----  1 root   29 116, 10 Sep 21 17:07 pcmC2D7p
-crw-rw----  1 root   29 116, 11 Sep 21 17:07 pcmC2D8p
-crw-rw----  1 root   29 116,  1 Sep 21 17:07 seq
-crw-rw----  1 root   29 116, 33 Sep 21 17:07 timer
-[DEBUG] Sound card directories:
-total 0
-drwxr-xr-x  2 root root 0 Sep 21 17:07 .
-drwxr-xr-x 69 root root 0 Sep 21 17:07 ..
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 card0 -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 card1 -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 card2 -> ../../devices/pci0000:00/0000:00:03.0/sound/card2
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 controlC0 -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/controlC0
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 controlC1 -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1/controlC1
-lrwxrwxrwx  1 root root 0 Sep 21 19:19 controlC2 -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/controlC2
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 hwC0D0 -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/hwC0D0
-lrwxrwxrwx  1 root root 0 Sep 21 19:19 hwC2D0 -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/hwC2D0
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC0D0c -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D0c
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC0D0p -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D0p
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC1D0c -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1/pcmC1D0c
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC1D0p -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1/pcmC1D0p
-lrwxrwxrwx  1 root root 0 Sep 21 19:19 pcmC2D3p -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/pcmC2D3p
-lrwxrwxrwx  1 root root 0 Sep 21 19:19 pcmC2D7p -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/pcmC2D7p
-lrwxrwxrwx  1 root root 0 Sep 21 19:19 pcmC2D8p -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/pcmC2D8p
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 seq -> ../../devices/virtual/sound/seq
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 timer -> ../../devices/virtual/sound/timer
-[DEBUG] Checking each card for details:
-[DEBUG] === CARD 0 ===
-[DEBUG] Card 0 uevent:
-DRIVER=snd_hda_intel
-PCI_CLASS=40300
-PCI_ID=8086:9CA0
-PCI_SUBSYS_ID=8086:2058
-PCI_SLOT_NAME=0000:00:1b.0
-MODALIAS=pci:v00008086d00009CA0sv00008086sd00002058bc04sc03i00
-[DEBUG] Card 0 PCM devices:
-crw-rw---- 1 root 29 116, 3 Sep 21 17:07 /dev/snd/pcmC0D0c
-crw-rw---- 1 root 29 116, 2 Sep 21 17:07 /dev/snd/pcmC0D0p
-[DEBUG] === CARD 1 ===
-[DEBUG] Card 1 uevent:
-DEVTYPE=usb_interface
-DRIVER=snd-usb-audio
-PRODUCT=41e/324d/106
-TYPE=0/0/0
-INTERFACE=1/1/0
-MODALIAS=usb:v041Ep324Dd0106dc00dsc00dp00ic01isc01ip00in00
-[DEBUG] Card 1 PCM devices:
-crw-rw---- 1 root 29 116, 6 Sep 21 17:07 /dev/snd/pcmC1D0c
-crw-rw---- 1 root 29 116, 5 Sep 21 17:07 /dev/snd/pcmC1D0p
-[DEBUG] === CARD 2 ===
-[DEBUG] Card 2 uevent:
-DRIVER=snd_hda_intel
-PCI_CLASS=40300
-PCI_ID=8086:160C
-PCI_SUBSYS_ID=8086:2058
-PCI_SLOT_NAME=0000:00:03.0
-MODALIAS=pci:v00008086d0000160Csv00008086sd00002058bc04sc03i00
-[DEBUG] Card 2 PCM devices:
-crw-rw---- 1 root 29 116,  9 Sep 21 17:07 /dev/snd/pcmC2D3p
-crw-rw---- 1 root 29 116, 10 Sep 21 17:07 /dev/snd/pcmC2D7p
-crw-rw---- 1 root 29 116, 11 Sep 21 17:07 /dev/snd/pcmC2D8p
-[DEBUG] === END ANALYSIS ===
-[DEBUG] Checking card 0...
-/dev/snd/pcmC0D0p
-[DEBUG] Card 0 has playback devices
-[DEBUG] Checking card 1...
-/dev/snd/pcmC1D0p
-[DEBUG] Card 1 has playback devices
-[INFO] Found USB audio device: card 1
-[DEBUG] Available PCM devices for card 1:
-crw-rw---- 1 root 29 116, 6 Sep 21 17:07 /dev/snd/pcmC1D0c
-crw-rw---- 1 root 29 116, 5 Sep 21 17:07 /dev/snd/pcmC1D0p
-[DEBUG] Checking card 2...
-/dev/snd/pcmC2D3p
-/dev/snd/pcmC2D7p
-/dev/snd/pcmC2D8p
-[DEBUG] Card 2 has playback devices
-[INFO] Will use USB audio card 1
-[INFO] Found playback device: hw:1,0
-[INFO] Will use USB audio device: hw:1,0
-[INFO] Snapcast Multi-Output addon starting...
-[INFO] Configuration file: /data/options.json
-[INFO] ----- USB Audio Devices -----
-Bus 001 Device 002: ID 041e:324d Creative Technology Ltd Sound Blaster Play! 3
-[INFO] ----- ALSA devices (cards) -----
-No ALSA cards found - audio subsystem may not be available
-[INFO] ----- ALSA PCMs (playback) -----
-null
-    Discard all samples (playback) or generate zero samples (capture)
-samplerate
-    Rate Converter Plugin Using Samplerate Library
-speexrate
-    Rate Converter Plugin Using Speex Resampler
-oss
-    Open Sound System
-upmix
-    Plugin for channel upmix (4,6,8)
-vdownmix
-    Plugin for channel downmix (stereo) with a simple spacialization
-default
-    Default ALSA Output (Home Assistant PulseAudio Sound Server)
-[INFO] ----- Hardware detection -----
-total 0
-drwxr-xr-x  4 root root     360 Sep 21 17:07 .
-drwxr-xr-x 19 root root    3400 Sep 21 17:07 ..
-drwxr-xr-x  2 root root      60 Sep 21 17:07 by-id
-drwxr-xr-x  2 root root     120 Sep 21 17:07 by-path
-crw-rw----  1 root   29 116,  8 Sep 21 17:07 controlC0
-crw-rw----  1 root   29 116,  7 Sep 21 17:07 controlC1
-crw-rw----  1 root   29 116, 13 Sep 21 17:07 controlC2
-crw-rw----  1 root   29 116,  4 Sep 21 17:07 hwC0D0
-crw-rw----  1 root   29 116, 12 Sep 21 17:07 hwC2D0
-crw-rw----  1 root   29 116,  3 Sep 21 17:07 pcmC0D0c
-crw-rw----  1 root   29 116,  2 Sep 21 17:07 pcmC0D0p
-crw-rw----  1 root   29 116,  6 Sep 21 17:07 pcmC1D0c
-crw-rw----  1 root   29 116,  5 Sep 21 17:07 pcmC1D0p
-crw-rw----  1 root   29 116,  9 Sep 21 17:07 pcmC2D3p
-crw-rw----  1 root   29 116, 10 Sep 21 17:07 pcmC2D7p
-crw-rw----  1 root   29 116, 11 Sep 21 17:07 pcmC2D8p
-crw-rw----  1 root   29 116,  1 Sep 21 17:07 seq
-crw-rw----  1 root   29 116, 33 Sep 21 17:07 timer
-[INFO] ----- System audio modules -----
-snd_hda_codec_hdmi     81920  1 
-snd_hda_codec_realtek   204800  1 
-snd_hda_codec_generic    98304  1 snd_hda_codec_realtek
-snd_hda_scodec_component    12288  1 snd_hda_codec_realtek
-snd_usb_audio         462848  4 
-snd_hda_intel          49152  2 
-snd_intel_dspcfg       32768  1 snd_hda_intel
-snd_hda_codec         180224  4 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel
-snd_usbmidi_lib        40960  1 snd_usb_audio
-snd_hwdep              12288  2 snd_usb_audio,snd_hda_codec
-snd_hda_core          131072  5 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel,snd_hda_codec
-snd_rawmidi            45056  1 snd_usbmidi_lib
-snd_pcm               172032  7 snd_hda_codec_hdmi,snd_usb_audio,snd_hda_intel,snd_hda_codec,snd_hda_core
-[INFO] Writing snapserver.conf...
-[INFO] Generating snapserver configuration...
-[INFO] Config file: /etc/snapserver.conf
-[INFO] Reading stream configurations from /data/options.json...
-[INFO] Adding stream: kitchen
-[INFO] Adding stream: sitting_room
-[INFO] Configuration generated successfully
-[INFO] Snapserver config:
-[http]
-enabled = true
-doc_root = /usr/share/snapserver/snapweb
-[stream.kitchen]
-source = pipe:///tmp/kitchen?name=Kitchen&codec=flac&sampleformat=48000:16:2
-[stream.sitting_room]
-source = pipe:///tmp/sitting_room?name=Sitting_room&codec=flac&sampleformat=48000:16:2
-[INFO] Starting snapserver...
-[INFO] Snapserver started with PID: 65
-2025-09-21 20-03-55.640 [Info] (Snapserver) Version 0.32.4
-2025-09-21 20-03-55.640 [Info] (Snapserver) Stream plugin directory: '"/usr/share/snapserver/plug-ins"', sandbox directory: '"/usr/share/snapserver/sandbox"'
-2025-09-21 20-03-55.642 [Error] (Avahi) Failed to create client: Daemon not running
-2025-09-21 20-03-55.642 [Info] (Snapserver) Using HTTP host name: 00c5fb9c-snapcast-multiout
-2025-09-21 20-03-55.646 [Info] (PcmStream) PcmStream: default, sampleFormat: 48000:16:2
-2025-09-21 20-03-55.646 [Info] (PipeStream) PipeStream mode: create
-2025-09-21 20-03-55.646 [Info] (Server) Stream: {"fragment":"","host":"","path":"/tmp/snapfifo","query":{"chunk_ms":"20","codec":"flac","name":"default","sampleformat":"48000:16:2"},"raw":"pipe:///tmp/snapfifo?chunk_ms=20&codec=flac&name=default&sampleformat=48000%3A16%3A2","scheme":"pipe"}
-2025-09-21 20-03-55.646 [Info] (FlacEnc) Init - compression level: 2
-2025-09-21 20-03-55.646 [Info] (ControlServer) Creating TCP acceptor for address: ::, port: 1705
-2025-09-21 20-03-55.646 [Info] (ControlServer) Creating HTTP acceptor for address: ::, port: 1780
-2025-09-21 20-03-55.646 [Info] (StreamServer) Creating stream acceptor for address: ::, port: 1704
-2025-09-21 20-03-55.646 [Info] (Snapserver) Number of threads: 4, hw threads: 4
-2025-09-21 20-03-55.647 [Error] (AsioStream) Error reading message: End of file, length: 0, ec: asio.misc:2
-[INFO] Configuring 2 audio streams...
-[INFO] Overriding device 'default' with detected USB device: hw:1,0
-[INFO] Starting snapclient 1: stream='kitchen' device='hw:1,0'
-[INFO] Snapclient 1 started with PID: 75
-2025-09-21 20-03-57.660 [Warn] (Snapclient) Options '--host' and '--port' are deprecated. Please add the server URI as last command line argument
-[INFO] Overriding device 'default' with detected USB device: hw:1,0
-[INFO] Starting snapclient 2: stream='sitting_room' device='hw:1,0'
-2025-09-21 20-03-57.664 [Error] (Snapclient) PCM device "hw:1,0" not found
-[INFO] Snapclient 2 started with PID: 78
-2025-09-21 20-03-57.664 [Info] (Snapclient) Version 0.32.4
-[INFO] All processes started successfully
-[INFO] Server PID: 65
-[INFO] Client PIDs: 75 78
-[INFO] Addon running, monitoring processes...
-2025-09-21 20-03-57.668 [Info] (Connection) Resolving host IP for: 127.0.0.1
-2025-09-21 20-03-57.668 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
-2025-09-21 20-03-57.668 [Notice] (Connection) Connected to 127.0.0.1
-2025-09-21 20-03-57.668 [Notice] (StreamServer) StreamServer::NewConnection: ::ffff:127.0.0.1
-2025-09-21 20-03-57.668 [Info] (Connection) My MAC: "f4:4d:30:63:b5:ae", socket: 7
-2025-09-21 20-03-57.670 [Warn] (Snapclient) Options '--host' and '--port' are deprecated. Please add the server URI as last command line argument
-2025-09-21 20-03-57.672 [Info] (Server) Hello from f4:4d:30:63:b5:ae, host: 00c5fb9c-snapcast-multiout, v0.32.4, ClientName: Snapclient, OS: Alpine Linux v3.19, Arch: x86_64, Protocol version: 2, Auth: {"param":"","scheme":""}
-2025-09-21 20-03-57.674 [Error] (Snapclient) PCM device "hw:1,0" not found
-2025-09-21 20-03-57.674 [Info] (Snapclient) Version 0.32.4
-2025-09-21 20-03-57.675 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 100, muted: 0
-2025-09-21 20-03-57.675 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
-2025-09-21 20-03-57.675 [Info] (Player) Player name: alsa, device: hw:1,0, description: <none>, idx: -1, sharing mode: unspecified, parameters: <none>
-2025-09-21 20-03-57.675 [Info] (Player) Mixer mode: software, parameters: <none>
-2025-09-21 20-03-57.675 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
-2025-09-21 20-03-57.675 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
-ALSA lib confmisc.c:165:(snd_config_get_card) Cannot get card index for 1
-2025-09-21 20-03-57.676 [Error] (Alsa) Exception: Can't open hw:1,0, error: No such file or directory, code: -2
-2025-09-21 20-03-57.677 [Error] (StreamSessionTCP) Error reading message header of length 0: End of file
-2025-09-21 20-03-57.677 [Fatal] (Snapclient) Exception: Can't open hw:1,0, error: No such file or directory
-2025-09-21 20-03-57.677 [Notice] (Snapclient) Snapclient terminated.
-2025-09-21 20-03-57.677 [Info] (StreamServer) onDisconnect: f4:4d:30:63:b5:ae
-2025-09-21 20-03-57.678 [Error] (StreamSessionTCP) Error in socket shutdown: Socket not connected
-[INFO] =================================================
-[INFO] Snapcast Multi-Output addon starting...
-[INFO] Addon Version: unknown
-[INFO] Addon Git Version: 0.31.0-21 (Test ALSA accessibility and use fallback devices)
-[INFO] Configuration file: /data/options.json
-[INFO] =================================================
-/run.sh: line 167: syntax error near unexpected token `fi'
-[INFO] =================================================
-[INFO] Snapcast Multi-Output addon starting...
-[INFO] Addon Version: unknown
-[INFO] Addon Git Version: 0.31.0-21 (Test ALSA accessibility and use fallback devices)
-[INFO] Configuration file: /data/options.json
-[INFO] =================================================
-/run.sh: line 167: syntax error near unexpected token `fi'
-[INFO] =================================================
 [INFO] Snapcast Multi-Output addon starting...
 [INFO] Addon Version: unknown
 [INFO] Addon Git Version: 0.31.0-21 (Test ALSA accessibility and use fallback devices)
@@ -498,3 +243,258 @@ ALSA lib dlmisc.c:339:(snd_dlobj_cache_get0) Cannot open shared library libasoun
 2025-09-21 20-12-26.943 [Fatal] (Snapclient) Exception: Can't open default, error: No such device or address
 2025-09-21 20-12-26.943 [Notice] (Snapclient) Snapclient terminated.
 2025-09-21 20-12-26.943 [Error] (StreamSessionTCP) Error in socket shutdown: Socket not connected
+[INFO] =================================================
+[INFO] Snapcast Multi-Output addon starting...
+[INFO] Addon Version: unknown
+[INFO] Addon Git Version: 0.31.0-23 (Add PulseAudio ALSA plugin support)
+[INFO] Configuration file: /data/options.json
+[INFO] =================================================
+[INFO] Detecting USB audio devices...
+[DEBUG] === CONTAINER DEVICE ANALYSIS ===
+[DEBUG] /dev/snd/ contents:
+total 0
+drwxr-xr-x  4 root root     360 Sep 21 17:07 .
+drwxr-xr-x 19 root root    3400 Sep 21 17:07 ..
+drwxr-xr-x  2 root root      60 Sep 21 17:07 by-id
+drwxr-xr-x  2 root root     120 Sep 21 17:07 by-path
+crw-rw----  1 root   29 116,  8 Sep 21 17:07 controlC0
+crw-rw----  1 root   29 116,  7 Sep 21 17:07 controlC1
+crw-rw----  1 root   29 116, 13 Sep 21 17:07 controlC2
+crw-rw----  1 root   29 116,  4 Sep 21 17:07 hwC0D0
+crw-rw----  1 root   29 116, 12 Sep 21 17:07 hwC2D0
+crw-rw----  1 root   29 116,  3 Sep 21 17:07 pcmC0D0c
+crw-rw----  1 root   29 116,  2 Sep 21 17:07 pcmC0D0p
+crw-rw----  1 root   29 116,  6 Sep 21 17:07 pcmC1D0c
+crw-rw----  1 root   29 116,  5 Sep 21 17:07 pcmC1D0p
+crw-rw----  1 root   29 116,  9 Sep 21 17:07 pcmC2D3p
+crw-rw----  1 root   29 116, 10 Sep 21 17:07 pcmC2D7p
+crw-rw----  1 root   29 116, 11 Sep 21 17:07 pcmC2D8p
+crw-rw----  1 root   29 116,  1 Sep 21 17:07 seq
+crw-rw----  1 root   29 116, 33 Sep 21 17:07 timer
+[DEBUG] Sound card directories:
+total 0
+drwxr-xr-x  2 root root 0 Sep 21 17:07 .
+drwxr-xr-x 69 root root 0 Sep 21 17:07 ..
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 card0 -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 card1 -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 card2 -> ../../devices/pci0000:00/0000:00:03.0/sound/card2
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 controlC0 -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/controlC0
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 controlC1 -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1/controlC1
+lrwxrwxrwx  1 root root 0 Sep 21 19:19 controlC2 -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/controlC2
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 hwC0D0 -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/hwC0D0
+lrwxrwxrwx  1 root root 0 Sep 21 19:19 hwC2D0 -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/hwC2D0
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC0D0c -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D0c
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC0D0p -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D0p
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC1D0c -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1/pcmC1D0c
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC1D0p -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1/pcmC1D0p
+lrwxrwxrwx  1 root root 0 Sep 21 19:19 pcmC2D3p -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/pcmC2D3p
+lrwxrwxrwx  1 root root 0 Sep 21 19:19 pcmC2D7p -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/pcmC2D7p
+lrwxrwxrwx  1 root root 0 Sep 21 19:19 pcmC2D8p -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/pcmC2D8p
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 seq -> ../../devices/virtual/sound/seq
+lrwxrwxrwx  1 root root 0 Sep 21 17:07 timer -> ../../devices/virtual/sound/timer
+[DEBUG] Checking each card for details:
+[DEBUG] === CARD 0 ===
+[DEBUG] Card 0 uevent:
+DRIVER=snd_hda_intel
+PCI_CLASS=40300
+PCI_ID=8086:9CA0
+PCI_SUBSYS_ID=8086:2058
+PCI_SLOT_NAME=0000:00:1b.0
+MODALIAS=pci:v00008086d00009CA0sv00008086sd00002058bc04sc03i00
+[DEBUG] Card 0 PCM devices:
+crw-rw---- 1 root 29 116, 3 Sep 21 17:07 /dev/snd/pcmC0D0c
+crw-rw---- 1 root 29 116, 2 Sep 21 17:07 /dev/snd/pcmC0D0p
+[DEBUG] === CARD 1 ===
+[DEBUG] Card 1 uevent:
+DEVTYPE=usb_interface
+DRIVER=snd-usb-audio
+PRODUCT=41e/324d/106
+TYPE=0/0/0
+INTERFACE=1/1/0
+MODALIAS=usb:v041Ep324Dd0106dc00dsc00dp00ic01isc01ip00in00
+[DEBUG] Card 1 PCM devices:
+crw-rw---- 1 root 29 116, 6 Sep 21 17:07 /dev/snd/pcmC1D0c
+crw-rw---- 1 root 29 116, 5 Sep 21 17:07 /dev/snd/pcmC1D0p
+[DEBUG] === CARD 2 ===
+[DEBUG] Card 2 uevent:
+DRIVER=snd_hda_intel
+PCI_CLASS=40300
+PCI_ID=8086:160C
+PCI_SUBSYS_ID=8086:2058
+PCI_SLOT_NAME=0000:00:03.0
+MODALIAS=pci:v00008086d0000160Csv00008086sd00002058bc04sc03i00
+[DEBUG] Card 2 PCM devices:
+crw-rw---- 1 root 29 116,  9 Sep 21 17:07 /dev/snd/pcmC2D3p
+crw-rw---- 1 root 29 116, 10 Sep 21 17:07 /dev/snd/pcmC2D7p
+crw-rw---- 1 root 29 116, 11 Sep 21 17:07 /dev/snd/pcmC2D8p
+[DEBUG] === END ANALYSIS ===
+[DEBUG] Checking card 0...
+/dev/snd/pcmC0D0p
+[DEBUG] Card 0 has playback devices
+[DEBUG] Checking card 1...
+/dev/snd/pcmC1D0p
+[DEBUG] Card 1 has playback devices
+[INFO] Found USB audio device: card 1
+[DEBUG] Available PCM devices for card 1:
+crw-rw---- 1 root 29 116, 6 Sep 21 17:07 /dev/snd/pcmC1D0c
+crw-rw---- 1 root 29 116, 5 Sep 21 17:07 /dev/snd/pcmC1D0p
+[DEBUG] Checking card 2...
+/dev/snd/pcmC2D3p
+/dev/snd/pcmC2D7p
+/dev/snd/pcmC2D8p
+[DEBUG] Card 2 has playback devices
+[INFO] Found USB audio card 1, testing ALSA accessibility...
+[INFO] Found USB playback device: hw:1,0
+[DEBUG] Testing ALSA accessibility for hw:1,0
+[DEBUG] ALSA cannot access hw:1,0
+[WARN] USB card 1 found but ALSA cannot access it. Trying fallback devices...
+[INFO] Trying card 2 devices as fallback...
+[INFO] Testing fallback device: hw:2,3
+[DEBUG] Testing ALSA accessibility for hw:2,3
+[DEBUG] ALSA cannot access hw:2,3
+[DEBUG] Fallback device hw:2,3 not accessible
+[INFO] Testing fallback device: hw:2,7
+[DEBUG] Testing ALSA accessibility for hw:2,7
+[DEBUG] ALSA cannot access hw:2,7
+[DEBUG] Fallback device hw:2,7 not accessible
+[INFO] Testing fallback device: hw:2,8
+[DEBUG] Testing ALSA accessibility for hw:2,8
+[DEBUG] ALSA cannot access hw:2,8
+[DEBUG] Fallback device hw:2,8 not accessible
+[INFO] Trying card 0 as last resort...
+[DEBUG] Testing ALSA accessibility for hw:0,0
+[DEBUG] ALSA cannot access hw:0,0
+[ERROR] No accessible audio devices found, will use default configuration
+[INFO] Snapcast Multi-Output addon starting...
+[INFO] Configuration file: /data/options.json
+[INFO] ----- USB Audio Devices -----
+Bus 001 Device 002: ID 041e:324d Creative Technology Ltd Sound Blaster Play! 3
+[INFO] ----- ALSA devices (cards) -----
+No ALSA cards found - audio subsystem may not be available
+[INFO] ----- ALSA PCMs (playback) -----
+null
+    Discard all samples (playback) or generate zero samples (capture)
+samplerate
+    Rate Converter Plugin Using Samplerate Library
+speexrate
+    Rate Converter Plugin Using Speex Resampler
+oss
+    Open Sound System
+pulse
+    PulseAudio Sound Server
+upmix
+    Plugin for channel upmix (4,6,8)
+vdownmix
+    Plugin for channel downmix (stereo) with a simple spacialization
+default
+    Default ALSA Output (Home Assistant PulseAudio Sound Server)
+[INFO] ----- Hardware detection -----
+total 0
+drwxr-xr-x  4 root root     360 Sep 21 17:07 .
+drwxr-xr-x 19 root root    3400 Sep 21 17:07 ..
+drwxr-xr-x  2 root root      60 Sep 21 17:07 by-id
+drwxr-xr-x  2 root root     120 Sep 21 17:07 by-path
+crw-rw----  1 root   29 116,  8 Sep 21 17:07 controlC0
+crw-rw----  1 root   29 116,  7 Sep 21 17:07 controlC1
+crw-rw----  1 root   29 116, 13 Sep 21 17:07 controlC2
+crw-rw----  1 root   29 116,  4 Sep 21 17:07 hwC0D0
+crw-rw----  1 root   29 116, 12 Sep 21 17:07 hwC2D0
+crw-rw----  1 root   29 116,  3 Sep 21 17:07 pcmC0D0c
+crw-rw----  1 root   29 116,  2 Sep 21 17:07 pcmC0D0p
+crw-rw----  1 root   29 116,  6 Sep 21 17:07 pcmC1D0c
+crw-rw----  1 root   29 116,  5 Sep 21 17:07 pcmC1D0p
+crw-rw----  1 root   29 116,  9 Sep 21 17:07 pcmC2D3p
+crw-rw----  1 root   29 116, 10 Sep 21 17:07 pcmC2D7p
+crw-rw----  1 root   29 116, 11 Sep 21 17:07 pcmC2D8p
+crw-rw----  1 root   29 116,  1 Sep 21 17:07 seq
+crw-rw----  1 root   29 116, 33 Sep 21 17:07 timer
+[INFO] ----- System audio modules -----
+snd_hda_codec_hdmi     81920  1 
+snd_hda_codec_realtek   204800  1 
+snd_hda_codec_generic    98304  1 snd_hda_codec_realtek
+snd_hda_scodec_component    12288  1 snd_hda_codec_realtek
+snd_usb_audio         462848  4 
+snd_hda_intel          49152  2 
+snd_intel_dspcfg       32768  1 snd_hda_intel
+snd_hda_codec         180224  4 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel
+snd_usbmidi_lib        40960  1 snd_usb_audio
+snd_hwdep              12288  2 snd_usb_audio,snd_hda_codec
+snd_hda_core          131072  5 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel,snd_hda_codec
+snd_rawmidi            45056  1 snd_usbmidi_lib
+snd_pcm               172032  7 snd_hda_codec_hdmi,snd_usb_audio,snd_hda_intel,snd_hda_codec,snd_hda_core
+[INFO] Writing snapserver.conf...
+[INFO] Generating snapserver configuration...
+[INFO] Config file: /etc/snapserver.conf
+[INFO] Reading stream configurations from /data/options.json...
+[INFO] Adding stream: kitchen
+[INFO] Adding stream: sitting_room
+[INFO] Configuration generated successfully
+[INFO] Snapserver config:
+[http]
+enabled = true
+doc_root = /usr/share/snapserver/snapweb
+[stream.kitchen]
+source = pipe:///tmp/kitchen?name=Kitchen&codec=flac&sampleformat=48000:16:2
+[stream.sitting_room]
+source = pipe:///tmp/sitting_room?name=Sitting_room&codec=flac&sampleformat=48000:16:2
+[INFO] Starting snapserver...
+[INFO] Snapserver started with PID: 90
+2025-09-21 21-18-22.007 [Info] (Snapserver) Version 0.32.4
+2025-09-21 21-18-22.008 [Info] (Snapserver) Stream plugin directory: '"/usr/share/snapserver/plug-ins"', sandbox directory: '"/usr/share/snapserver/sandbox"'
+2025-09-21 21-18-22.009 [Error] (Avahi) Failed to create client: Daemon not running
+2025-09-21 21-18-22.009 [Info] (Snapserver) Using HTTP host name: 00c5fb9c-snapcast-multiout
+2025-09-21 21-18-22.014 [Info] (PcmStream) PcmStream: default, sampleFormat: 48000:16:2
+2025-09-21 21-18-22.014 [Info] (PipeStream) PipeStream mode: create
+2025-09-21 21-18-22.015 [Info] (Server) Stream: {"fragment":"","host":"","path":"/tmp/snapfifo","query":{"chunk_ms":"20","codec":"flac","name":"default","sampleformat":"48000:16:2"},"raw":"pipe:///tmp/snapfifo?chunk_ms=20&codec=flac&name=default&sampleformat=48000%3A16%3A2","scheme":"pipe"}
+2025-09-21 21-18-22.015 [Info] (FlacEnc) Init - compression level: 2
+2025-09-21 21-18-22.015 [Info] (ControlServer) Creating TCP acceptor for address: ::, port: 1705
+2025-09-21 21-18-22.015 [Info] (ControlServer) Creating HTTP acceptor for address: ::, port: 1780
+2025-09-21 21-18-22.015 [Info] (StreamServer) Creating stream acceptor for address: ::, port: 1704
+2025-09-21 21-18-22.015 [Info] (Snapserver) Number of threads: 4, hw threads: 4
+2025-09-21 21-18-22.016 [Error] (AsioStream) Error reading message: End of file, length: 0, ec: asio.misc:2
+[INFO] Configuring 2 audio streams...
+[INFO] Starting snapclient 1: stream='kitchen' device='default'
+[INFO] Snapclient 1 started with PID: 100
+2025-09-21 21-18-24.023 [Warn] (Snapclient) Options '--host' and '--port' are deprecated. Please add the server URI as last command line argument
+[INFO] Starting snapclient 2: stream='sitting_room' device='default'
+[INFO] Snapclient 2 started with PID: 103
+[INFO] All processes started successfully
+[INFO] Server PID: 90
+[INFO] Client PIDs: 100 103
+[INFO] Addon running, monitoring processes...
+2025-09-21 21-18-24.028 [Info] (Snapclient) Version 0.32.4
+2025-09-21 21-18-24.033 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-21 21-18-24.033 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-21 21-18-24.033 [Warn] (Snapclient) Options '--host' and '--port' are deprecated. Please add the server URI as last command line argument
+2025-09-21 21-18-24.034 [Notice] (Connection) Connected to 127.0.0.1
+2025-09-21 21-18-24.034 [Info] (Connection) My MAC: "f4:4d:30:63:b5:ae", socket: 7
+2025-09-21 21-18-24.034 [Notice] (StreamServer) StreamServer::NewConnection: ::ffff:127.0.0.1
+2025-09-21 21-18-24.036 [Info] (Server) Hello from f4:4d:30:63:b5:ae, host: 00c5fb9c-snapcast-multiout, v0.32.4, ClientName: Snapclient, OS: Alpine Linux v3.19, Arch: x86_64, Protocol version: 2, Auth: {"param":"","scheme":""}
+2025-09-21 21-18-24.038 [Info] (Snapclient) Version 0.32.4
+2025-09-21 21-18-24.039 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 100, muted: 0
+2025-09-21 21-18-24.039 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-21 21-18-24.039 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-21 21-18-24.039 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-21 21-18-24.039 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-21 21-18-24.039 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-21 21-18-24.044 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-21 21-18-24.044 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-21 21-18-24.044 [Notice] (StreamServer) StreamServer::NewConnection: ::ffff:127.0.0.1
+2025-09-21 21-18-24.044 [Notice] (Connection) Connected to 127.0.0.1
+2025-09-21 21-18-24.044 [Info] (Connection) My MAC: "f4:4d:30:63:b5:ae", socket: 7
+2025-09-21 21-18-24.047 [Info] (Server) Hello from f4:4d:30:63:b5:ae#2, host: 00c5fb9c-snapcast-multiout, v0.32.4, ClientName: Snapclient, OS: Alpine Linux v3.19, Arch: x86_64, Protocol version: 2, Auth: {"param":"","scheme":""}
+2025-09-21 21-18-24.048 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 100, muted: 0
+2025-09-21 21-18-24.048 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-21 21-18-24.048 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-21 21-18-24.048 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-21 21-18-24.048 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-21 21-18-24.048 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-21 21-18-24.049 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-21 21-18-24.050 [Info] (Stream) No chunks available
+2025-09-21 21-18-24.053 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-21 21-18-24.053 [Info] (Stream) No chunks available
+2025-09-21 21-18-24.053 [Info] (Alsa) Failed to get chunk
+2025-09-21 21-18-24.110 [Info] (Controller) diff to server [ms]: 0.004
+2025-09-21 21-18-24.113 [Info] (Controller) diff to server [ms]: 0.004
+2025-09-21 21-18-29.056 [Notice] (Alsa) No chunk received for 5000ms. Closing ALSA.
+2025-09-21 21-18-29.060 [Notice] (Alsa) No chunk received for 5000ms. Closing ALSA.

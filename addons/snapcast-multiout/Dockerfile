@@ -30,6 +30,10 @@ RUN mkdir build && cd build && \
     make -j1 snapserver snapclient && \
     make install
 
+# Install snapweb files
+RUN mkdir -p /usr/share/snapserver/snapweb && \
+    cp -r /snapcast/server/snapweb/* /usr/share/snapserver/snapweb/
+
 # Clean up
 WORKDIR /
 RUN rm -rf /snapcast

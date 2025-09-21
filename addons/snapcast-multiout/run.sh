@@ -24,7 +24,7 @@ fi
 echo "[INFO] ================================================="
 echo "[INFO] Snapcast Multi-Output addon starting..."
 echo "[INFO] Addon Version: $ADDON_VERSION"
-echo "[INFO] Addon Git Version: 0.31.0-23 (Add PulseAudio ALSA plugin support)"
+echo "[INFO] Addon Git Version: 0.31.0-25 (Add Web UI button and fix snapweb files)"
 echo "[INFO] Configuration file: $OPTS"
 echo "[INFO] ================================================="
 
