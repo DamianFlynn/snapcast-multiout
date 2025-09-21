@@ -1,7 +1,24 @@
 [INFO] Snapcast Multi-Output addon starting...
 [INFO] Configuration file: /data/options.json
+[INFO] ----- Detecting USB Audio Devices -----
+[INFO] Found USB audio device: card 2
+[INFO] Configuring ALSA to use USB audio card 2
+/run.sh: line 38: /etc/asound.conf: Read-only file system
+[INFO] Snapcast Multi-Output addon starting...
+[INFO] Configuration file: /data/options.json
+[INFO] ----- Detecting USB Audio Devices -----
+[INFO] Found USB audio device: card 1
+[INFO] Configuring ALSA to use USB audio card 1
+/run.sh: line 38: /etc/asound.conf: Read-only file system
+[INFO] Snapcast Multi-Output addon starting...
+[INFO] Configuration file: /data/options.json
+[INFO] ----- Detecting USB Audio Devices -----
+[INFO] Found USB audio device: card 1
+[INFO] Will use USB audio card 1 (configured in asound.conf)
+[INFO] Snapcast Multi-Output addon starting...
+[INFO] Configuration file: /data/options.json
 [INFO] ----- USB Audio Devices -----
-No USB audio devices found
+Bus 001 Device 002: ID 041e:324d Creative Technology Ltd Sound Blaster Play! 3
 [INFO] ----- ALSA devices (cards) -----
 No ALSA cards found - audio subsystem may not be available
 [INFO] ----- ALSA PCMs (playback) -----
@@ -21,38 +38,38 @@ default
     Default ALSA Output (Home Assistant PulseAudio Sound Server)
 [INFO] ----- Hardware detection -----
 total 0
-drwxr-xr-x  4 root root     360 Sep 19 16:15 .
-drwxr-xr-x 19 root root    3400 Sep 19 16:15 ..
-drwxr-xr-x  2 root root      60 Sep 19 16:15 by-id
-drwxr-xr-x  2 root root     120 Sep 19 16:15 by-path
-crw-rw----  1 root   29 116,  5 Sep 10 07:49 controlC0
-crw-rw----  1 root   29 116, 10 Sep 10 07:49 controlC1
-crw-rw----  1 root   29 116, 13 Sep 19 16:15 controlC2
-crw-rw----  1 root   29 116,  4 Sep 10 07:49 hwC0D0
-crw-rw----  1 root   29 116,  9 Sep 10 07:49 hwC1D0
-crw-rw----  1 root   29 116,  3 Sep 10 07:49 pcmC0D0c
-crw-rw----  1 root   29 116,  2 Sep 10 07:49 pcmC0D0p
-crw-rw----  1 root   29 116,  6 Sep 10 07:49 pcmC1D3p
-crw-rw----  1 root   29 116,  7 Sep 10 07:49 pcmC1D7p
-crw-rw----  1 root   29 116,  8 Sep 10 07:49 pcmC1D8p
-crw-rw----  1 root   29 116, 12 Sep 19 16:15 pcmC2D0c
-crw-rw----  1 root   29 116, 11 Sep 19 16:15 pcmC2D0p
-crw-rw----  1 root   29 116,  1 Sep 10 07:49 seq
-crw-rw----  1 root   29 116, 33 Sep 10 07:49 timer
+drwxr-xr-x  4 root root     360 Sep 21 17:07 .
+drwxr-xr-x 19 root root    3400 Sep 21 17:07 ..
+drwxr-xr-x  2 root root      60 Sep 21 17:07 by-id
+drwxr-xr-x  2 root root     120 Sep 21 17:07 by-path
+crw-rw----  1 root   29 116,  8 Sep 21 17:07 controlC0
+crw-rw----  1 root   29 116,  7 Sep 21 17:07 controlC1
+crw-rw----  1 root   29 116, 13 Sep 21 17:07 controlC2
+crw-rw----  1 root   29 116,  4 Sep 21 17:07 hwC0D0
+crw-rw----  1 root   29 116, 12 Sep 21 17:07 hwC2D0
+crw-rw----  1 root   29 116,  3 Sep 21 17:07 pcmC0D0c
+crw-rw----  1 root   29 116,  2 Sep 21 17:07 pcmC0D0p
+crw-rw----  1 root   29 116,  6 Sep 21 17:07 pcmC1D0c
+crw-rw----  1 root   29 116,  5 Sep 21 17:07 pcmC1D0p
+crw-rw----  1 root   29 116,  9 Sep 21 17:07 pcmC2D3p
+crw-rw----  1 root   29 116, 10 Sep 21 17:07 pcmC2D7p
+crw-rw----  1 root   29 116, 11 Sep 21 17:07 pcmC2D8p
+crw-rw----  1 root   29 116,  1 Sep 21 17:07 seq
+crw-rw----  1 root   29 116, 33 Sep 21 17:07 timer
 [INFO] ----- System audio modules -----
-snd_usb_audio         462848  4 
-snd_usbmidi_lib        40960  1 snd_usb_audio
-snd_rawmidi            45056  1 snd_usbmidi_lib
 snd_hda_codec_hdmi     81920  1 
 snd_hda_codec_realtek   204800  1 
 snd_hda_codec_generic    98304  1 snd_hda_codec_realtek
 snd_hda_scodec_component    12288  1 snd_hda_codec_realtek
+snd_usb_audio         462848  4 
 snd_hda_intel          49152  2 
 snd_intel_dspcfg       32768  1 snd_hda_intel
 snd_hda_codec         180224  4 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel
+snd_usbmidi_lib        40960  1 snd_usb_audio
 snd_hwdep              12288  2 snd_usb_audio,snd_hda_codec
 snd_hda_core          131072  5 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel,snd_hda_codec
-snd_pcm               172032  7 snd_usb_audio,snd_hda_codec_hdmi,snd_hda_intel,snd_hda_codec,snd_hda_core
+snd_rawmidi            45056  1 snd_usbmidi_lib
+snd_pcm               172032  7 snd_hda_codec_hdmi,snd_usb_audio,snd_hda_intel,snd_hda_codec,snd_hda_core
 [INFO] Writing snapserver.conf...
 [INFO] Generating snapserver configuration...
 [INFO] Config file: /etc/snapserver.conf
@@ -69,55 +86,53 @@ source = pipe:///tmp/kitchen?name=Kitchen&codec=flac&sampleformat=48000:16:2
 [stream.sitting_room]
 source = pipe:///tmp/sitting_room?name=Sitting_room&codec=flac&sampleformat=48000:16:2
 [INFO] Starting snapserver...
-[INFO] Snapserver started with PID: 28
-2025-09-21 10-38-27.639 [Info] (Snapserver) Version 0.32.4
-2025-09-21 10-38-27.639 [Info] (Snapserver) Stream plugin directory: '"/usr/share/snapserver/plug-ins"', sandbox directory: '"/usr/share/snapserver/sandbox"'
-2025-09-21 10-38-27.641 [Error] (Avahi) Failed to create client: Daemon not running
-2025-09-21 10-38-27.641 [Info] (Snapserver) Using HTTP host name: 00c5fb9c-snapcast-multiout
-2025-09-21 10-38-27.654 [Info] (PcmStream) PcmStream: default, sampleFormat: 48000:16:2
-2025-09-21 10-38-27.654 [Info] (PipeStream) PipeStream mode: create
-2025-09-21 10-38-27.654 [Info] (Server) Stream: {"fragment":"","host":"","path":"/tmp/snapfifo","query":{"chunk_ms":"20","codec":"flac","name":"default","sampleformat":"48000:16:2"},"raw":"pipe:///tmp/snapfifo?chunk_ms=20&codec=flac&name=default&sampleformat=48000%3A16%3A2","scheme":"pipe"}
-2025-09-21 10-38-27.655 [Info] (FlacEnc) Init - compression level: 2
-2025-09-21 10-38-27.655 [Info] (ControlServer) Creating TCP acceptor for address: ::, port: 1705
-2025-09-21 10-38-27.655 [Info] (ControlServer) Creating HTTP acceptor for address: ::, port: 1780
-2025-09-21 10-38-27.655 [Info] (StreamServer) Creating stream acceptor for address: ::, port: 1704
-2025-09-21 10-38-27.655 [Info] (Snapserver) Number of threads: 4, hw threads: 4
-2025-09-21 10-38-27.656 [Error] (AsioStream) Error reading message: End of file, length: 0, ec: asio.misc:2
+[INFO] Snapserver started with PID: 40
+2025-09-21 18-05-37.522 [Info] (Snapserver) Version 0.32.4
+2025-09-21 18-05-37.522 [Info] (Snapserver) Stream plugin directory: '"/usr/share/snapserver/plug-ins"', sandbox directory: '"/usr/share/snapserver/sandbox"'
+2025-09-21 18-05-37.524 [Error] (Avahi) Failed to create client: Daemon not running
+2025-09-21 18-05-37.524 [Info] (Snapserver) Using HTTP host name: 00c5fb9c-snapcast-multiout
+2025-09-21 18-05-37.528 [Info] (PcmStream) PcmStream: default, sampleFormat: 48000:16:2
+2025-09-21 18-05-37.528 [Info] (PipeStream) PipeStream mode: create
+2025-09-21 18-05-37.528 [Info] (Server) Stream: {"fragment":"","host":"","path":"/tmp/snapfifo","query":{"chunk_ms":"20","codec":"flac","name":"default","sampleformat":"48000:16:2"},"raw":"pipe:///tmp/snapfifo?chunk_ms=20&codec=flac&name=default&sampleformat=48000%3A16%3A2","scheme":"pipe"}
+2025-09-21 18-05-37.529 [Info] (FlacEnc) Init - compression level: 2
+2025-09-21 18-05-37.529 [Info] (ControlServer) Creating TCP acceptor for address: ::, port: 1705
+2025-09-21 18-05-37.529 [Info] (ControlServer) Creating HTTP acceptor for address: ::, port: 1780
+2025-09-21 18-05-37.529 [Info] (StreamServer) Creating stream acceptor for address: ::, port: 1704
+2025-09-21 18-05-37.529 [Info] (Snapserver) Number of threads: 4, hw threads: 4
+2025-09-21 18-05-37.529 [Error] (AsioStream) Error reading message: End of file, length: 0, ec: asio.misc:2
 [INFO] Configuring 2 audio streams...
-[INFO] Starting snapclient 1: stream='kitchen' device='default'
-[INFO] Snapclient 1 started with PID: 38
-2025-09-21 10-38-29.657 [Warn] (Snapclient) Options '--host' and '--port' are deprecated. Please add the server URI as last command line argument
-[INFO] Starting snapclient 2: stream='sitting_room' device='default'
-2025-09-21 10-38-29.663 [Info] (Snapclient) Version 0.32.4
-[INFO] Snapclient 2 started with PID: 41
+[INFO] Overriding device 'default' with detected USB device: hw:1,0
+[INFO] Starting snapclient 1: stream='kitchen' device='hw:1,0'
+[INFO] Snapclient 1 started with PID: 50
+2025-09-21 18-05-39.543 [Warn] (Snapclient) Options '--host' and '--port' are deprecated. Please add the server URI as last command line argument
+[INFO] Overriding device 'default' with detected USB device: hw:1,0
+[INFO] Starting snapclient 2: stream='sitting_room' device='hw:1,0'
+[INFO] Snapclient 2 started with PID: 53
 [INFO] All processes started successfully
-[INFO] Server PID: 28
-[INFO] Client PIDs: 38 41
+[INFO] Server PID: 40
+[INFO] Client PIDs: 50 53
 [INFO] Addon running, monitoring processes...
-2025-09-21 10-38-29.667 [Info] (Connection) Resolving host IP for: 127.0.0.1
-2025-09-21 10-38-29.667 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
-2025-09-21 10-38-29.667 [Notice] (Connection) Connected to 127.0.0.1
-2025-09-21 10-38-29.667 [Info] (Connection) My MAC: "f4:4d:30:63:b5:ae", socket: 7
-2025-09-21 10-38-29.667 [Notice] (StreamServer) StreamServer::NewConnection: ::ffff:127.0.0.1
-2025-09-21 10-38-29.669 [Warn] (Snapclient) Options '--host' and '--port' are deprecated. Please add the server URI as last command line argument
-2025-09-21 10-38-29.671 [Info] (Server) Hello from f4:4d:30:63:b5:ae, host: 00c5fb9c-snapcast-multiout, v0.32.4, ClientName: Snapclient, OS: Alpine Linux v3.19, Arch: x86_64, Protocol version: 2, Auth: {"param":"","scheme":""}
-2025-09-21 10-38-29.673 [Info] (Snapclient) Version 0.32.4
-2025-09-21 10-38-29.673 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 100, muted: 0
-2025-09-21 10-38-29.673 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
-2025-09-21 10-38-29.673 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 6, sharing mode: unspecified, parameters: <none>
-2025-09-21 10-38-29.673 [Info] (Player) Mixer mode: software, parameters: <none>
-2025-09-21 10-38-29.673 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
-2025-09-21 10-38-29.673 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
-ALSA lib dlmisc.c:339:(snd_dlobj_cache_get0) Cannot open shared library libasound_module_pcm_pulse.so (Error loading shared library /usr/lib/alsa-lib/libasound_module_pcm_pulse.so: No such file or directory)
-2025-09-21 10-38-29.674 [Error] (Alsa) Exception: Can't open default, error: No such device or address, code: -6
-2025-09-21 10-38-29.675 [Error] (StreamSessionTCP) Error reading message header of length 0: End of file
-2025-09-21 10-38-29.675 [Info] (StreamServer) onDisconnect: f4:4d:30:63:b5:ae
-2025-09-21 10-38-29.675 [Fatal] (Snapclient) Exception: Can't open default, error: No such device or address
-2025-09-21 10-38-29.675 [Notice] (Snapclient) Snapclient terminated.
-2025-09-21 10-38-29.675 [Error] (StreamSessionTCP) Error in socket shutdown: Socket not connected
-[INFO] Snapcast Multi-Output addon starting...
-[INFO] Configuration file: /data/options.json
-[INFO] ----- Detecting USB Audio Devices -----
-[INFO] Found USB audio device: card 2
-[INFO] Configuring ALSA to use USB audio card 2
-/run.sh: line 38: /etc/asound.conf: Read-only file system
+2025-09-21 18-05-39.549 [Error] (Snapclient) PCM device "hw:1,0" not found
+2025-09-21 18-05-39.549 [Info] (Snapclient) Version 0.32.4
+2025-09-21 18-05-39.553 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-21 18-05-39.553 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-21 18-05-39.553 [Notice] (Connection) Connected to 127.0.0.1
+2025-09-21 18-05-39.553 [Info] (Connection) My MAC: "f4:4d:30:63:b5:ae", socket: 7
+2025-09-21 18-05-39.553 [Notice] (StreamServer) StreamServer::NewConnection: ::ffff:127.0.0.1
+2025-09-21 18-05-39.554 [Warn] (Snapclient) Options '--host' and '--port' are deprecated. Please add the server URI as last command line argument
+2025-09-21 18-05-39.557 [Info] (Server) Hello from f4:4d:30:63:b5:ae, host: 00c5fb9c-snapcast-multiout, v0.32.4, ClientName: Snapclient, OS: Alpine Linux v3.19, Arch: x86_64, Protocol version: 2, Auth: {"param":"","scheme":""}
+2025-09-21 18-05-39.559 [Error] (Snapclient) PCM device "hw:1,0" not found
+2025-09-21 18-05-39.559 [Info] (Snapclient) Version 0.32.4
+2025-09-21 18-05-39.559 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 100, muted: 0
+2025-09-21 18-05-39.559 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-21 18-05-39.559 [Info] (Player) Player name: alsa, device: hw:1,0, description: <none>, idx: -1, sharing mode: unspecified, parameters: <none>
+2025-09-21 18-05-39.559 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-21 18-05-39.559 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-21 18-05-39.559 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+ALSA lib confmisc.c:165:(snd_config_get_card) Cannot get card index for 1
+2025-09-21 18-05-39.560 [Error] (Alsa) Exception: Can't open hw:1,0, error: No such file or directory, code: -2
+2025-09-21 18-05-39.560 [Error] (StreamSessionTCP) Error reading message header of length 0: End of file
+2025-09-21 18-05-39.561 [Info] (StreamServer) onDisconnect: f4:4d:30:63:b5:ae
+2025-09-21 18-05-39.561 [Fatal] (Snapclient) Exception: Can't open hw:1,0, error: No such file or directory
+2025-09-21 18-05-39.561 [Notice] (Snapclient) Snapclient terminated.
+2025-09-21 18-05-39.561 [Error] (StreamSessionTCP) Error in socket shutdown: Socket not connected

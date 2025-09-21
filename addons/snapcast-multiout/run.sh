@@ -20,24 +20,55 @@ detect_and_configure_audio() {
   for control in /dev/snd/controlC*; do
     if [ -e "$control" ]; then
       CARD_NUM=$(basename "$control" | sed 's/controlC//')
-      # Check if this is a USB audio device
-      if [ -f "/sys/class/sound/card$CARD_NUM/device/uevent" ]; then
-        if grep -q "usb" "/sys/class/sound/card$CARD_NUM/device/uevent" 2>/dev/null; then
-          USB_AUDIO_CARDS+=("$CARD_NUM")
-          echo "[INFO] Found USB audio device: card $CARD_NUM"
+      echo "[DEBUG] Checking card $CARD_NUM..."
+      
+      # Check if this card has playback devices
+      if ls /dev/snd/pcmC${CARD_NUM}D*p 2>/dev/null; then
+        echo "[DEBUG] Card $CARD_NUM has playback devices"
+        
+        # Check if this is a USB audio device
+        if [ -f "/sys/class/sound/card$CARD_NUM/device/uevent" ]; then
+          if grep -q "usb" "/sys/class/sound/card$CARD_NUM/device/uevent" 2>/dev/null; then
+            USB_AUDIO_CARDS+=("$CARD_NUM")
+            echo "[INFO] Found USB audio device: card $CARD_NUM"
+            
+            # List available PCM devices for this card
+            echo "[DEBUG] Available PCM devices for card $CARD_NUM:"
+            ls -la /dev/snd/pcmC${CARD_NUM}D* 2>/dev/null || echo "[DEBUG] No PCM devices found"
+          fi
         fi
+      else
+        echo "[DEBUG] Card $CARD_NUM has no playback devices"
       fi
     fi
   done
   
-  # Report the USB audio device found
+  # Report the USB audio device found and determine the correct device
   if [ ${#USB_AUDIO_CARDS[@]} -gt 0 ]; then
     USB_CARD=${USB_AUDIO_CARDS[0]}
-    echo "[INFO] Will use USB audio card $USB_CARD (configured in asound.conf)"
-    export DETECTED_USB_CARD="$USB_CARD"
+    echo "[INFO] Will use USB audio card $USB_CARD"
+    
+    # Find the first available playback device for this card
+    PCM_DEVICE=""
+    for pcm in /dev/snd/pcmC${USB_CARD}D*p; do
+      if [ -e "$pcm" ]; then
+        DEVICE_NUM=$(basename "$pcm" | sed 's/pcmC'${USB_CARD}'D\([0-9]*\)p/\1/')
+        PCM_DEVICE="hw:$USB_CARD,$DEVICE_NUM"
+        echo "[INFO] Found playback device: $PCM_DEVICE"
+        break
+      fi
+    done
+    
+    if [ -n "$PCM_DEVICE" ]; then
+      export DETECTED_USB_DEVICE="$PCM_DEVICE"
+      echo "[INFO] Will use USB audio device: $DETECTED_USB_DEVICE"
+    else
+      echo "[WARN] USB card $USB_CARD found but no playback devices available"
+      export DETECTED_USB_DEVICE=""
+    fi
   else
     echo "[WARN] No USB audio devices found, will use default configuration"
-    export DETECTED_USB_CARD=""
+    export DETECTED_USB_DEVICE=""
   fi
 }
 
@@ -78,8 +109,8 @@ for i in $(seq 0 $((COUNT-1))); do
   DEV=$(jq -r ".streams[$i].device" "$OPTS")
   
   # If we detected a USB audio device and the config uses default, override with USB device
-  if [ -n "$DETECTED_USB_CARD" ] && [ "$DEV" = "default" ]; then
-    DEV="hw:$DETECTED_USB_CARD,0"
+  if [ -n "$DETECTED_USB_DEVICE" ] && [ "$DEV" = "default" ]; then
+    DEV="$DETECTED_USB_DEVICE"
     echo "[INFO] Overriding device 'default' with detected USB device: $DEV"
   fi
   
