@@ -13,14 +13,19 @@ enabled = true
 doc_root = /usr/share/snapserver/snapweb
 bind_to_address = 0.0.0.0
 port = 1780
+
+[tcp]
+enabled = true
+bind_to_address = 0.0.0.0
+port = 1705
 EOF
 
 echo "[INFO] Reading stream configurations from /data/options.json..."
 STREAM_COUNT=0
 jq -r '.streams[].name' /data/options.json | while read -r name; do
   echo "[INFO] Adding stream: $name"
-  # Create a proper display name by capitalizing first letter
-  display_name="$(echo "${name:0:1}" | tr '[:lower:]' '[:upper:]')${name:1}"
+  # Create a proper display name by capitalizing and replacing underscores
+  display_name="$(echo "$name" | sed 's/_/ /g' | sed 's/\b\(.\)/\u\1/g')"
   cat >> "$TMP" <<EOF
 [stream.${name}]
 source = pipe:///tmp/${name}?name=${display_name}&codec=flac&sampleformat=48000:16:2

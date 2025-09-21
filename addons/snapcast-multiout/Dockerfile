@@ -50,7 +50,7 @@ RUN echo "Building snapweb interface..." && \
     npm run build && \
     echo "Snapweb build completed"
 
-# Install snapweb files
+# Install snapweb files and patch for ingress compatibility
 RUN mkdir -p /usr/share/snapserver/snapweb && \
     if [ -d "/snapweb/dist" ]; then \
         echo "Installing built snapweb from /snapweb/dist" && \
@@ -63,7 +63,9 @@ RUN mkdir -p /usr/share/snapserver/snapweb && \
         cp -r /snapweb/* /usr/share/snapserver/snapweb/; \
     else \
         echo "No snapweb found, using custom interface"; \
-    fi
+    fi && \
+    echo "Patching snapweb for Home Assistant ingress compatibility" && \
+    find /usr/share/snapserver/snapweb -name "*.html" -exec sed -i 's|</head>|<script>!function(){if(window.location.pathname.includes("/hassio/ingress/")){window.addEventListener("load",function(){setTimeout(function(){if(window.config){const u=window.location.pathname.replace(/\/$/,"");window.config.baseUrl=(window.location.protocol==="https:"?"wss://":"ws://")+window.location.host+u;console.log("Set snapweb baseUrl for ingress:",window.config.baseUrl)}},500)})}}();</script></head>|' {} \;
 
 # Clean up
 WORKDIR /
