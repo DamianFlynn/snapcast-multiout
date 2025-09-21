@@ -19,9 +19,11 @@ echo "[INFO] Reading stream configurations from /data/options.json..."
 STREAM_COUNT=0
 jq -r '.streams[].name' /data/options.json | while read -r name; do
   echo "[INFO] Adding stream: $name"
+  # Create a proper display name by capitalizing first letter
+  display_name="$(echo "${name:0:1}" | tr '[:lower:]' '[:upper:]')${name:1}"
   cat >> "$TMP" <<EOF
 [stream.${name}]
-source = pipe:///tmp/${name}?name=${name^}&codec=flac&sampleformat=48000:16:2
+source = pipe:///tmp/${name}?name=${display_name}&codec=flac&sampleformat=48000:16:2
 EOF
   STREAM_COUNT=$((STREAM_COUNT + 1))
 done
