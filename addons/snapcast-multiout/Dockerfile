@@ -1,5 +1,5 @@
 
-# Use Home Assistant base image
+# Use the base image specified in build.yaml
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
