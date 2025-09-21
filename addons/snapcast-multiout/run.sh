@@ -8,8 +8,14 @@ exec 2> >(stdbuf -oL cat >&2)
 OPTS=/data/options.json
 LIST=$(jq -r '.list_devices_on_start' "$OPTS")
 
+# Get version from config.yaml
+ADDON_VERSION=$(grep '^version:' /config.yaml | sed 's/version: *"\?\([^"]*\)"\?.*/\1/' 2>/dev/null || echo "unknown")
+
+echo "[INFO] ================================================="
 echo "[INFO] Snapcast Multi-Output addon starting..."
+echo "[INFO] Addon Version: $ADDON_VERSION"
 echo "[INFO] Configuration file: $OPTS"
+echo "[INFO] ================================================="
 
 # Function to detect USB audio devices and report configuration
 detect_and_configure_audio() {
