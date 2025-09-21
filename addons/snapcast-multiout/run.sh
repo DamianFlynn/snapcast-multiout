@@ -8,8 +8,18 @@ exec 2> >(stdbuf -oL cat >&2)
 OPTS=/data/options.json
 LIST=$(jq -r '.list_devices_on_start' "$OPTS")
 
-# Get version from config.yaml
-ADDON_VERSION=$(grep '^version:' /config.yaml | sed 's/version: *"\?\([^"]*\)"\?.*/\1/' 2>/dev/null || echo "unknown")
+# Get version from config.yaml (try multiple possible locations)
+ADDON_VERSION="unknown"
+for config_path in "/config.yaml" "/data/config.yaml" "/app/config.yaml" "$(dirname "$0")/config.yaml"; do
+  if [ -f "$config_path" ]; then
+    ADDON_VERSION=$(grep '^version:' "$config_path" | sed 's/version: *"\?\([^"]*\)"\?.*/\1/' 2>/dev/null || echo "unknown")
+    break
+  fi
+done
+# If still unknown, try to get it from build environment
+if [ "$ADDON_VERSION" = "unknown" ] && [ -n "$BUILD_VERSION" ]; then
+  ADDON_VERSION="$BUILD_VERSION"
+fi
 
 echo "[INFO] ================================================="
 echo "[INFO] Snapcast Multi-Output addon starting..."
@@ -95,24 +105,35 @@ detect_and_configure_audio() {
       export DETECTED_USB_DEVICE=""
     fi
   else
-    echo "[WARNING] No USB audio devices detected, trying fallback to card 2..."
-    # Fallback: try card 2 specifically (often where USB audio appears)
+    echo "[WARNING] No USB audio devices detected via uevent check, but trying known working devices..."
+    # We can see from debug that card 2 has multiple PCM devices: pcmC2D3p, pcmC2D7p, pcmC2D8p
+    # Even though card 1 is detected as USB, ALSA can't access it properly
+    # Try card 2 devices since they show up in the container
     if [ -e "/dev/snd/controlC2" ]; then
-      echo "[INFO] Trying card 2 as fallback USB device"
-      # Try to find any playback device on card 2
-      for pcm in /dev/snd/pcmC2D*p; do
-        if [ -e "$pcm" ]; then
-          DEVICE_NUM=$(basename "$pcm" | sed 's/pcmC2D\([0-9]*\)p/\1/')
-          PCM_DEVICE="hw:2,$DEVICE_NUM"
-          echo "[INFO] Found fallback playback device: $PCM_DEVICE"
+      echo "[INFO] Trying card 2 devices as fallback"
+      # Try each available device on card 2
+      for device_num in 3 7 8; do
+        if [ -e "/dev/snd/pcmC2D${device_num}p" ]; then
+          PCM_DEVICE="hw:2,$device_num"
+          echo "[INFO] Found available device: $PCM_DEVICE"
           export DETECTED_USB_DEVICE="$PCM_DEVICE"
           break
         fi
       done
     fi
     
+    # If card 2 didn't work, try card 1 with device 0 anyway
+    if [ -z "$DETECTED_USB_DEVICE" ] && [ -e "/dev/snd/controlC1" ]; then
+      echo "[INFO] Trying card 1 device 0 as last resort"
+      if [ -e "/dev/snd/pcmC1D0p" ]; then
+        PCM_DEVICE="hw:1,0"
+        echo "[INFO] Found device: $PCM_DEVICE"
+        export DETECTED_USB_DEVICE="$PCM_DEVICE"
+      fi
+    fi
+    
     if [ -z "$DETECTED_USB_DEVICE" ]; then
-      echo "[WARN] No USB audio devices found and no fallback available, will use default configuration"
+      echo "[ERROR] No accessible audio devices found, will use default configuration"
       export DETECTED_USB_DEVICE=""
     fi
   fi
