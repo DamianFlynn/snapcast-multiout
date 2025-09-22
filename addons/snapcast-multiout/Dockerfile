@@ -46,8 +46,11 @@ RUN echo "=== Checking snapcast directory structure ===" && \
 # Try to build web interface if package.json exists
 RUN echo "Building snapweb interface..." && \
     cd /snapweb && \
-    npm install && \
-    npm run build && \
+    npm config set fetch-retries 5 && \
+    npm config set fetch-retry-mintimeout 20000 && \
+    npm config set fetch-retry-maxtimeout 120000 && \
+    (npm install --prefer-offline || npm install || echo "npm install failed, will use source files") && \
+    (npm run build || echo "npm build failed, will use source files") && \
     echo "Snapweb build completed"
 
 # Install snapweb files and patch for ingress compatibility
