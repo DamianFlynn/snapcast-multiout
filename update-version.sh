@@ -7,7 +7,7 @@ set -euo pipefail
 
 BUILD_NUM=${1:-1}
 TODAY=$(date +%Y.%m.%d)
-NEW_VERSION="${TODAY}.${BUILD_NUM}"
+NEW_VERSION="${TODAY}-${BUILD_NUM}"
 
 echo "Updating version to: $NEW_VERSION"
 
