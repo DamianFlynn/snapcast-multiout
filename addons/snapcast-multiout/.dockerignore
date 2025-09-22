@@ -1,0 +1,15 @@
+# Git files
+.git
+.gitignore
+
+# Documentation
+*.md
+DOCS.md
+CHANGELOG.md
+
+# Development files
+test-*
+*.logs
+
+# Home Assistant specific (keep config.yaml and run.sh)
+# but ignore other development artifacts
