@@ -210,7 +210,8 @@ for i in $(seq 0 $((COUNT-1))); do
   
   echo "[INFO] Starting snapclient $((i+1)): stream='$NAME' device='$DEV'"
   # Run snapclient with explicit logging to stdout/stderr
-  snapclient --host 127.0.0.1 --player alsa --soundcard "$DEV" --instance $((i+1)) 2>&1 &
+  # Use --stream to connect to the specific named stream
+  snapclient --host 127.0.0.1 --player alsa --soundcard "$DEV" --instance $((i+1)) --stream "$NAME" 2>&1 &
   CLIENT_PIDS+=($!)
   echo "[INFO] Snapclient $((i+1)) started with PID: ${CLIENT_PIDS[$i]}"
 done

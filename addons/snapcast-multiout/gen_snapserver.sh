@@ -26,9 +26,12 @@ jq -r '.streams[].name' /data/options.json | while read -r name; do
   echo "[INFO] Adding stream: $name"
   # Create a proper display name by capitalizing and replacing underscores
   display_name="$(echo "$name" | sed 's/_/ /g' | sed 's/\b\(.\)/\u\1/g')"
+  # URL-encode the display name for safe inclusion in query string
+  encoded_display_name=$(jq -rn --arg s "$display_name" '$s|@uri')
+  echo "[INFO] Display name: $display_name"
   cat >> "$TMP" <<EOF
 [stream.${name}]
-source = pipe:///tmp/${name}?name=${display_name}&codec=flac&sampleformat=48000:16:2
+source = pipe:///tmp/${name}?name=${encoded_display_name}&codec=flac&sampleformat=48000:16:2
 EOF
   STREAM_COUNT=$((STREAM_COUNT + 1))
 done
