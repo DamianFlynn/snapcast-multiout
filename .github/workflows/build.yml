@@ -65,7 +65,7 @@ jobs:
           file: ./addons/snapcast-multiout/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ steps.meta.outputs.tags }}-amd64
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             BUILD_FROM=docker.io/library/alpine:3.19
@@ -77,25 +77,7 @@ jobs:
           file: ./addons/snapcast-multiout/Dockerfile
           platforms: linux/arm64
           push: true
-          tags: ${{ steps.meta.outputs.tags }}-aarch64
+          tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: |
             BUILD_FROM=docker.io/library/alpine:3.19
-
-      - name: Create and push multi-arch manifest
-        run: |
-          VERSION=${{ steps.version.outputs.VERSION }}
-          
-          # Create manifest for version tag
-          docker manifest create ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$VERSION \
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$VERSION-amd64 \
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$VERSION-aarch64
-          docker manifest push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$VERSION
-          
-          # Create manifest for latest tag (only on main branch)
-          if [ "${{ github.ref }}" = "refs/heads/main" ]; then
-            docker manifest create ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest \
-              ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$VERSION-amd64 \
-              ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$VERSION-aarch64
-            docker manifest push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-          fi
