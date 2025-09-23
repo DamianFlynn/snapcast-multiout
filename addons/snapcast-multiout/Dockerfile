@@ -3,8 +3,8 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 # Cache buster for Home Assistant rebuilds - change this value to force rebuild
-ENV ADDON_VERSION="2025.09.22-1"
-ENV BUILD_DATE="2025-09-22"
+ENV ADDON_VERSION="2025.09.23-1"
+ENV BUILD_DATE="2025-09-23"
 
 # Install essential packages first
 RUN apk update && apk add --no-cache \
