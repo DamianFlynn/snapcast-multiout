@@ -1,254 +1,7 @@
-2025-09-22 03-53-19.685 [Error] (ControlSessionWS) ControlSessionWebsocket::on_read_ws error: End of file
-2025-09-22 03-55-41.188 [Notice] (ControlServer) New connection from: 172.16.1.1, port: 1780
-2025-09-22 03-55-41.188 [Info] (ControlServer) Removing 1 inactive session(s), active sessions: 2
-[INFO] Received shutdown signal, cleaning up...
-[INFO] Stopping snapserver (PID: 98)...
-[INFO] Stopping snapclients...
-[INFO] Stopping snapclient 1 (PID: 111)...
-[INFO] Stopping snapclient 2 (PID: 114)...
-2025-09-22 09-55-51.842 [Info] (Snapclient) Received signal 15: Terminated
-[INFO] Cleanup complete, exiting
-2025-09-22 09-55-51.842 [Info] (Snapserver) Received signal 15: Terminated
-2025-09-22 09-55-51.842 [Info] (Snapclient) Received signal 15: Terminated
-2025-09-22 09-55-51.842 [Info] (Snapserver) Stopping streamServer
-2025-09-22 09-55-51.842 [Info] (ControlServer) Removing 2 inactive session(s), active sessions: 1
-2025-09-22 09-55-51.843 [Error] (ControlSessionTCP) Error in socket shutdown: Bad file descriptor
-2025-09-22 09-55-51.843 [Info] (Snapserver) done
-2025-09-22 09-55-51.843 [Error] (ControlSessionTCP) Error in socket shutdown: Bad file descriptor
-2025-09-22 09-55-51.844 [Notice] (Snapserver) Snapserver terminated.
 [INFO] =================================================
 [INFO] Snapcast Multi-Output addon starting...
 [INFO] Addon Version: unknown
-[INFO] Addon Git Version: 0.31.0-30 (Use official snapweb from badaix/snapweb repository)
-[INFO] Configuration file: /data/options.json
-[INFO] =================================================
-[INFO] Detecting USB audio devices...
-[DEBUG] === CONTAINER DEVICE ANALYSIS ===
-[DEBUG] /dev/snd/ contents:
-total 0
-drwxr-xr-x  4 root root     360 Sep 21 17:07 .
-drwxr-xr-x 19 root root    3400 Sep 21 17:07 ..
-drwxr-xr-x  2 root root      60 Sep 21 17:07 by-id
-drwxr-xr-x  2 root root     120 Sep 21 17:07 by-path
-crw-rw----  1 root   29 116,  8 Sep 21 17:07 controlC0
-crw-rw----  1 root   29 116,  7 Sep 21 17:07 controlC1
-crw-rw----  1 root   29 116, 13 Sep 21 17:07 controlC2
-crw-rw----  1 root   29 116,  4 Sep 21 17:07 hwC0D0
-crw-rw----  1 root   29 116, 12 Sep 21 17:07 hwC2D0
-crw-rw----  1 root   29 116,  3 Sep 21 17:07 pcmC0D0c
-crw-rw----  1 root   29 116,  2 Sep 21 17:07 pcmC0D0p
-crw-rw----  1 root   29 116,  6 Sep 21 17:07 pcmC1D0c
-crw-rw----  1 root   29 116,  5 Sep 21 17:07 pcmC1D0p
-crw-rw----  1 root   29 116,  9 Sep 21 17:07 pcmC2D3p
-crw-rw----  1 root   29 116, 10 Sep 21 17:07 pcmC2D7p
-crw-rw----  1 root   29 116, 11 Sep 21 17:07 pcmC2D8p
-crw-rw----  1 root   29 116,  1 Sep 21 17:07 seq
-crw-rw----  1 root   29 116, 33 Sep 21 17:07 timer
-[DEBUG] Sound card directories:
-total 0
-drwxr-xr-x  2 root root 0 Sep 21 17:07 .
-drwxr-xr-x 69 root root 0 Sep 21 17:07 ..
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 card0 -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 card1 -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 card2 -> ../../devices/pci0000:00/0000:00:03.0/sound/card2
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 controlC0 -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/controlC0
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 controlC1 -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1/controlC1
-lrwxrwxrwx  1 root root 0 Sep 21 19:19 controlC2 -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/controlC2
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 hwC0D0 -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/hwC0D0
-lrwxrwxrwx  1 root root 0 Sep 21 19:19 hwC2D0 -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/hwC2D0
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC0D0c -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D0c
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC0D0p -> ../../devices/pci0000:00/0000:00:1b.0/sound/card0/pcmC0D0p
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC1D0c -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1/pcmC1D0c
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 pcmC1D0p -> ../../devices/pci0000:00/0000:00:14.0/usb1/1-2/1-2:1.0/sound/card1/pcmC1D0p
-lrwxrwxrwx  1 root root 0 Sep 21 19:19 pcmC2D3p -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/pcmC2D3p
-lrwxrwxrwx  1 root root 0 Sep 21 19:19 pcmC2D7p -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/pcmC2D7p
-lrwxrwxrwx  1 root root 0 Sep 21 19:19 pcmC2D8p -> ../../devices/pci0000:00/0000:00:03.0/sound/card2/pcmC2D8p
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 seq -> ../../devices/virtual/sound/seq
-lrwxrwxrwx  1 root root 0 Sep 21 17:07 timer -> ../../devices/virtual/sound/timer
-[DEBUG] Checking each card for details:
-[DEBUG] === CARD 0 ===
-[DEBUG] Card 0 uevent:
-DRIVER=snd_hda_intel
-PCI_CLASS=40300
-PCI_ID=8086:9CA0
-PCI_SUBSYS_ID=8086:2058
-PCI_SLOT_NAME=0000:00:1b.0
-MODALIAS=pci:v00008086d00009CA0sv00008086sd00002058bc04sc03i00
-[DEBUG] Card 0 PCM devices:
-crw-rw---- 1 root 29 116, 3 Sep 21 17:07 /dev/snd/pcmC0D0c
-crw-rw---- 1 root 29 116, 2 Sep 21 17:07 /dev/snd/pcmC0D0p
-[DEBUG] === CARD 1 ===
-[DEBUG] Card 1 uevent:
-DEVTYPE=usb_interface
-DRIVER=snd-usb-audio
-PRODUCT=41e/324d/106
-TYPE=0/0/0
-INTERFACE=1/1/0
-MODALIAS=usb:v041Ep324Dd0106dc00dsc00dp00ic01isc01ip00in00
-[DEBUG] Card 1 PCM devices:
-crw-rw---- 1 root 29 116, 6 Sep 21 17:07 /dev/snd/pcmC1D0c
-crw-rw---- 1 root 29 116, 5 Sep 21 17:07 /dev/snd/pcmC1D0p
-[DEBUG] === CARD 2 ===
-[DEBUG] Card 2 uevent:
-DRIVER=snd_hda_intel
-PCI_CLASS=40300
-PCI_ID=8086:160C
-PCI_SUBSYS_ID=8086:2058
-PCI_SLOT_NAME=0000:00:03.0
-MODALIAS=pci:v00008086d0000160Csv00008086sd00002058bc04sc03i00
-[DEBUG] Card 2 PCM devices:
-crw-rw---- 1 root 29 116,  9 Sep 21 17:07 /dev/snd/pcmC2D3p
-crw-rw---- 1 root 29 116, 10 Sep 21 17:07 /dev/snd/pcmC2D7p
-crw-rw---- 1 root 29 116, 11 Sep 21 17:07 /dev/snd/pcmC2D8p
-[DEBUG] === END ANALYSIS ===
-[DEBUG] Checking card 0...
-/dev/snd/pcmC0D0p
-[DEBUG] Card 0 has playback devices
-[DEBUG] Checking card 1...
-/dev/snd/pcmC1D0p
-[DEBUG] Card 1 has playback devices
-[INFO] Found USB audio device: card 1
-[DEBUG] Available PCM devices for card 1:
-crw-rw---- 1 root 29 116, 6 Sep 21 17:07 /dev/snd/pcmC1D0c
-crw-rw---- 1 root 29 116, 5 Sep 21 17:07 /dev/snd/pcmC1D0p
-[DEBUG] Checking card 2...
-/dev/snd/pcmC2D3p
-/dev/snd/pcmC2D7p
-/dev/snd/pcmC2D8p
-[DEBUG] Card 2 has playback devices
-[INFO] Found USB audio card 1, testing ALSA accessibility...
-[INFO] Found USB playback device: hw:1,0
-[DEBUG] Testing ALSA accessibility for hw:1,0
-[DEBUG] ALSA cannot access hw:1,0
-[WARN] USB card 1 found but ALSA cannot access it. Trying fallback devices...
-[INFO] Trying card 2 devices as fallback...
-[INFO] Testing fallback device: hw:2,3
-[DEBUG] Testing ALSA accessibility for hw:2,3
-[DEBUG] ALSA cannot access hw:2,3
-[DEBUG] Fallback device hw:2,3 not accessible
-[INFO] Testing fallback device: hw:2,7
-[DEBUG] Testing ALSA accessibility for hw:2,7
-[DEBUG] ALSA cannot access hw:2,7
-[DEBUG] Fallback device hw:2,7 not accessible
-[INFO] Testing fallback device: hw:2,8
-[DEBUG] Testing ALSA accessibility for hw:2,8
-[DEBUG] ALSA cannot access hw:2,8
-[DEBUG] Fallback device hw:2,8 not accessible
-[INFO] Trying card 0 as last resort...
-[DEBUG] Testing ALSA accessibility for hw:0,0
-[DEBUG] ALSA cannot access hw:0,0
-[ERROR] No accessible audio devices found, will use default configuration
-[INFO] Snapcast Multi-Output addon starting...
-[INFO] Configuration file: /data/options.json
-[INFO] ----- USB Audio Devices -----
-Bus 001 Device 002: ID 041e:324d Creative Technology Ltd Sound Blaster Play! 3
-[INFO] ----- ALSA devices (cards) -----
-No ALSA cards found - audio subsystem may not be available
-[INFO] ----- ALSA PCMs (playback) -----
-null
-    Discard all samples (playback) or generate zero samples (capture)
-samplerate
-    Rate Converter Plugin Using Samplerate Library
-speexrate
-    Rate Converter Plugin Using Speex Resampler
-oss
-    Open Sound System
-pulse
-    PulseAudio Sound Server
-upmix
-    Plugin for channel upmix (4,6,8)
-vdownmix
-    Plugin for channel downmix (stereo) with a simple spacialization
-default
-    Default ALSA Output (Home Assistant PulseAudio Sound Server)
-[INFO] ----- Hardware detection -----
-total 0
-drwxr-xr-x  4 root root     360 Sep 21 17:07 .
-drwxr-xr-x 19 root root    3400 Sep 21 17:07 ..
-drwxr-xr-x  2 root root      60 Sep 21 17:07 by-id
-drwxr-xr-x  2 root root     120 Sep 21 17:07 by-path
-crw-rw----  1 root   29 116,  8 Sep 21 17:07 controlC0
-crw-rw----  1 root   29 116,  7 Sep 21 17:07 controlC1
-crw-rw----  1 root   29 116, 13 Sep 21 17:07 controlC2
-crw-rw----  1 root   29 116,  4 Sep 21 17:07 hwC0D0
-crw-rw----  1 root   29 116, 12 Sep 21 17:07 hwC2D0
-crw-rw----  1 root   29 116,  3 Sep 21 17:07 pcmC0D0c
-crw-rw----  1 root   29 116,  2 Sep 21 17:07 pcmC0D0p
-crw-rw----  1 root   29 116,  6 Sep 21 17:07 pcmC1D0c
-crw-rw----  1 root   29 116,  5 Sep 21 17:07 pcmC1D0p
-crw-rw----  1 root   29 116,  9 Sep 21 17:07 pcmC2D3p
-crw-rw----  1 root   29 116, 10 Sep 21 17:07 pcmC2D7p
-crw-rw----  1 root   29 116, 11 Sep 21 17:07 pcmC2D8p
-crw-rw----  1 root   29 116,  1 Sep 21 17:07 seq
-crw-rw----  1 root   29 116, 33 Sep 21 17:07 timer
-[INFO] ----- System audio modules -----
-snd_hda_codec_hdmi     81920  1 
-snd_hda_codec_realtek   204800  1 
-snd_hda_codec_generic    98304  1 snd_hda_codec_realtek
-snd_hda_scodec_component    12288  1 snd_hda_codec_realtek
-snd_usb_audio         462848  4 
-snd_hda_intel          49152  2 
-snd_intel_dspcfg       32768  1 snd_hda_intel
-snd_hda_codec         180224  4 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel
-snd_usbmidi_lib        40960  1 snd_usb_audio
-snd_hwdep              12288  2 snd_usb_audio,snd_hda_codec
-snd_hda_core          131072  5 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel,snd_hda_codec
-snd_rawmidi            45056  1 snd_usbmidi_lib
-snd_pcm               172032  7 snd_hda_codec_hdmi,snd_usb_audio,snd_hda_intel,snd_hda_codec,snd_hda_core
-[INFO] Writing snapserver.conf...
-[INFO] Generating snapserver configuration...
-[INFO] Config file: /etc/snapserver.conf
-[INFO] Reading stream configurations from /data/options.json...
-[INFO] Adding stream: kitchen
-[INFO] Display name: Kitchen
-[INFO] Adding stream: sitting_room
-[INFO] Display name: Sitting Room
-[INFO] Configuration generated successfully
-[INFO] Snapserver config:
-[http]
-enabled = true
-doc_root = /usr/share/snapserver/snapweb
-bind_to_address = 0.0.0.0
-port = 1780
-
-[tcp]
-enabled = true
-bind_to_address = 0.0.0.0
-port = 1705
-[stream.kitchen]
-source = pipe:///tmp/kitchen?name=Kitchen&codec=flac&sampleformat=48000:16:2
-[stream.sitting_room]
-source = pipe:///tmp/sitting_room?name=Sitting%20Room&codec=flac&sampleformat=48000:16:2
-[INFO] Starting snapserver...
-[INFO] Snapserver started with PID: 100
-2025-09-22 09-55-52.247 [Info] (Snapserver) Version 0.32.4
-2025-09-22 09-55-52.247 [Info] (Snapserver) Stream plugin directory: '"/usr/share/snapserver/plug-ins"', sandbox directory: '"/usr/share/snapserver/sandbox"'
-2025-09-22 09-55-52.249 [Error] (Avahi) Failed to create client: Daemon not running
-2025-09-22 09-55-52.249 [Info] (Snapserver) Using HTTP host name: 00c5fb9c-snapcast-multiout
-2025-09-22 09-55-52.255 [Info] (PcmStream) PcmStream: default, sampleFormat: 48000:16:2
-2025-09-22 09-55-52.255 [Info] (PipeStream) PipeStream mode: create
-2025-09-22 09-55-52.255 [Info] (Server) Stream: {"fragment":"","host":"","path":"/tmp/snapfifo","query":{"chunk_ms":"20","codec":"flac","name":"default","sampleformat":"48000:16:2"},"raw":"pipe:///tmp/snapfifo?chunk_ms=20&codec=flac&name=default&sampleformat=48000%3A16%3A2","scheme":"pipe"}
-2025-09-22 09-55-52.255 [Info] (FlacEnc) Init - compression level: 2
-2025-09-22 09-55-52.256 [Info] (ControlServer) Creating TCP acceptor for address: 0.0.0.0, port: 1705
-2025-09-22 09-55-52.256 [Info] (ControlServer) Creating HTTP acceptor for address: 0.0.0.0, port: 1780
-2025-09-22 09-55-52.256 [Info] (StreamServer) Creating stream acceptor for address: ::, port: 1704
-2025-09-22 09-55-52.256 [Info] (Snapserver) Number of threads: 4, hw threads: 4
-2025-09-22 09-55-52.256 [Error] (AsioStream) Error reading message: End of file, length: 0, ec: asio.misc:2
-[INFO] Configuring 2 audio streams...
-[INFO] Starting snapclient 1: stream='kitchen' device='default' name='Kitchen'
-[INFO] Snapclient 1 started with PID: 114
-2025-09-22 09-55-54.266 [Fatal] (Snapclient) Exception: Unknown command line argument: '--name'
-2025-09-22 09-55-54.266 [Notice] (Snapclient) Snapclient terminated.
-[INFO] Starting snapclient 2: stream='sitting_room' device='default' name='Sitting Room'
-[INFO] Snapclient 2 started with PID: 121
-[INFO] All processes started successfully
-[INFO] Server PID: 100
-[INFO] Client PIDs: 114 121
-[INFO] Addon running, monitoring processes...
-[INFO] =================================================
-[INFO] Snapcast Multi-Output addon starting...
-[INFO] Addon Version: unknown
-[INFO] Addon Git Version: 0.31.0-35
+[INFO] Addon Git Version: 2025.09.23-3
 [INFO] Configuration file: /data/options.json
 [INFO] =================================================
 [INFO] Detecting USB audio devices...
@@ -448,30 +201,33 @@ source = pipe:///tmp/kitchen?name=ukuiutucuhueun&codec=flac&sampleformat=48000:1
 source = pipe:///tmp/sitting_room?name=usuiututuiunugu uruououm&codec=flac&sampleformat=48000:16:2
 [INFO] Starting snapserver...
 [INFO] Snapserver started with PID: 98
-2025-09-22 10-53-41.714 [Info] (Snapserver) Version 0.32.4
-2025-09-22 10-53-41.715 [Info] (Snapserver) Stream plugin directory: '"/usr/share/snapserver/plug-ins"', sandbox directory: '"/usr/share/snapserver/sandbox"'
-2025-09-22 10-53-41.718 [Error] (Avahi) Failed to create client: Daemon not running
-2025-09-22 10-53-41.720 [Info] (Snapserver) Using HTTP host name: 00c5fb9c-snapcast-multiout
-2025-09-22 10-53-41.743 [Info] (PcmStream) PcmStream: default, sampleFormat: 48000:16:2
-2025-09-22 10-53-41.743 [Info] (PipeStream) PipeStream mode: create
-2025-09-22 10-53-41.743 [Info] (Server) Stream: {"fragment":"","host":"","path":"/tmp/snapfifo","query":{"chunk_ms":"20","codec":"flac","name":"default","sampleformat":"48000:16:2"},"raw":"pipe:///tmp/snapfifo?chunk_ms=20&codec=flac&name=default&sampleformat=48000%3A16%3A2","scheme":"pipe"}
-2025-09-22 10-53-41.744 [Info] (FlacEnc) Init - compression level: 2
-2025-09-22 10-53-41.746 [Info] (ControlServer) Creating TCP acceptor for address: 0.0.0.0, port: 1705
-2025-09-22 10-53-41.749 [Error] (ControlServer) error creating TCP acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
-2025-09-22 10-53-41.749 [Info] (ControlServer) Creating HTTP acceptor for address: 0.0.0.0, port: 1780
-2025-09-22 10-53-41.750 [Error] (ControlServer) error creating HTTP acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
-2025-09-22 10-53-41.751 [Info] (StreamServer) Creating stream acceptor for address: ::, port: 1704
-2025-09-22 10-53-41.753 [Error] (StreamServer) error creating TCP acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
-2025-09-22 10-53-41.753 [Info] (Snapserver) Number of threads: 4, hw threads: 4
-2025-09-22 10-53-41.753 [Error] (AsioStream) Error reading message: End of file, length: 0, ec: asio.misc:2
+2025-09-23 07-43-03.031 [Warn] (Snapserver) Option 'tcp.enabled' is deprecated: use 'tcp-control.enabled'
+2025-09-23 07-43-03.031 [Warn] (Snapserver) Option 'tcp.port' is deprecated: use 'tcp-control.port'
+2025-09-23 07-43-03.031 [Warn] (Snapserver) Option 'tcp.bind_to_address' is deprecated: use 'tcp-control.bind_to_address'
+2025-09-23 07-43-03.031 [Info] (Snapserver) Version 0.33.0
+2025-09-23 07-43-03.031 [Info] (Snapserver) Stream plugin directory: '"/usr/share/snapserver/plug-ins"', sandbox directory: '"/usr/share/snapserver/sandbox"'
+2025-09-23 07-43-03.033 [Error] (Avahi) Failed to create client: Daemon not running
+2025-09-23 07-43-03.033 [Info] (Snapserver) Using HTTP host name: 00c5fb9c-snapcast-multiout
+2025-09-23 07-43-03.038 [Info] (PcmStream) PcmStream: default, sampleFormat: 48000:16:2
+2025-09-23 07-43-03.038 [Info] (PipeStream) PipeStream mode: create
+2025-09-23 07-43-03.038 [Info] (Server) Stream: {"fragment":"","host":"","path":"/tmp/snapfifo","query":{"chunk_ms":"20","codec":"flac","name":"default","sampleformat":"48000:16:2"},"raw":"pipe:///tmp/snapfifo?chunk_ms=20&codec=flac&name=default&sampleformat=48000%3A16%3A2","scheme":"pipe"}
+2025-09-23 07-43-03.038 [Info] (FlacEnc) Init - compression level: 2
+2025-09-23 07-43-03.038 [Info] (ControlServer) Creating TCP control acceptor for address: 0.0.0.0, port: 1705
+2025-09-23 07-43-03.039 [Error] (ControlServer) error creating TCP control acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
+2025-09-23 07-43-03.039 [Info] (ControlServer) Creating HTTP acceptor for address: 0.0.0.0, port: 1780
+2025-09-23 07-43-03.039 [Error] (ControlServer) error creating HTTP acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
+2025-09-23 07-43-03.039 [Info] (StreamServer) Creating TCP stream acceptor for address: ::, port: 1704
+2025-09-23 07-43-03.039 [Error] (StreamServer) error creating TCP stream acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
+2025-09-23 07-43-03.039 [Info] (Snapserver) Number of threads: 4, hw threads: 4
+2025-09-23 07-43-03.039 [Error] (AsioStream) Error reading message: End of file, length: 0, ec: asio.misc:2
 [INFO] Configuring 2 audio streams...
 [INFO] Starting snapclient 1: stream='kitchen' device='default'
 [INFO] Snapclient 1 started with PID: 108
+2025-09-23 07-43-05.052 [Fatal] (Snapclient) Exception: Unknown command line argument: '--stream'
+2025-09-23 07-43-05.052 [Notice] (Snapclient) Snapclient terminated.
 [INFO] Starting snapclient 2: stream='sitting_room' device='default'
 [INFO] Snapclient 2 started with PID: 111
 [INFO] All processes started successfully
 [INFO] Server PID: 98
 [INFO] Client PIDs: 108 111
 [INFO] Addon running, monitoring processes...
-2025-09-22 10-53-43.688 [Fatal] (Snapclient) Exception: Unknown command line argument: '--stream'
-2025-09-22 10-53-43.689 [Notice] (Snapclient) Snapclient terminated.

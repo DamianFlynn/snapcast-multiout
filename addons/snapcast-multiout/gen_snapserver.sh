@@ -14,10 +14,14 @@ doc_root = /usr/share/snapserver/snapweb
 bind_to_address = 0.0.0.0
 port = 1780
 
-[tcp]
+[tcp-control]
 enabled = true
 bind_to_address = 0.0.0.0
 port = 1705
+
+[stream]
+bind_to_address = ::
+port = 1704
 EOF
 
 echo "[INFO] Reading stream configurations from /data/options.json..."

@@ -10,23 +10,29 @@ LIST=$(jq -r '.list_devices_on_start' "$OPTS")
 
 # Get version from config.yaml (try multiple possible locations)
 ADDON_VERSION="unknown"
-for config_path in "/config.yaml" "/data/config.yaml" "/app/config.yaml" "$(dirname "$0")/config.yaml"; do
+for config_path in "/etc/config.yaml" "/config.yaml" "/data/config.yaml" "/app/config.yaml" "$(dirname "$0")/config.yaml"; do
   if [ -f "$config_path" ]; then
     ADDON_VERSION=$(grep '^version:' "$config_path" | sed 's/version: *"\?\([^"]*\)"\?.*/\1/' 2>/dev/null || echo "unknown")
     break
   fi
 done
 # If still unknown, try to get it from build environment
-if [ "$ADDON_VERSION" = "unknown" ] && [ -n "${BUILD_VERSION:-}" ]; then
-  ADDON_VERSION="$BUILD_VERSION"
+if [ "$ADDON_VERSION" = "unknown" ] && [ -n "${ADDON_VERSION:-}" ]; then
+  ADDON_VERSION="2025.09.23-4"
 fi
 
 echo "[INFO] ================================================="
 echo "[INFO] Snapcast Multi-Output addon starting..."
 echo "[INFO] Addon Version: $ADDON_VERSION"
-echo "[INFO] Addon Git Version: 2025.09.23-3"
+echo "[INFO] Addon Git Version: 2025.09.23-4"
 echo "[INFO] Configuration file: $OPTS"
 echo "[INFO] ================================================="
+
+# Cleanup any existing snapcast processes
+echo "[INFO] Cleaning up any existing snapcast processes..."
+pkill -f snapserver || true
+pkill -f snapclient || true
+sleep 2
 
 # Function to detect USB audio devices and report configuration
 detect_and_configure_audio() {
@@ -210,8 +216,8 @@ for i in $(seq 0 $((COUNT-1))); do
   
   echo "[INFO] Starting snapclient $((i+1)): stream='$NAME' device='$DEV'"
   # Run snapclient with explicit logging to stdout/stderr
-  # Use --stream to connect to the specific named stream
-  snapclient --host 127.0.0.1 --player alsa --soundcard "$DEV" --instance $((i+1)) --stream "$NAME" 2>&1 &
+  # Note: Stream selection handled by snapserver configuration
+  snapclient --host 127.0.0.1 --player alsa --soundcard "$DEV" --instance $((i+1)) 2>&1 &
   CLIENT_PIDS+=($!)
   echo "[INFO] Snapclient $((i+1)) started with PID: ${CLIENT_PIDS[$i]}"
 done
