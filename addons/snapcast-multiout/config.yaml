@@ -1,6 +1,6 @@
 name: Snapcast Multi-Output
 slug: snapcast-multiout
-version: "2025.09.23-7"
+version: "2025.09.23-8"
 description: Snapserver + dynamic Snapclients for multi-output USB audio with Music Assistant
 url: https://github.com/damianflynn/snapcast-multiout
 arch: [amd64, aarch64]

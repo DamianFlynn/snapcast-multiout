@@ -26,7 +26,11 @@ EOF
 
 echo "[INFO] Reading stream configurations from /data/options.json..."
 STREAM_COUNT=0
-jq -r '.streams[].name' /data/options.json | while read -r name; do
+
+# Get stream names into an array to avoid subshell issues
+mapfile -t stream_names < <(jq -r '.streams[].name' /data/options.json)
+
+for name in "${stream_names[@]}"; do
   echo "[INFO] Adding stream: $name"
   # Create a proper display name by capitalizing and replacing underscores
   display_name="$(echo "$name" | sed 's/_/ /g' | sed 's/\b\(.\)/\u\1/g')"

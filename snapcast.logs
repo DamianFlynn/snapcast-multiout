@@ -1,9 +1,199 @@
+lrwxrwxrwx  1 root root 0 Sep 22 10:51 seq -> ../../devices/virtual/sound/seq
+lrwxrwxrwx  1 root root 0 Sep 22 10:51 timer -> ../../devices/virtual/sound/timer
+[DEBUG] Checking each card for details:
+[DEBUG] === CARD 0 ===
+[DEBUG] Card 0 uevent:
+DRIVER=snd_hda_intel
+PCI_CLASS=40300
+PCI_ID=8086:9CA0
+PCI_SUBSYS_ID=8086:2058
+PCI_SLOT_NAME=0000:00:1b.0
+MODALIAS=pci:v00008086d00009CA0sv00008086sd00002058bc04sc03i00
+[DEBUG] Card 0 PCM devices:
+crw-rw---- 1 root 29 116, 6 Sep 22 10:51 /dev/snd/pcmC0D0c
+crw-rw---- 1 root 29 116, 5 Sep 22 10:51 /dev/snd/pcmC0D0p
+[DEBUG] === CARD 1 ===
+[DEBUG] Card 1 uevent:
+DEVTYPE=usb_interface
+DRIVER=snd-usb-audio
+PRODUCT=41e/324d/106
+TYPE=0/0/0
+INTERFACE=1/1/0
+MODALIAS=usb:v041Ep324Dd0106dc00dsc00dp00ic01isc01ip00in00
+[DEBUG] Card 1 PCM devices:
+crw-rw---- 1 root 29 116, 3 Sep 22 10:51 /dev/snd/pcmC1D0c
+crw-rw---- 1 root 29 116, 2 Sep 22 10:51 /dev/snd/pcmC1D0p
+[DEBUG] === CARD 2 ===
+[DEBUG] Card 2 uevent:
+DRIVER=snd_hda_intel
+PCI_CLASS=40300
+PCI_ID=8086:160C
+PCI_SUBSYS_ID=8086:2058
+PCI_SLOT_NAME=0000:00:03.0
+MODALIAS=pci:v00008086d0000160Csv00008086sd00002058bc04sc03i00
+[DEBUG] Card 2 PCM devices:
+crw-rw---- 1 root 29 116,  9 Sep 22 10:51 /dev/snd/pcmC2D3p
+crw-rw---- 1 root 29 116, 10 Sep 22 10:51 /dev/snd/pcmC2D7p
+crw-rw---- 1 root 29 116, 11 Sep 22 10:51 /dev/snd/pcmC2D8p
+[DEBUG] === END ANALYSIS ===
+[DEBUG] Checking card 0...
+/dev/snd/pcmC0D0p
+[DEBUG] Card 0 has playback devices
+[DEBUG] Checking card 1...
+/dev/snd/pcmC1D0p
+[DEBUG] Card 1 has playback devices
+[INFO] Found USB audio device: card 1
+[DEBUG] Available PCM devices for card 1:
+crw-rw---- 1 root 29 116, 3 Sep 22 10:51 /dev/snd/pcmC1D0c
+crw-rw---- 1 root 29 116, 2 Sep 22 10:51 /dev/snd/pcmC1D0p
+[DEBUG] Checking card 2...
+/dev/snd/pcmC2D3p
+/dev/snd/pcmC2D7p
+/dev/snd/pcmC2D8p
+[DEBUG] Card 2 has playback devices
+[INFO] Found USB audio card 1, testing ALSA accessibility...
+[INFO] Found USB playback device: hw:1,0
+[DEBUG] Testing ALSA accessibility for hw:1,0
+[DEBUG] ALSA cannot access hw:1,0
+[WARN] USB card 1 found but ALSA cannot access it. Trying fallback devices...
+[INFO] Trying card 2 devices as fallback...
+[INFO] Testing fallback device: hw:2,3
+[DEBUG] Testing ALSA accessibility for hw:2,3
+[DEBUG] ALSA cannot access hw:2,3
+[DEBUG] Fallback device hw:2,3 not accessible
+[INFO] Testing fallback device: hw:2,7
+[DEBUG] Testing ALSA accessibility for hw:2,7
+[DEBUG] ALSA cannot access hw:2,7
+[DEBUG] Fallback device hw:2,7 not accessible
+[INFO] Testing fallback device: hw:2,8
+[DEBUG] Testing ALSA accessibility for hw:2,8
+[DEBUG] ALSA cannot access hw:2,8
+[DEBUG] Fallback device hw:2,8 not accessible
+[INFO] Trying card 0 as last resort...
+[DEBUG] Testing ALSA accessibility for hw:0,0
+[DEBUG] ALSA cannot access hw:0,0
+[ERROR] No accessible audio devices found, will use default configuration
+[INFO] Snapcast Multi-Output addon starting...
+[INFO] Configuration file: /data/options.json
+[INFO] ----- USB Audio Devices -----
+Bus 001 Device 002: ID 041e:324d Creative Technology Ltd Sound Blaster Play! 3
+[INFO] ----- ALSA devices (cards) -----
+No ALSA cards found - audio subsystem may not be available
+[INFO] ----- ALSA PCMs (playback) -----
+null
+    Discard all samples (playback) or generate zero samples (capture)
+samplerate
+    Rate Converter Plugin Using Samplerate Library
+speexrate
+    Rate Converter Plugin Using Speex Resampler
+oss
+    Open Sound System
+pulse
+    PulseAudio Sound Server
+upmix
+    Plugin for channel upmix (4,6,8)
+vdownmix
+    Plugin for channel downmix (stereo) with a simple spacialization
+default
+    Default ALSA Output (Home Assistant PulseAudio Sound Server)
+[INFO] ----- Hardware detection -----
+total 0
+drwxr-xr-x  4 root root     360 Sep 22 10:51 .
+drwxr-xr-x 19 root root    3400 Sep 22 10:51 ..
+drwxr-xr-x  2 root root      60 Sep 22 10:51 by-id
+drwxr-xr-x  2 root root     120 Sep 22 10:51 by-path
+crw-rw----  1 root   29 116,  8 Sep 22 10:51 controlC0
+crw-rw----  1 root   29 116,  4 Sep 22 10:51 controlC1
+crw-rw----  1 root   29 116, 13 Sep 22 10:51 controlC2
+crw-rw----  1 root   29 116,  7 Sep 22 10:51 hwC0D0
+crw-rw----  1 root   29 116, 12 Sep 22 10:51 hwC2D0
+crw-rw----  1 root   29 116,  6 Sep 22 10:51 pcmC0D0c
+crw-rw----  1 root   29 116,  5 Sep 22 10:51 pcmC0D0p
+crw-rw----  1 root   29 116,  3 Sep 22 10:51 pcmC1D0c
+crw-rw----  1 root   29 116,  2 Sep 22 10:51 pcmC1D0p
+crw-rw----  1 root   29 116,  9 Sep 22 10:51 pcmC2D3p
+crw-rw----  1 root   29 116, 10 Sep 22 10:51 pcmC2D7p
+crw-rw----  1 root   29 116, 11 Sep 22 10:51 pcmC2D8p
+crw-rw----  1 root   29 116,  1 Sep 22 10:51 seq
+crw-rw----  1 root   29 116, 33 Sep 22 10:51 timer
+[INFO] ----- System audio modules -----
+snd_hda_codec_hdmi     81920  1 
+snd_hda_codec_realtek   204800  1 
+snd_hda_codec_generic    98304  1 snd_hda_codec_realtek
+snd_hda_scodec_component    12288  1 snd_hda_codec_realtek
+snd_hda_intel          49152  2 
+snd_intel_dspcfg       32768  1 snd_hda_intel
+snd_usb_audio         462848  4 
+snd_hda_codec         180224  4 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel
+snd_usbmidi_lib        40960  1 snd_usb_audio
+snd_hwdep              12288  2 snd_usb_audio,snd_hda_codec
+snd_rawmidi            45056  1 snd_usbmidi_lib
+snd_hda_core          131072  5 snd_hda_codec_hdmi,snd_hda_codec_realtek,snd_hda_codec_generic,snd_hda_intel,snd_hda_codec
+snd_pcm               172032  7 snd_hda_codec_hdmi,snd_hda_intel,snd_usb_audio,snd_hda_codec,snd_hda_core
+[INFO] Writing snapserver.conf...
+[INFO] Generating snapserver configuration...
+[INFO] Config file: /etc/snapserver.conf
+[INFO] Reading stream configurations from /data/options.json...
+[INFO] Adding stream: kitchen
+[INFO] Adding stream: sitting_room
+[INFO] Configuration generated successfully
+[INFO] Snapserver config:
+[http]
+enabled = true
+doc_root = /usr/share/snapserver/snapweb
+bind_to_address = 0.0.0.0
+port = 1780
+
+[tcp-control]
+enabled = true
+bind_to_address = 0.0.0.0
+port = 1705
+
+[stream]
+bind_to_address = ::
+port = 1704
+[stream.kitchen]
+source = pipe:///tmp/kitchen?name=ukuiutucuhueun&codec=flac&sampleformat=48000:16:2
+[stream.sitting_room]
+source = pipe:///tmp/sitting_room?name=usuiututuiunugu uruououm&codec=flac&sampleformat=48000:16:2
+[INFO] Starting snapserver...
+[INFO] Snapserver started with PID: 101
+2025-09-23 10-24-19.316 [Warn] (Snapserver) Option 'stream.bind_to_address' is deprecated: use 'tcp-streaming.bind_to_address'
+2025-09-23 10-24-19.316 [Warn] (Snapserver) Option 'stream.port' is deprecated: use 'tcp-streaming.port'
+2025-09-23 10-24-19.316 [Info] (Snapserver) Version 0.33.0
+2025-09-23 10-24-19.317 [Info] (Snapserver) Stream plugin directory: '"/usr/share/snapserver/plug-ins"', sandbox directory: '"/usr/share/snapserver/sandbox"'
+2025-09-23 10-24-19.318 [Error] (Avahi) Failed to create client: Daemon not running
+2025-09-23 10-24-19.318 [Info] (Snapserver) Using HTTP host name: 00c5fb9c-snapcast-multiout
+2025-09-23 10-24-19.322 [Info] (PcmStream) PcmStream: default, sampleFormat: 48000:16:2
+2025-09-23 10-24-19.322 [Info] (PipeStream) PipeStream mode: create
+2025-09-23 10-24-19.322 [Info] (Server) Stream: {"fragment":"","host":"","path":"/tmp/snapfifo","query":{"chunk_ms":"20","codec":"flac","name":"default","sampleformat":"48000:16:2"},"raw":"pipe:///tmp/snapfifo?chunk_ms=20&codec=flac&name=default&sampleformat=48000%3A16%3A2","scheme":"pipe"}
+2025-09-23 10-24-19.322 [Info] (FlacEnc) Init - compression level: 2
+2025-09-23 10-24-19.323 [Info] (ControlServer) Creating TCP control acceptor for address: 0.0.0.0, port: 1705
+2025-09-23 10-24-19.324 [Error] (ControlServer) error creating TCP control acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
+2025-09-23 10-24-19.324 [Info] (ControlServer) Creating HTTP acceptor for address: 0.0.0.0, port: 1780
+2025-09-23 10-24-19.324 [Error] (ControlServer) error creating HTTP acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
+2025-09-23 10-24-19.324 [Info] (StreamServer) Creating TCP stream acceptor for address: ::, port: 1704
+2025-09-23 10-24-19.324 [Error] (StreamServer) error creating TCP stream acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
+2025-09-23 10-24-19.324 [Info] (Snapserver) Number of threads: 4, hw threads: 4
+2025-09-23 10-24-19.324 [Error] (AsioStream) Error reading message: End of file, length: 0, ec: asio.misc:2
+[INFO] Configuring 2 audio streams...
+[INFO] Starting snapclient 1: stream='kitchen' device='default'
+[INFO] Snapclient 1 started with PID: 111
+2025-09-23 10-24-21.339 [Fatal] (Snapclient) Exception: Unknown command line argument: '--stream'
+2025-09-23 10-24-21.339 [Notice] (Snapclient) Snapclient terminated.
+[INFO] Starting snapclient 2: stream='sitting_room' device='default'
+[INFO] Snapclient 2 started with PID: 114
+[INFO] All processes started successfully
+[INFO] Server PID: 101
+[INFO] Client PIDs: 111 114
+[INFO] Addon running, monitoring processes...
 [INFO] =================================================
 [INFO] Snapcast Multi-Output addon starting...
-[INFO] Addon Version: unknown
-[INFO] Addon Git Version: 2025.09.23-3
+[INFO] Addon Version: 2025.09.23-7
+[INFO] Addon Git Version: 2025.09.23-7
 [INFO] Configuration file: /data/options.json
 [INFO] =================================================
+[INFO] Cleaning up any existing snapcast processes...
 [INFO] Detecting USB audio devices...
 [DEBUG] === CONTAINER DEVICE ANALYSIS ===
 [DEBUG] /dev/snd/ contents:
@@ -191,43 +381,257 @@ doc_root = /usr/share/snapserver/snapweb
 bind_to_address = 0.0.0.0
 port = 1780
 
-[tcp]
+[tcp-control]
 enabled = true
 bind_to_address = 0.0.0.0
 port = 1705
+
+[stream]
+bind_to_address = ::
+port = 1704
 [stream.kitchen]
 source = pipe:///tmp/kitchen?name=ukuiutucuhueun&codec=flac&sampleformat=48000:16:2
 [stream.sitting_room]
 source = pipe:///tmp/sitting_room?name=usuiututuiunugu uruououm&codec=flac&sampleformat=48000:16:2
 [INFO] Starting snapserver...
-[INFO] Snapserver started with PID: 98
-2025-09-23 07-43-03.031 [Warn] (Snapserver) Option 'tcp.enabled' is deprecated: use 'tcp-control.enabled'
-2025-09-23 07-43-03.031 [Warn] (Snapserver) Option 'tcp.port' is deprecated: use 'tcp-control.port'
-2025-09-23 07-43-03.031 [Warn] (Snapserver) Option 'tcp.bind_to_address' is deprecated: use 'tcp-control.bind_to_address'
-2025-09-23 07-43-03.031 [Info] (Snapserver) Version 0.33.0
-2025-09-23 07-43-03.031 [Info] (Snapserver) Stream plugin directory: '"/usr/share/snapserver/plug-ins"', sandbox directory: '"/usr/share/snapserver/sandbox"'
-2025-09-23 07-43-03.033 [Error] (Avahi) Failed to create client: Daemon not running
-2025-09-23 07-43-03.033 [Info] (Snapserver) Using HTTP host name: 00c5fb9c-snapcast-multiout
-2025-09-23 07-43-03.038 [Info] (PcmStream) PcmStream: default, sampleFormat: 48000:16:2
-2025-09-23 07-43-03.038 [Info] (PipeStream) PipeStream mode: create
-2025-09-23 07-43-03.038 [Info] (Server) Stream: {"fragment":"","host":"","path":"/tmp/snapfifo","query":{"chunk_ms":"20","codec":"flac","name":"default","sampleformat":"48000:16:2"},"raw":"pipe:///tmp/snapfifo?chunk_ms=20&codec=flac&name=default&sampleformat=48000%3A16%3A2","scheme":"pipe"}
-2025-09-23 07-43-03.038 [Info] (FlacEnc) Init - compression level: 2
-2025-09-23 07-43-03.038 [Info] (ControlServer) Creating TCP control acceptor for address: 0.0.0.0, port: 1705
-2025-09-23 07-43-03.039 [Error] (ControlServer) error creating TCP control acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
-2025-09-23 07-43-03.039 [Info] (ControlServer) Creating HTTP acceptor for address: 0.0.0.0, port: 1780
-2025-09-23 07-43-03.039 [Error] (ControlServer) error creating HTTP acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
-2025-09-23 07-43-03.039 [Info] (StreamServer) Creating TCP stream acceptor for address: ::, port: 1704
-2025-09-23 07-43-03.039 [Error] (StreamServer) error creating TCP stream acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
-2025-09-23 07-43-03.039 [Info] (Snapserver) Number of threads: 4, hw threads: 4
-2025-09-23 07-43-03.039 [Error] (AsioStream) Error reading message: End of file, length: 0, ec: asio.misc:2
+[INFO] Snapserver started with PID: 101
+2025-09-23 12-06-00.439 [Warn] (Snapserver) Option 'stream.bind_to_address' is deprecated: use 'tcp-streaming.bind_to_address'
+2025-09-23 12-06-00.439 [Warn] (Snapserver) Option 'stream.port' is deprecated: use 'tcp-streaming.port'
+2025-09-23 12-06-00.439 [Info] (Snapserver) Version 0.33.0
+2025-09-23 12-06-00.439 [Info] (Snapserver) Stream plugin directory: '"/usr/share/snapserver/plug-ins"', sandbox directory: '"/usr/share/snapserver/sandbox"'
+2025-09-23 12-06-00.441 [Error] (Avahi) Failed to create client: Daemon not running
+2025-09-23 12-06-00.441 [Info] (Snapserver) Using HTTP host name: 00c5fb9c-snapcast-multiout
+2025-09-23 12-06-00.447 [Info] (PcmStream) PcmStream: default, sampleFormat: 48000:16:2
+2025-09-23 12-06-00.447 [Info] (PipeStream) PipeStream mode: create
+2025-09-23 12-06-00.447 [Info] (Server) Stream: {"fragment":"","host":"","path":"/tmp/snapfifo","query":{"chunk_ms":"20","codec":"flac","name":"default","sampleformat":"48000:16:2"},"raw":"pipe:///tmp/snapfifo?chunk_ms=20&codec=flac&name=default&sampleformat=48000%3A16%3A2","scheme":"pipe"}
+2025-09-23 12-06-00.447 [Info] (FlacEnc) Init - compression level: 2
+2025-09-23 12-06-00.447 [Info] (ControlServer) Creating TCP control acceptor for address: 0.0.0.0, port: 1705
+2025-09-23 12-06-00.450 [Error] (ControlServer) error creating TCP control acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
+2025-09-23 12-06-00.450 [Info] (ControlServer) Creating HTTP acceptor for address: 0.0.0.0, port: 1780
+2025-09-23 12-06-00.450 [Error] (ControlServer) error creating HTTP acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
+2025-09-23 12-06-00.450 [Info] (StreamServer) Creating TCP stream acceptor for address: ::, port: 1704
+2025-09-23 12-06-00.450 [Error] (StreamServer) error creating TCP stream acceptor: bind: Address in use [system:98 at /usr/include/boost/asio/detail/reactive_socket_service.hpp:161 in function 'bind'], code: system:98
+2025-09-23 12-06-00.450 [Info] (Snapserver) Number of threads: 4, hw threads: 4
+2025-09-23 12-06-00.450 [Error] (AsioStream) Error reading message: End of file, length: 0, ec: asio.misc:2
 [INFO] Configuring 2 audio streams...
 [INFO] Starting snapclient 1: stream='kitchen' device='default'
-[INFO] Snapclient 1 started with PID: 108
-2025-09-23 07-43-05.052 [Fatal] (Snapclient) Exception: Unknown command line argument: '--stream'
-2025-09-23 07-43-05.052 [Notice] (Snapclient) Snapclient terminated.
+[INFO] Snapclient 1 started with PID: 111
+2025-09-23 12-06-02.460 [Warn] (Snapclient) Options '--host' and '--port' are deprecated. Please add the server URI as last command line argument
 [INFO] Starting snapclient 2: stream='sitting_room' device='default'
-[INFO] Snapclient 2 started with PID: 111
+[INFO] Snapclient 2 started with PID: 114
 [INFO] All processes started successfully
-[INFO] Server PID: 98
-[INFO] Client PIDs: 108 111
+[INFO] Server PID: 101
+[INFO] Client PIDs: 111 114
 [INFO] Addon running, monitoring processes...
+2025-09-23 12-06-02.465 [Info] (Snapclient) Version 0.33.0
+2025-09-23 12-06-02.469 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-06-02.469 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-06-02.470 [Notice] (Connection) Connected to 127.0.0.1
+2025-09-23 12-06-02.470 [Info] (Connection) My MAC: "f4:4d:30:63:b5:ae", socket: 7
+2025-09-23 12-06-02.471 [Warn] (Snapclient) Options '--host' and '--port' are deprecated. Please add the server URI as last command line argument
+2025-09-23 12-06-02.473 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 25, muted: 0
+2025-09-23 12-06-02.473 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-23 12-06-02.473 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-23 12-06-02.473 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-23 12-06-02.473 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-23 12-06-02.473 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-23 12-06-02.478 [Info] (Snapclient) Version 0.33.0
+2025-09-23 12-06-02.480 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-23 12-06-02.481 [Info] (Stream) No chunks available
+2025-09-23 12-06-02.481 [Info] (Alsa) Failed to get chunk
+2025-09-23 12-06-02.483 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-06-02.483 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-06-02.483 [Notice] (Connection) Connected to 127.0.0.1
+2025-09-23 12-06-02.483 [Info] (Connection) My MAC: "f4:4d:30:63:b5:ae", socket: 7
+2025-09-23 12-06-02.486 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 25, muted: 0
+2025-09-23 12-06-02.487 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-23 12-06-02.487 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-23 12-06-02.487 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-23 12-06-02.487 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-23 12-06-02.487 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-23 12-06-02.492 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-23 12-06-02.493 [Info] (Stream) No chunks available
+2025-09-23 12-06-02.493 [Info] (Alsa) Failed to get chunk
+2025-09-23 12-06-02.545 [Info] (Controller) diff to server [ms]: 0.014
+2025-09-23 12-06-02.555 [Info] (Controller) diff to server [ms]: 0.007
+2025-09-23 12-08-12.634 [Error] (Connection) Error reading message header of length 0: End of file
+2025-09-23 12-08-12.634 [Error] (Controller) Error receiving next message: asio.misc:2
+2025-09-23 12-08-12.634 [Info] (Controller) Reconnecting
+2025-09-23 12-08-12.634 [Error] (Connection) Error reading message header of length 0: End of file
+2025-09-23 12-08-12.634 [Error] (Controller) Error receiving next message: asio.misc:2
+2025-09-23 12-08-12.634 [Info] (Controller) Reconnecting
+2025-09-23 12-08-13.641 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-13.641 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-13.641 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-13.641 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-13.641 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-13.641 [Info] (Controller) Reconnecting
+2025-09-23 12-08-13.642 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-13.642 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-13.642 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-13.642 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-13.642 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-13.642 [Info] (Controller) Reconnecting
+2025-09-23 12-08-14.642 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-14.642 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-14.642 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-14.642 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-14.642 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-14.642 [Info] (Controller) Reconnecting
+2025-09-23 12-08-14.643 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-14.643 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-14.643 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-14.643 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-14.643 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-14.643 [Info] (Controller) Reconnecting
+2025-09-23 12-08-15.643 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-15.643 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-15.643 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-15.643 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-15.643 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-15.643 [Info] (Controller) Reconnecting
+2025-09-23 12-08-15.644 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-15.644 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-15.644 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-15.644 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-15.644 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-15.644 [Info] (Controller) Reconnecting
+2025-09-23 12-08-16.644 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-16.644 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-16.644 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-16.644 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-16.644 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-16.644 [Info] (Controller) Reconnecting
+2025-09-23 12-08-16.645 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-16.645 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-16.646 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-16.646 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-16.646 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-16.646 [Info] (Controller) Reconnecting
+2025-09-23 12-08-17.645 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-17.645 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-17.645 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-17.645 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-17.645 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-17.645 [Info] (Controller) Reconnecting
+2025-09-23 12-08-17.647 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-17.647 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-17.647 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-17.647 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-17.647 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-17.647 [Info] (Controller) Reconnecting
+2025-09-23 12-08-18.646 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-18.646 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-18.647 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-18.647 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-18.647 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-18.647 [Info] (Controller) Reconnecting
+2025-09-23 12-08-18.648 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-18.648 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-18.648 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-18.648 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-18.648 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-18.648 [Info] (Controller) Reconnecting
+2025-09-23 12-08-19.647 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-19.647 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-19.648 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-19.648 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-19.648 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-19.648 [Info] (Controller) Reconnecting
+2025-09-23 12-08-19.649 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-19.649 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-19.649 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-19.649 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-19.649 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-19.649 [Info] (Controller) Reconnecting
+2025-09-23 12-08-20.648 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-20.648 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-20.648 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-20.648 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-20.648 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-20.648 [Info] (Controller) Reconnecting
+2025-09-23 12-08-20.650 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-20.650 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-20.650 [Error] (Connection) Failed to connect to host '127.0.0.1', error: Connection refused
+2025-09-23 12-08-20.650 [Error] (Connection) Error in socket shutdown: Socket not connected
+2025-09-23 12-08-20.651 [Error] (Controller) Error: Connection refused
+2025-09-23 12-08-20.651 [Info] (Controller) Reconnecting
+2025-09-23 12-08-21.649 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-21.649 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-21.649 [Notice] (Connection) Connected to 127.0.0.1
+2025-09-23 12-08-21.649 [Info] (Connection) My MAC: "f4:4d:30:63:b5:ae", socket: 7
+2025-09-23 12-08-21.651 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 25, muted: 0
+2025-09-23 12-08-21.651 [Info] (Connection) Resolving host IP for: 127.0.0.1
+2025-09-23 12-08-21.651 [Info] (Connection) Connecting to host: 127.0.0.1:1704, port: 1704, protocol: tcp
+2025-09-23 12-08-21.651 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-23 12-08-21.651 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-23 12-08-21.651 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-23 12-08-21.651 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-23 12-08-21.651 [Notice] (Connection) Connected to 127.0.0.1
+2025-09-23 12-08-21.651 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-23 12-08-21.651 [Info] (Connection) My MAC: "f4:4d:30:63:b5:ae", socket: 7
+2025-09-23 12-08-21.653 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 25, muted: 0
+2025-09-23 12-08-21.654 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-23 12-08-21.654 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-23 12-08-21.654 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-23 12-08-21.654 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-23 12-08-21.654 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-23 12-08-21.654 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-23 12-08-21.655 [Info] (Stream) Wrote 34 bytes to socket
+2025-09-23 12-08-21.655 [Info] (Stream) No chunks available
+2025-09-23 12-08-21.655 [Info] (Alsa) Failed to get chunk
+2025-09-23 12-08-21.656 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-23 12-08-21.657 [Info] (Stream) No chunks available
+2025-09-23 12-08-21.733 [Info] (Controller) diff to server [ms]: 0.017
+2025-09-23 12-08-21.734 [Info] (Controller) diff to server [ms]: 0.021
+2025-09-23 12-08-26.662 [Notice] (Alsa) No chunk received for 5000ms. Closing ALSA.
+2025-09-23 12-08-26.663 [Notice] (Alsa) No chunk received for 5000ms. Closing ALSA.
+2025-09-23 12-16-54.247 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-23 12-16-54.247 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-23 12-16-54.247 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-23 12-16-54.247 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-23 12-16-54.247 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-23 12-16-54.253 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-23 12-16-54.257 [Info] (Stream) No chunks available
+2025-09-23 12-16-54.257 [Info] (Alsa) Failed to get chunk
+2025-09-23 12-17-03.859 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-23 12-17-03.860 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-23 12-17-03.860 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-23 12-17-03.860 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-23 12-17-03.860 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-23 12-17-03.862 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-23 12-19-03.221 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-23 12-19-03.221 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-23 12-19-03.221 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-23 12-19-03.221 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-23 12-19-03.221 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-23 12-19-03.224 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-23 12-19-03.225 [Info] (Stream) No chunks available
+2025-09-23 12-19-03.225 [Info] (Alsa) Failed to get chunk
+2025-09-23 12-19-05.731 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-23 12-19-05.731 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-23 12-19-05.731 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-23 12-19-05.731 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-23 12-19-05.731 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-23 12-19-05.733 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-23 12-19-05.734 [Info] (Stream) No chunks available
+2025-09-23 12-19-05.734 [Info] (Alsa) Failed to get chunk
+2025-09-23 12-19-08.325 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-23 12-19-08.325 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-23 12-19-08.325 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-23 12-19-08.325 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-23 12-19-08.325 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-23 12-19-08.328 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-23 12-19-08.329 [Info] (Stream) No chunks available
+2025-09-23 12-19-08.329 [Info] (Alsa) Failed to get chunk
+2025-09-23 12-19-13.335 [Notice] (Alsa) No chunk received for 5000ms. Closing ALSA.
+2025-09-23 12-19-49.883 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 25, muted: 0
+2025-09-23 12-20-07.316 [Info] (Controller) ServerSettings - buffer: 1000, latency: 0, volume: 25, muted: 0
+2025-09-23 12-21-42.322 [Info] (Controller) Codec: flac, sampleformat: 48000:16:2
+2025-09-23 12-21-42.322 [Info] (Player) Player name: alsa, device: default, description: Default ALSA Output (Home Assistant PulseAudio Sound Server), idx: 7, sharing mode: unspecified, parameters: <none>
+2025-09-23 12-21-42.322 [Info] (Player) Mixer mode: software, parameters: <none>
+2025-09-23 12-21-42.322 [Info] (Player) Sampleformat: 48000:16:2, stream: 48000:16:2
+2025-09-23 12-21-42.323 [Info] (Alsa) Using default buffer_time: 80 ms, default fragments: 4
+2025-09-23 12-21-42.324 [Info] (Alsa) PCM name: default, sample rate: 48000 Hz, channels: 2, buffer time: 80000 us, periods: 4, period time: 20000 us, period frames: 960
+2025-09-23 12-21-42.325 [Info] (Stream) No chunks available
+2025-09-23 12-21-42.325 [Info] (Alsa) Failed to get chunk

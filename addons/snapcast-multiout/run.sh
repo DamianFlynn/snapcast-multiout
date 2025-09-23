@@ -194,6 +194,25 @@ fi
 echo "[INFO] Writing snapserver.conf..."
 /gen_snapserver.sh
 
+# Create named pipe files for each stream
+echo "[INFO] Creating named pipes for streams..."
+COUNT=$(jq '.streams | length' "$OPTS")
+for i in $(seq 0 $((COUNT-1))); do
+  NAME=$(jq -r ".streams[$i].name" "$OPTS")
+  PIPE_FILE="/tmp/$NAME"
+  echo "[INFO] Creating pipe: $PIPE_FILE"
+  rm -f "$PIPE_FILE"  # Remove if exists
+  mkfifo "$PIPE_FILE"
+  chmod 666 "$PIPE_FILE"
+done
+
+# Kill any existing snapcast processes and wait for ports to be released
+echo "[INFO] Cleaning up any existing snapcast processes..."
+pkill -f snapserver || true
+pkill -f snapclient || true
+# Wait for ports to be released
+sleep 3
+
 echo "[INFO] Starting snapserver..."
 # Run snapserver with explicit logging to stdout/stderr
 snapserver -c /etc/snapserver.conf 2>&1 &
@@ -236,6 +255,15 @@ cleanup() {
     echo "[INFO] Stopping snapclient $((i+1)) (PID: ${CLIENT_PIDS[$i]})..."
     kill ${CLIENT_PIDS[$i]} 2>/dev/null || true
   done
+  
+  # Clean up pipe files
+  echo "[INFO] Cleaning up pipe files..."
+  COUNT=$(jq '.streams | length' "$OPTS")
+  for i in $(seq 0 $((COUNT-1))); do
+    NAME=$(jq -r ".streams[$i].name" "$OPTS")
+    rm -f "/tmp/$NAME"
+  done
+  
   echo "[INFO] Cleanup complete, exiting"
   exit 0
 }
