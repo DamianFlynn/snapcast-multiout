@@ -1,4 +1,7 @@
 # Multi-stage build for better caching and smaller final image
+# Global ARG that can be used in both stages
+ARG BUILD_FROM=docker.io/library/alpine:3.19
+
 # Stage 1: Build snapcast from source
 FROM docker.io/library/alpine:3.19 AS builder
 
@@ -28,11 +31,11 @@ RUN npm install && \
     npm run build
 
 # Stage 2: Runtime image
-ARG BUILD_FROM=docker.io/library/alpine:3.19
+ARG BUILD_FROM
 FROM $BUILD_FROM
 
 # Cache buster for Home Assistant rebuilds - change this value to force rebuild
-ENV ADDON_VERSION="2025.09.23-2"
+ENV ADDON_VERSION="2025.09.23-3"
 ENV BUILD_DATE="2025-09-23"
 
 # Install only runtime dependencies
