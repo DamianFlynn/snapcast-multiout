@@ -18,13 +18,13 @@ for config_path in "/etc/config.yaml" "/config.yaml" "/data/config.yaml" "/app/c
 done
 # If still unknown, try to get it from build environment
 if [ "$ADDON_VERSION" = "unknown" ] && [ -n "${ADDON_VERSION:-}" ]; then
-  ADDON_VERSION="2025.09.23-4"
+  ADDON_VERSION="2025.09.23-5"
 fi
 
 echo "[INFO] ================================================="
 echo "[INFO] Snapcast Multi-Output addon starting..."
 echo "[INFO] Addon Version: $ADDON_VERSION"
-echo "[INFO] Addon Git Version: 2025.09.23-4"
+echo "[INFO] Addon Git Version: 2025.09.23-5"
 echo "[INFO] Configuration file: $OPTS"
 echo "[INFO] ================================================="
 
@@ -217,7 +217,7 @@ for i in $(seq 0 $((COUNT-1))); do
   echo "[INFO] Starting snapclient $((i+1)): stream='$NAME' device='$DEV'"
   # Run snapclient with explicit logging to stdout/stderr
   # Note: Stream selection handled by snapserver configuration
-  snapclient --host 127.0.0.1 --player alsa --soundcard "$DEV" --instance $((i+1)) 2>&1 &
+  snapclient --host 127.0.0.1 --player alsa --soundcard "$DEV" --hostID "$NAME" --instance $((i+1)) 2>&1 &
   CLIENT_PIDS+=($!)
   echo "[INFO] Snapclient $((i+1)) started with PID: ${CLIENT_PIDS[$i]}"
 done
