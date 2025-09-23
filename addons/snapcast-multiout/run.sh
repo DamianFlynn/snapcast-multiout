@@ -88,19 +88,40 @@ detect_and_configure_audio() {
     fi
   done
   
+  # Function to fix USB audio permissions
+  fix_usb_audio_permissions() {
+    echo "[INFO] Fixing USB audio device permissions..."
+    
+    # Make sure audio group has access to all audio devices
+    chgrp -R audio /dev/snd/ 2>/dev/null || true
+    chmod -R g+rw /dev/snd/ 2>/dev/null || true
+    
+    # Set proper permissions on USB devices
+    if [ -d /dev/bus/usb ]; then
+      chmod -R a+rw /dev/bus/usb/ 2>/dev/null || true
+    fi
+    
+    # Ensure all PCM devices are accessible
+    chmod 666 /dev/snd/pcm* 2>/dev/null || true
+  }
+
   # Test ALSA accessibility for detected devices
   test_alsa_device() {
     local device="$1"
     echo "[DEBUG] Testing ALSA accessibility for $device"
-    # Test if ALSA can access the device by checking card index
-    if aplay -l 2>/dev/null | grep -q "card $(echo $device | sed 's/hw:\([0-9]*\),.*/\1/')"; then
-      echo "[DEBUG] ALSA can access $device"
+    
+    # Try to open the device with a short test
+    if timeout 3 aplay -D "$device" -f cd -t raw -r 48000 -c 2 /dev/zero -d 0.1 >/dev/null 2>&1; then
+      echo "[DEBUG] ALSA can access $device successfully"
       return 0
     else
       echo "[DEBUG] ALSA cannot access $device"
       return 1
     fi
   }
+
+  # Fix permissions before device detection
+  fix_usb_audio_permissions
 
   # Report the USB audio device found and determine the correct device
   if [ ${#USB_AUDIO_CARDS[@]} -gt 0 ]; then
@@ -226,14 +247,30 @@ CLIENT_PIDS=()
 for i in $(seq 0 $((COUNT-1))); do
   NAME=$(jq -r ".streams[$i].name" "$OPTS")
   DEV=$(jq -r ".streams[$i].device" "$OPTS")
+  DESC=$(jq -r ".streams[$i].description // \"\"" "$OPTS")
   
-  # If we detected a USB audio device and the config uses default, override with USB device
-  if [ -n "$DETECTED_USB_DEVICE" ] && [ "$DEV" = "default" ]; then
+  # Test if the configured device is accessible
+  if [ "$DEV" != "default" ]; then
+    echo "[INFO] Testing configured device $DEV for stream '$NAME'..."
+    if test_alsa_device "$DEV"; then
+      echo "[INFO] Device $DEV is accessible for '$NAME'"
+    else
+      echo "[WARN] Configured device $DEV not accessible for '$NAME', using default"
+      DEV="default"
+    fi
+  fi
+  
+  # If still using default and we have detected USB devices, try to assign them
+  if [ "$DEV" = "default" ] && [ -n "$DETECTED_USB_DEVICE" ]; then
     DEV="$DETECTED_USB_DEVICE"
-    echo "[INFO] Overriding device 'default' with detected USB device: $DEV"
+    echo "[INFO] Assigning detected USB device $DEV to stream '$NAME'"
   fi
   
   echo "[INFO] Starting snapclient $((i+1)): stream='$NAME' device='$DEV'"
+  if [ -n "$DESC" ]; then
+    echo "[INFO] Description: $DESC"
+  fi
+  
   # Run snapclient with explicit logging to stdout/stderr  
   # Each client gets unique hostID for identification - group assignment handled via snapweb
   snapclient --host 127.0.0.1 --player alsa --soundcard "$DEV" --hostID "$NAME" --instance $((i+1)) 2>&1 &

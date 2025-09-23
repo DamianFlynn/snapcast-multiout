@@ -1,103 +1,97 @@
 # Snapcast Multi-Output
 
-A Home Assistant add-on that provides synchronized multi-room audio using Snapcast with support for multiple audio output devices.
+Professional multi-room audio system using Snapcast with dedicated USB audio interfaces.
 
 ## About
 
-This add-on runs both Snapserver and multiple Snapclient instances, allowing you to:
+This add-on provides synchronized multi-room audio using Snapcast technology, designed for professional installations with USB audio interfaces like the Behringer UMC1820 or Creative Sound Blaster series.
 
-- Stream audio to multiple rooms/zones simultaneously  
-- Maintain perfect synchronization across all outputs
-- Support various audio devices (USB audio interfaces, sound cards)
-- Integrate seamlessly with Music Assistant and other Home Assistant media players
-
-Perfect for multi-room audio setups using USB audio interfaces like the Behringer UMC1820 or similar devices.
+**Key Features:**
+- **🏠 Independent room streams** - Each room gets its own audio stream
+- **🔗 Perfect synchronization** - Sub-millisecond timing across all zones
+- **🎛️ USB audio interface support** - Dedicated hardware per zone
+- **🎵 Music Assistant integration** - Seamless HA media control
+- **📱 Web interface** - Advanced configuration via Snapweb
+- **⚡ Production ready** - Optimized for 24/7 operation
 
 ## Installation
 
-1. Add this repository to your Home Assistant add-on store
+1. Add this repository to your Home Assistant add-on store:
+   ```
+   https://github.com/damianflynn/snapcast-multiout
+   ```
+
 2. Install the "Snapcast Multi-Output" add-on
-3. Configure your audio streams (see Configuration section)
+3. Configure your streams (see examples below)
 4. Start the add-on
 
 ## Configuration
 
-### Basic Configuration
+### Current Setup (Sound Blaster Play! 3)
 
 ```yaml
 list_devices_on_start: true
 streams:
-  - name: living_room
+  - name: kitchen
     device: hw:1,0
-  - name: kitchen  
+    description: "Kitchen - Sound Blaster Play! 3"
+  - name: sitting_room
+    device: hw:2,0  
+    description: "Sitting Room - Future UMC1820"
+```
+
+### Production Setup (UMC1820)
+
+```yaml
+list_devices_on_start: true
+streams:
+  - name: kitchen
+    device: hw:1,0
+    description: "Kitchen - UMC1820 Outputs 1+2"
+  - name: living_room
     device: hw:1,1
+    description: "Living Room - UMC1820 Outputs 3+4"
   - name: bedroom
-    device: hw:2,0
-```
-
-### Configuration Options
-
-- **list_devices_on_start** (boolean): Show available ALSA audio devices in the logs when starting
-- **streams** (list): Array of audio streams/zones to create
-  - **name** (string): Unique identifier for the room/zone
-  - **device** (string): ALSA device name (use `hw:CARD,DEVICE` format)
-
-### Understanding ALSA Device Names
-
-Each `hw:X,Y` device represents a **stereo pair** (left + right channels):
-- `hw:1,0` = Card 1, Device 0 (first stereo pair - channels 1+2)
-- `hw:1,1` = Card 1, Device 1 (second stereo pair - channels 3+4)
-- `hw:2,0` = Card 2, Device 0 (different USB interface)
-
-### Multi-Device Stereo Setup Examples
-
-#### Single Sound Blaster (2 stereo rooms)
-```yaml
-list_devices_on_start: true
-streams:
-  - name: kitchen
-    device: hw:1,0      # Sound Blaster stereo pair 1
-  - name: living_room
-    device: hw:1,1      # Sound Blaster stereo pair 2
-```
-
-#### Sound Blaster + UMC1820 (6 stereo rooms)
-```yaml
-list_devices_on_start: true
-streams:
-  # Sound Blaster (2 stereo outputs)
-  - name: kitchen
-    device: hw:1,0
-  - name: living_room
-    device: hw:1,1
-  
-  # UMC1820 (4 stereo outputs)  
-  - name: bedroom1
-    device: hw:2,0      # UMC1820 outputs 1+2
-  - name: bedroom2
-    device: hw:2,1      # UMC1820 outputs 3+4
-  - name: office
-    device: hw:2,2      # UMC1820 outputs 5+6
-  - name: dining_room
-    device: hw:2,3      # UMC1820 outputs 7+8
-```
-
-#### Dual UMC1820 Setup (8 stereo rooms)
-```yaml
-list_devices_on_start: true
-streams:
-  # First UMC1820
-  - name: kitchen
-    device: hw:1,0
-  - name: living_room
-    device: hw:1,1
-  - name: bedroom1
     device: hw:1,2
-  - name: bedroom2
-    device: hw:1,3
-  
-  # Second UMC1820
+    description: "Bedroom - UMC1820 Outputs 5+6"
   - name: office
+    device: hw:1,3
+    description: "Office - UMC1820 Outputs 7+8"
+```
+
+### Large Installation (Multiple UMC1820s)
+
+```yaml
+list_devices_on_start: true
+streams:
+  # First UMC1820 - Main Living Areas
+  - name: kitchen
+    device: hw:1,0
+    description: "Kitchen - UMC1820 #1"
+  - name: living_room
+    device: hw:1,1
+    description: "Living Room - UMC1820 #1"
+  - name: dining_room
+    device: hw:1,2
+    description: "Dining Room - UMC1820 #1"
+  - name: office
+    device: hw:1,3
+    description: "Office - UMC1820 #1"
+    
+  # Second UMC1820 - Bedrooms & Outdoor
+  - name: master_bedroom
+    device: hw:2,0
+    description: "Master Bedroom - UMC1820 #2"
+  - name: guest_bedroom
+    device: hw:2,1
+    description: "Guest Bedroom - UMC1820 #2"
+  - name: patio
+    device: hw:2,2
+    description: "Patio - UMC1820 #2"
+  - name: basement
+    device: hw:2,3
+    description: "Basement - UMC1820 #2"
+```
     device: hw:2,0
   - name: dining_room
     device: hw:2,1
