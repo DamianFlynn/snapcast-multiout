@@ -1,6 +1,6 @@
 name: Snapcast Multi-Output
 slug: snapcast-multiout
-version: "2025.09.23-9"
+version: "2025.09.23-10"
 description: Snapserver + dynamic Snapclients for multi-output USB audio with Music Assistant
 url: https://github.com/damianflynn/snapcast-multiout
 arch: [amd64, aarch64]
@@ -24,10 +24,10 @@ options:
   list_devices_on_start: true
   streams:
     - name: kitchen
-      device: hw:1,0  # Sound Blaster Play! 3 - will auto-detect USB audio
+      device: default  # Will auto-detect USB audio devices
       description: "Kitchen - Sound Blaster Play! 3"
     - name: sitting_room
-      device: hw:2,0  # UMC1820 or next USB audio device
+      device: default  # Will auto-detect USB audio devices  
       description: "Sitting Room - UMC1820"
 schema:
   list_devices_on_start: bool

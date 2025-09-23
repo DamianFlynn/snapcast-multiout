@@ -2,6 +2,20 @@
 
 All notable changes to this add-on will be documented in this file.
 
+## [2025.09.23-10] - 2025-09-23
+
+### Fixed
+- 🔧 **CRITICAL FIX: USB Audio Device Access** - Reverted stream device configuration from hardcoded `hw:1,0`/`hw:2,0` back to `device: default` to restore working USB audio detection
+- ✅ **Auto-Detection Restored** - USB audio devices are now properly detected and assigned automatically by the runtime logic
+- 🎯 **Container Permissions** - Maintained privileged container access while fixing device assignment logic
+
+### Technical Details
+- Stream configuration now uses `device: default` which allows the enhanced USB detection logic in `run.sh` to properly assign detected USB audio devices
+- Keeps all USB audio permission improvements and device testing enhancements
+- Preserves device descriptions for better identification in logs
+
+---
+
 ## [2025.09.23-9] - 2025-09-23 🎉 **PRODUCTION READY**
 
 ### Added - USB Audio Interface Support
