@@ -24,7 +24,7 @@ fi
 echo "[INFO] ================================================="
 echo "[INFO] Snapcast Multi-Output addon starting..."
 echo "[INFO] Addon Version: $ADDON_VERSION"
-echo "[INFO] Addon Git Version: 2025.09.23-1"
+echo "[INFO] Addon Git Version: 2025.09.23-2"
 echo "[INFO] Configuration file: $OPTS"
 echo "[INFO] ================================================="
 
